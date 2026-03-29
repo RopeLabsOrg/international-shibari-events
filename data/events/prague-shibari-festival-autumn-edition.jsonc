@@ -1,0 +1,48 @@
+{
+  "name": "Prague Shibari Festival (Autumn Edition)",
+  "slug": "prague-shibari-festival-autumn-edition",
+  "location": {
+    "city": "Prague",
+    "country": "Czechia",
+    "venue": "Prague (exact venue shared after booking)"
+  },
+  "links": {
+    "website": "https://www.pragueshibari.com/",
+    "fetlife": "https://fetlife.com/events/1941040",
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "sold_out",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2024-09-13",
+      "endDate": "2024-09-15",
+      "announcementDate": null,
+      "ticketSaleDate": "2024-06-20",
+      "soldOutDate": "2024-07-24",
+      "sourceNotes": "sourceEventId=1535094 (FetLife event). Description says tickets available from 2024-06-20 at 23:00 CET. Discussion createdAt=2024-07-24 reports sold out."
+    },
+    {
+      "startDate": "2025-09-12",
+      "endDate": "2025-09-14",
+      "announcementDate": null,
+      "ticketSaleDate": "2025-06-10",
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1795416 (FetLife event). Description says tickets available from 2025-06-10 at 23:00."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-09-11",
+    "endDate": "2026-09-13",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": null,
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://www.pragueshibari.com/events/tickets-2026-09-11/",
+    "status": "sold_out"
+  }
+}

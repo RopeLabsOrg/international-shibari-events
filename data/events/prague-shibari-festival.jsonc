@@ -25,15 +25,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-05-15",
     "endDate": "2026-05-17",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": "2025-11-20",
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://www.pragueshibari.com/events/tickets-2026-05-15/",
     "status": "sold_out"
   }

@@ -1,9 +1,7 @@
 import { parse as parseJsonc } from "jsonc-parser";
 import type { IEventData, TStatus } from "../../schemas/event.schema";
-
-const MS_PER_DAY = 24 * 60 * 60 * 1000;
-const DEFAULT_CADENCE_DAYS = 180;
-const DEFAULT_DURATION_DAYS = 3;
+import { addDays, deriveNextEditionDates, getCadenceAndDuration, parseIsoDate } from "./predictions";
+import type { IPredictionInfo } from "./predictions";
 
 export type TTemporalState = "happening_now" | "upcoming" | "ended";
 export type TSortKey = "eventDate" | "ticketDate" | "status" | "lastUpdated" | "name";
@@ -32,63 +30,21 @@ export interface IEditionDisplay {
   confidenceLabel: string;
 }
 
-export interface IPredictionInfo {
-  cadenceDays: number;
-  durationDays: number;
-  sampleSize: number;
-  sourceNotes: string[];
-}
-
-function parseIsoDate(value: string | null | undefined): Date | null {
-  if (!value) {
-    return null;
-  }
-
-  const date = new Date(`${value}T00:00:00Z`);
-  if (Number.isNaN(date.getTime())) {
-    return null;
-  }
-
-  return date;
-}
-
-function addDays(baseDate: Date, days: number): Date {
-  return new Date(baseDate.getTime() + days * MS_PER_DAY);
-}
-
 function toIsoDate(date: Date): string {
   return date.toISOString().slice(0, 10);
 }
-
-function median(values: number[]): number {
-  if (values.length === 0) {
-    return 0;
-  }
-
-  const sorted = [...values].sort((leftValue, rightValue) => leftValue - rightValue);
-  const middle = Math.floor(sorted.length / 2);
-
-  if (sorted.length % 2 === 1) {
-    return sorted[middle];
-  }
-
-  return Math.round((sorted[middle - 1] + sorted[middle]) / 2);
-}
-
-function resolveDate(confirmedDate: string | null | undefined, estimatedDate: string | null | undefined): IResolvedDate {
-  const confirmed = parseIsoDate(confirmedDate);
-  if (confirmed) {
+function resolveDate(confirmedDate: Date | null, estimatedDate: Date | null): IResolvedDate {
+  if (confirmedDate) {
     return {
-      value: confirmed,
+      value: confirmedDate,
       isEstimated: false,
       source: "confirmed",
     };
   }
 
-  const estimated = parseIsoDate(estimatedDate);
-  if (estimated) {
+  if (estimatedDate) {
     return {
-      value: estimated,
+      value: estimatedDate,
       isEstimated: true,
       source: "estimated",
     };
@@ -149,39 +105,6 @@ function compareResolvedDate(leftDate: IResolvedDate, rightDate: IResolvedDate):
   return 0;
 }
 
-function getCadenceAndDuration(event: IEventData): IPredictionInfo {
-  const editions = [...event.historicalEditions];
-  const starts = editions.map((edition) => parseIsoDate(edition.startDate)).filter((date): date is Date => Boolean(date));
-  const intervals: number[] = [];
-
-  for (let index = 1; index < starts.length; index += 1) {
-    const deltaDays = Math.round((starts[index].getTime() - starts[index - 1].getTime()) / MS_PER_DAY);
-    if (deltaDays > 0) {
-      intervals.push(deltaDays);
-    }
-  }
-
-  const durations = editions
-    .map((edition) => {
-      const startDate = parseIsoDate(edition.startDate);
-      const endDate = parseIsoDate(edition.endDate);
-      if (!startDate || !endDate) {
-        return null;
-      }
-      return Math.max(1, Math.round((endDate.getTime() - startDate.getTime()) / MS_PER_DAY) + 1);
-    })
-    .filter((value): value is number => value !== null);
-
-  const sourceNotes = editions.map((edition) => edition.sourceNotes).filter((note) => note.trim().length > 0);
-
-  return {
-    cadenceDays: median(intervals) || DEFAULT_CADENCE_DAYS,
-    durationDays: median(durations) || DEFAULT_DURATION_DAYS,
-    sampleSize: intervals.length,
-    sourceNotes,
-  };
-}
-
 export function formatDisplayDate(date: Date | null): string {
   if (!date) {
     return "TBA";
@@ -209,9 +132,10 @@ export function formatDateRange(startDate: Date | null, endDate: Date | null): s
 export function getEventSummaries(eventDataList: IEventData[], nowDate = new Date()): IEventSummary[] {
   return eventDataList.map((eventData) => {
     const nextEdition = eventData.nextEdition;
-    const nextDate = resolveDate(nextEdition.startDate, nextEdition.estimatedStartDate);
-    const ticketDate = resolveDate(nextEdition.ticketSaleDate, nextEdition.estimatedTicketSaleDate);
-    const endDate = resolveDate(nextEdition.endDate, nextEdition.estimatedEndDate);
+    const derivedDates = deriveNextEditionDates(eventData);
+    const nextDate = resolveDate(parseIsoDate(nextEdition.startDate), derivedDates.startDate);
+    const ticketDate = resolveDate(parseIsoDate(nextEdition.ticketSaleDate), derivedDates.ticketDate);
+    const endDate = resolveDate(parseIsoDate(nextEdition.endDate), derivedDates.endDate);
 
     return {
       event: eventData,
@@ -275,24 +199,27 @@ export function loadEventsData(): IEventData[] {
 export function buildEditionDisplays(event: IEventData): { editions: IEditionDisplay[]; prediction: IPredictionInfo } {
   const nextEdition = event.nextEdition;
   const prediction = getCadenceAndDuration(event);
+  const derivedDates = deriveNextEditionDates(event);
 
   const currentEdition: IEditionDisplay = {
     title: "Next / current edition",
-    startDate: resolveDate(nextEdition.startDate, nextEdition.estimatedStartDate),
-    endDate: resolveDate(nextEdition.endDate, nextEdition.estimatedEndDate),
-    ticketDate: resolveDate(nextEdition.ticketSaleDate, nextEdition.estimatedTicketSaleDate),
-    announcementDate: resolveDate(nextEdition.announcementDate, nextEdition.estimatedAnnouncementDate),
-    isEstimated: nextEdition.isEstimated,
-    confidenceLabel: nextEdition.isEstimated ? "Predicted from prior editions" : "Confirmed by source",
+    startDate: resolveDate(parseIsoDate(nextEdition.startDate), derivedDates.startDate),
+    endDate: resolveDate(parseIsoDate(nextEdition.endDate), derivedDates.endDate),
+    ticketDate: resolveDate(parseIsoDate(nextEdition.ticketSaleDate), derivedDates.ticketDate),
+    announcementDate: resolveDate(parseIsoDate(nextEdition.announcementDate), derivedDates.announcementDate),
+    isEstimated: parseIsoDate(nextEdition.startDate) === null && derivedDates.startDate !== null,
+    confidenceLabel: parseIsoDate(nextEdition.startDate)
+      ? "Confirmed by source"
+      : (derivedDates.startDate ? "Predicted from prior editions" : "Low confidence (limited history)"),
   };
 
   const baseStartDate = currentEdition.startDate.value;
-  const predictedStartDate = baseStartDate
-    ? addDays(baseStartDate, prediction.cadenceDays)
-    : parseIsoDate(nextEdition.estimatedStartDate);
+  const predictedStartDate = baseStartDate ? addDays(baseStartDate, prediction.cadenceDays) : null;
   const predictedEndDate = predictedStartDate ? addDays(predictedStartDate, prediction.durationDays - 1) : null;
-  const predictedTicketDate = predictedStartDate ? addDays(predictedStartDate, -75) : null;
-  const predictedAnnouncementDate = predictedStartDate ? addDays(predictedStartDate, -110) : null;
+  const predictedTicketDate = predictedStartDate ? addDays(predictedStartDate, -prediction.ticketLeadDays) : null;
+  const predictedAnnouncementDate = predictedStartDate
+    ? addDays(predictedStartDate, -prediction.announcementLeadDays)
+    : null;
 
   const secondEdition: IEditionDisplay = {
     title: "Following edition (forecast)",

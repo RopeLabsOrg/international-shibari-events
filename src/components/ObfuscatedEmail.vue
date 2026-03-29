@@ -41,6 +41,7 @@ function revealEmail(): void {
     :href="mailtoHref"
     :class="[
       'font-medium text-[var(--color-secondary)] underline decoration-dotted underline-offset-2 transition hover:text-[var(--color-primary)]',
+      props.requireReveal ? 'inline-flex items-center py-1' : '',
       !props.requireReveal ? props.className : '',
     ]"
   >

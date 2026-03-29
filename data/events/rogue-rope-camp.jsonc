@@ -41,15 +41,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": true,
     "startDate": null,
     "endDate": null,
-    "estimatedStartDate": "2026-08-07",
-    "estimatedEndDate": "2026-08-11",
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://docs.roguerope.be/",
     "status": "tba"
   }

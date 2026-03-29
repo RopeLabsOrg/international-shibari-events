@@ -14,8 +14,8 @@ alwaysApply: false
 
 1. Create `data/events/<event-slug>.jsonc`.
 2. Fill identity, links, status, `lastUpdated`, `historicalEditions`, and `nextEdition`.
-3. Include comments for non-obvious assumptions (especially estimated dates).
-4. Ensure no past-only display behavior (provide a future estimate when needed).
+3. Include comments for non-obvious assumptions (especially timeline assumptions in `sourceNotes`).
+4. Ensure no past-only display behavior (runtime prediction should be possible from historical cadence when dates are unknown).
 
 # Update an Existing Event
 

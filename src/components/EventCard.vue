@@ -115,6 +115,7 @@ async function openEventDetails(): Promise<void> {
       </a>
       <div
         v-if="event.links.contactEmail"
+        class="flex items-center"
         @click.stop
         @keydown.enter.stop
         @keydown.space.stop

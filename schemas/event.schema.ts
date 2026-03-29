@@ -48,17 +48,12 @@ const HISTORICAL_EDITION_SCHEMA = {
 const NEXT_EDITION_SCHEMA = {
   type: "object",
   additionalProperties: false,
-  required: ["isEstimated", "status"],
+  required: ["status"],
   properties: {
-    isEstimated: { type: "boolean" },
     startDate: { type: ["string", "null"], format: "date" },
     endDate: { type: ["string", "null"], format: "date" },
-    estimatedStartDate: { type: ["string", "null"], format: "date" },
-    estimatedEndDate: { type: ["string", "null"], format: "date" },
     announcementDate: { type: ["string", "null"], format: "date" },
-    estimatedAnnouncementDate: { type: ["string", "null"], format: "date" },
     ticketSaleDate: { type: ["string", "null"], format: "date" },
-    estimatedTicketSaleDate: { type: ["string", "null"], format: "date" },
     ticketUrl: { type: ["string", "null"], format: "uri" },
     status: { type: "string", enum: [...STATUS_VALUES] },
   },

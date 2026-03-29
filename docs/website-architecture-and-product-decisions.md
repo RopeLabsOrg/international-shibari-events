@@ -52,7 +52,7 @@ Home listing supports sorting by:
 ## Prediction Rules
 
 - Every event detail page must show two forward-looking editions:
-  - next/current edition from `nextEdition` fields,
+  - next/current edition from `nextEdition` confirmed fields + runtime prediction fallback,
   - following forecasted edition computed from historical cadence.
 - Following-edition forecast algorithm:
   - cadence days = median interval between historical start dates,
@@ -116,7 +116,7 @@ Each event detail page displays:
 
 - Make small, atomic commits following gitmoji conventions.
 - Keep data provenance explicit in `historicalEditions[].sourceNotes`.
-- Keep uncertain/unverified events in catalog with conservative `tba` status and estimated dates instead of removing them.
+- Keep uncertain/unverified events in catalog with conservative `tba` status and runtime-derived estimates instead of removing them.
 - Extend features incrementally after each baseline milestone (sorting/filtering, saved preferences, region filters, reminder exports).
 
 ## Next Feature Backlog (Post-Baseline)

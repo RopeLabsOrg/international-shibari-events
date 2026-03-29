@@ -25,15 +25,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-08-13",
     "endDate": "2026-08-16",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://myshibari.dk/en/begivenheder/danish-shibari-festival-2026-2/",
     "status": "sold_out"
   }
@@ -65,15 +60,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-08-13",
     "endDate": "2026-08-16",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://myshibari.dk/en/begivenheder/danish-shibari-festival-2026-2/",
     "status": "sold_out"
   }
@@ -105,15 +95,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-08-13",
     "endDate": "2026-08-16",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": "2025-11-15",
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": "2025-11-15",
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://myshibari.dk/en/begivenheder/danish-shibari-festival-2026-2/",
     "status": "scheduled"
   }

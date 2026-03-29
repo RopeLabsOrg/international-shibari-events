@@ -41,15 +41,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-10-19",
     "endDate": "2026-10-24",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://felixruckert.de/2015/10/01/eurix/",
     "status": "on_sale"
   }

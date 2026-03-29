@@ -16,15 +16,10 @@
   "lastUpdated": "2026-03-29",
   "historicalEditions": [],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-05-01",
     "endDate": "2026-05-04",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://www.shibarilounge.com/kasumi-hourai-and-akane",
     "status": "on_sale"
   }
@@ -47,15 +42,10 @@
   "lastUpdated": "2026-03-29",
   "historicalEditions": [],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-05-01",
     "endDate": "2026-05-04",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://www.shibarilounge.com/kasumi-hourai-and-akane",
     "status": "on_sale"
   }
@@ -87,15 +77,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-05-01",
     "endDate": "2026-05-04",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": "2026-01-20",
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": "2026-01-20",
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://www.shibarilounge.com/kasumi-hourai-and-akane",
     "status": "on_sale"
   }

@@ -41,15 +41,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": null,
     "endDate": null,
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://www.ellipsisrope.com/",
     "status": "tba"
   }

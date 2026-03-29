@@ -33,15 +33,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-05-22",
     "endDate": "2026-05-25",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
     "status": "scheduled"
   }
@@ -64,15 +59,10 @@
   "lastUpdated": "2026-03-29",
   "historicalEditions": [],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-05-22",
     "endDate": "2026-05-25",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
     "status": "scheduled"
   }
@@ -95,15 +85,10 @@
   "lastUpdated": "2026-03-29",
   "historicalEditions": [],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-05-22",
     "endDate": "2026-05-25",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
     "status": "scheduled"
   }
@@ -126,15 +111,10 @@
   "lastUpdated": "2026-03-29",
   "historicalEditions": [],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-05-22",
     "endDate": "2026-05-25",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
     "status": "scheduled"
   }
@@ -166,15 +146,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-05-22",
     "endDate": "2026-05-25",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": "2025-08-15",
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": "2025-08-15",
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
     "status": "scheduled"
   }

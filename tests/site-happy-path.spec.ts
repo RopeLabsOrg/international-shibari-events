@@ -22,6 +22,19 @@ describe("buyer guide website", () => {
     }
   });
 
+  it("derives next dates from historical cadence when next edition dates are missing", () => {
+    const summaries = getEventSummaries(loadEventsData());
+    const eurixSpring = summaries.find((summary) => summary.event.slug === "eurix-spring-edition");
+    const ropeLinkedWinter = summaries.find((summary) => summary.event.slug === "ropelinked-winter-edition");
+
+    expect(eurixSpring).toBeDefined();
+    expect(ropeLinkedWinter).toBeDefined();
+    expect(eurixSpring?.nextDate.value).not.toBeNull();
+    expect(ropeLinkedWinter?.nextDate.value).not.toBeNull();
+    expect(eurixSpring?.nextDate.isEstimated).toBe(true);
+    expect(ropeLinkedWinter?.nextDate.isEstimated).toBe(true);
+  });
+
   it("renders home cards with sort control", () => {
     const wrapper = mount(HomePage, {
       global: {
@@ -33,7 +46,7 @@ describe("buyer guide website", () => {
       },
     });
 
-    expect(wrapper.text()).toContain("Event Buyer Guide");
+    expect(wrapper.text()).toContain("Upcoming Events");
     expect(wrapper.find("select").exists()).toBe(true);
     expect(wrapper.text()).toContain("Sort by");
     expect(wrapper.text()).toContain("Missing an event?");

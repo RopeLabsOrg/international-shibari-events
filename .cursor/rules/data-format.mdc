@@ -21,7 +21,7 @@ alwaysApply: false
 - `status`: one of `scheduled`, `on_sale`, `sold_out`, `waiting_list`, `tba`.
 - `lastUpdated`: ISO date (`YYYY-MM-DD`) for staleness reminders.
 - `historicalEditions`: array of known past editions.
-- `nextEdition`: confirmed or estimated upcoming edition.
+- `nextEdition`: upcoming edition facts from sources; estimates are derived at runtime.
 
 # Edition Structures
 
@@ -32,19 +32,17 @@ alwaysApply: false
   - `soldOutDate` (nullable)
   - `sourceNotes` (short provenance note)
 - `nextEdition`:
-  - `isEstimated` (boolean)
   - `startDate` / `endDate` (nullable when unknown)
-  - `estimatedStartDate` / `estimatedEndDate` (nullable)
-  - `announcementDate` / `estimatedAnnouncementDate` (nullable)
-  - `ticketSaleDate` / `estimatedTicketSaleDate` (nullable)
+  - `announcementDate` (nullable)
+  - `ticketSaleDate` (nullable)
   - `ticketUrl` (nullable)
   - `status` (same enum as top-level)
 
 # Estimation Rule
 
 - Never render past-only listings in the app.
-- If no confirmed future date exists, set `nextEdition.isEstimated = true`.
-- Base estimates on historical cadence (median month/day gap when possible).
+- If no confirmed future date exists, estimates are calculated on the fly.
+- Base estimates on historical cadence and lead-time medians from prior editions.
 
 # Example Template
 
@@ -73,15 +71,10 @@ alwaysApply: false
   "historicalEditions": [],
 
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-09-11",
     "endDate": "2026-09-13",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": "2026-05-15",
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": "2026-06-01",
     "ticketUrl": "https://www.pragueshibari.com/",
     "status": "sold_out"
   }

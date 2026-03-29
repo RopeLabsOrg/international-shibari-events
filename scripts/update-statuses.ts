@@ -11,6 +11,7 @@ import {
   type IEventData,
   type TStatus,
 } from "../schemas/event.schema";
+import { deriveNextEditionDates } from "../src/lib/predictions";
 
 const DATA_DIRECTORY = path.resolve(process.cwd(), "data/events");
 const DEFAULT_REMINDER_OUTPUT_PATH = "/tmp/status-reminders.json";
@@ -149,11 +150,9 @@ function collectReminders(eventData: IEventData, todayDate: Date): IReminder[] {
   const reminders: IReminder[] = [];
   const eventName = eventData.name;
   const eventSlug = eventData.slug;
-  const nextEdition = eventData.nextEdition;
+  const derivedDates = deriveNextEditionDates(eventData);
 
-  const announcementDate = parseIsoDate(
-    nextEdition.announcementDate || nextEdition.estimatedAnnouncementDate,
-  );
+  const announcementDate = derivedDates.announcementDate;
   if (
     announcementDate &&
     isWithinWindow(
@@ -180,9 +179,7 @@ function collectReminders(eventData: IEventData, todayDate: Date): IReminder[] {
     );
   }
 
-  const ticketSaleDate = parseIsoDate(
-    nextEdition.ticketSaleDate || nextEdition.estimatedTicketSaleDate,
-  );
+  const ticketSaleDate = derivedDates.ticketDate;
   if (
     ticketSaleDate &&
     isWithinWindow(

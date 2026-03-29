@@ -25,15 +25,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-09-26",
     "endDate": "2026-09-27",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": null,
     "ticketUrl": "https://www.onawa-europe.com/tickets",
     "status": "scheduled"
   }
@@ -65,15 +60,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": false,
     "startDate": "2026-09-26",
     "endDate": "2026-09-27",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
     "announcementDate": null,
-    "estimatedAnnouncementDate": "2026-06-20",
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": "2026-07-01",
     "ticketUrl": "https://www.onawa-europe.com/tickets",
     "status": "scheduled"
   }

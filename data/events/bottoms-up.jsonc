@@ -41,15 +41,10 @@
     }
   ],
   "nextEdition": {
-    "isEstimated": true,
     "startDate": null,
     "endDate": null,
-    "estimatedStartDate": "2027-02-17",
-    "estimatedEndDate": "2027-02-21",
     "announcementDate": null,
-    "estimatedAnnouncementDate": null,
     "ticketSaleDate": null,
-    "estimatedTicketSaleDate": "2026-12-01",
     "ticketUrl": "https://docs.roguerope.be/docs/practical/participation/",
     "status": "tba"
   }

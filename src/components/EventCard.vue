@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import { useRouter } from "vue-router";
 import StatusPill from "./StatusPill.vue";
 import ObfuscatedEmail from "./ObfuscatedEmail.vue";
 import { formatDateRange } from "../lib/events";
@@ -9,6 +10,7 @@ const props = defineProps<{
   summary: IEventSummary;
 }>();
 
+const router = useRouter();
 const event = computed(() => props.summary.event);
 const dateRange = computed(() =>
   formatDateRange(
@@ -16,15 +18,29 @@ const dateRange = computed(() =>
     props.summary.endDate.value,
   ),
 );
+
+async function openEventDetails(): Promise<void> {
+  await router.push(`/events/${event.value.slug}`);
+}
 </script>
 
 <template>
-  <article class="rounded-xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-black/20">
+  <article
+    class="cursor-pointer rounded-xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-black/20 transition hover:border-[var(--color-primary)]"
+    role="link"
+    tabindex="0"
+    @click="openEventDetails()"
+    @keydown.enter.prevent="openEventDetails()"
+    @keydown.space.prevent="openEventDetails()"
+  >
     <div class="flex flex-wrap items-start justify-between gap-3">
       <div>
         <RouterLink
           class="text-lg font-semibold text-[var(--color-secondary)] transition hover:text-[var(--color-primary)]"
           :to="`/events/${event.slug}`"
+          @click.stop
+          @keydown.enter.stop
+          @keydown.space.stop
         >
           {{ event.name }}
         </RouterLink>
@@ -67,6 +83,9 @@ const dateRange = computed(() =>
         class="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
         target="_blank"
         rel="noopener noreferrer"
+        @click.stop
+        @keydown.enter.stop
+        @keydown.space.stop
       >
         Website
       </a>
@@ -76,6 +95,9 @@ const dateRange = computed(() =>
         class="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
         target="_blank"
         rel="noopener noreferrer"
+        @click.stop
+        @keydown.enter.stop
+        @keydown.space.stop
       >
         FetLife
       </a>
@@ -85,18 +107,27 @@ const dateRange = computed(() =>
         class="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
         target="_blank"
         rel="noopener noreferrer"
+        @click.stop
+        @keydown.enter.stop
+        @keydown.space.stop
       >
         Mailing list
       </a>
-      <ObfuscatedEmail
+      <div
         v-if="event.links.contactEmail"
-        :email="event.links.contactEmail"
-        reveal-label="Reveal email"
-        link-label="Email"
-        :require-reveal="true"
-        :show-address-when-revealed="false"
-        class-name="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
-      />
+        @click.stop
+        @keydown.enter.stop
+        @keydown.space.stop
+      >
+        <ObfuscatedEmail
+          :email="event.links.contactEmail"
+          reveal-label="Reveal email"
+          link-label="Email"
+          :require-reveal="true"
+          :show-address-when-revealed="false"
+          class-name="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
+        />
+      </div>
     </div>
   </article>
 </template>

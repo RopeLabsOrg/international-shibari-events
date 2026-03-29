@@ -30,9 +30,17 @@ jobs:
           node-version: "lts/*"
           cache: "npm"
 
+      - name: Resolve Vite base path
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          OWNER_NAME="${GITHUB_REPOSITORY_OWNER}"
+          if [ "${REPO_NAME}" = "${OWNER_NAME}.github.io" ]; then
+            echo "BASE_PATH=/" >> "$GITHUB_ENV"
+          else
+            echo "BASE_PATH=/${REPO_NAME}/" >> "$GITHUB_ENV"
+          fi
+
       - name: Build site
-        env:
-          BASE_PATH: /
         run: |
           npm ci
           npm run typecheck

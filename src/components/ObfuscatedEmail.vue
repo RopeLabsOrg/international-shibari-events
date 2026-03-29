@@ -29,7 +29,7 @@ function revealEmail(): void {
     v-if="!isRevealed"
     type="button"
     :class="[
-      'cursor-pointer border-0 bg-transparent p-0 text-[var(--color-secondary)] underline decoration-dotted underline-offset-2 transition hover:text-[var(--color-primary)]',
+      'cursor-pointer',
       props.className,
     ]"
     @click="revealEmail"
@@ -40,8 +40,8 @@ function revealEmail(): void {
     v-else
     :href="mailtoHref"
     :class="[
-      'text-[var(--color-secondary)] underline decoration-dotted underline-offset-2 transition hover:text-[var(--color-primary)]',
-      props.className,
+      'font-medium text-[var(--color-secondary)] underline decoration-dotted underline-offset-2 transition hover:text-[var(--color-primary)]',
+      !props.requireReveal ? props.className : '',
     ]"
   >
     <span class="[direction:rtl] [unicode-bidi:bidi-override]">

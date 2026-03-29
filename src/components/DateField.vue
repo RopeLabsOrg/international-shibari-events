@@ -12,13 +12,13 @@ const formattedDate = computed(() => formatDisplayDate(props.value));
 </script>
 
 <template>
-  <div class="rounded-lg border border-slate-800 bg-slate-900/80 p-3">
-    <p class="text-xs uppercase tracking-wide text-slate-400">
+  <div class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-strong)] p-3">
+    <p class="text-xs uppercase tracking-wide text-[var(--color-muted)]">
       {{ label }}
     </p>
-    <p class="mt-1 text-sm font-medium text-slate-100">
+    <p class="mt-1 text-sm font-medium text-[var(--color-text)]">
       {{ formattedDate }}
-      <span v-if="isEstimated" class="ml-2 rounded bg-amber-600/20 px-2 py-0.5 text-xs text-amber-300">
+      <span v-if="isEstimated" class="ml-2 rounded-full bg-[rgba(127,103,71,0.14)] px-2 py-0.5 text-xs text-[var(--color-highlight)]">
         Estimated
       </span>
     </p>

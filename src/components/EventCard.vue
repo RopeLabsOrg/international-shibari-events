@@ -26,7 +26,7 @@ async function openEventDetails(): Promise<void> {
 
 <template>
   <article
-    class="cursor-pointer rounded-xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-black/20 transition hover:border-[var(--color-primary)]"
+    class="cursor-pointer rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-lg shadow-[rgba(58,42,26,0.1)] transition hover:-translate-y-0.5 hover:border-[var(--color-primary)] hover:shadow-xl hover:shadow-[rgba(58,42,26,0.15)]"
     role="link"
     tabindex="0"
     @click="openEventDetails()"
@@ -44,7 +44,7 @@ async function openEventDetails(): Promise<void> {
         >
           {{ event.name }}
         </RouterLink>
-        <p class="mt-1 text-sm text-slate-300">
+        <p class="mt-1 text-sm text-[var(--color-muted)]">
           {{ event.location.city }}, {{ event.location.country }}
         </p>
       </div>
@@ -52,24 +52,24 @@ async function openEventDetails(): Promise<void> {
     </div>
 
     <div class="mt-4 grid gap-2 sm:grid-cols-2">
-      <div class="rounded-lg border border-slate-800 bg-slate-950/70 p-3">
-        <p class="text-xs uppercase tracking-wide text-slate-400">
+      <div class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-strong)] p-3">
+        <p class="text-xs uppercase tracking-wide text-[var(--color-muted)]">
           Event date
         </p>
-        <p class="mt-1 text-sm font-medium text-slate-100">
+        <p class="mt-1 text-sm font-medium text-[var(--color-text)]">
           {{ dateRange }}
-          <span v-if="summary.nextDate.isEstimated" class="ml-2 rounded bg-amber-600/20 px-2 py-0.5 text-xs text-amber-300">
+          <span v-if="summary.nextDate.isEstimated" class="ml-2 rounded-full bg-[rgba(127,103,71,0.14)] px-2 py-0.5 text-xs text-[var(--color-highlight)]">
             Estimated
           </span>
         </p>
       </div>
-      <div class="rounded-lg border border-slate-800 bg-slate-950/70 p-3">
-        <p class="text-xs uppercase tracking-wide text-slate-400">
+      <div class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-strong)] p-3">
+        <p class="text-xs uppercase tracking-wide text-[var(--color-muted)]">
           Ticket date
         </p>
-        <p class="mt-1 text-sm font-medium text-slate-100">
+        <p class="mt-1 text-sm font-medium text-[var(--color-text)]">
           {{ summary.ticketDate.value ? summary.ticketDate.value.toISOString().slice(0, 10) : "TBA" }}
-          <span v-if="summary.ticketDate.isEstimated" class="ml-2 rounded bg-amber-600/20 px-2 py-0.5 text-xs text-amber-300">
+          <span v-if="summary.ticketDate.isEstimated" class="ml-2 rounded-full bg-[rgba(127,103,71,0.14)] px-2 py-0.5 text-xs text-[var(--color-highlight)]">
             Estimated
           </span>
         </p>
@@ -80,7 +80,7 @@ async function openEventDetails(): Promise<void> {
       <a
         v-if="event.links.website"
         :href="event.links.website"
-        class="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
+        class="rounded-xl border border-[var(--color-secondary)] bg-[var(--color-surface-strong)] px-3 py-1 text-[var(--color-secondary)] transition hover:bg-[var(--color-secondary)] hover:text-[var(--color-surface-strong)]"
         target="_blank"
         rel="noopener noreferrer"
         @click.stop
@@ -92,7 +92,7 @@ async function openEventDetails(): Promise<void> {
       <a
         v-if="event.links.fetlife"
         :href="event.links.fetlife"
-        class="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
+        class="rounded-xl border border-[var(--color-secondary)] bg-[var(--color-surface-strong)] px-3 py-1 text-[var(--color-secondary)] transition hover:bg-[var(--color-secondary)] hover:text-[var(--color-surface-strong)]"
         target="_blank"
         rel="noopener noreferrer"
         @click.stop
@@ -104,7 +104,7 @@ async function openEventDetails(): Promise<void> {
       <a
         v-if="event.links.mailingList"
         :href="event.links.mailingList"
-        class="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
+        class="rounded-xl border border-[var(--color-secondary)] bg-[var(--color-surface-strong)] px-3 py-1 text-[var(--color-secondary)] transition hover:bg-[var(--color-secondary)] hover:text-[var(--color-surface-strong)]"
         target="_blank"
         rel="noopener noreferrer"
         @click.stop
@@ -123,7 +123,7 @@ async function openEventDetails(): Promise<void> {
           :email="event.links.contactEmail"
           reveal-label="Reveal email"
           :require-reveal="true"
-          class-name="text-slate-200"
+          class-name="rounded-xl border border-[var(--color-secondary)] bg-[var(--color-surface-strong)] px-3 py-1 text-[var(--color-secondary)] transition hover:bg-[var(--color-secondary)] hover:text-[var(--color-surface-strong)]"
         />
       </div>
     </div>

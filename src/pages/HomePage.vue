@@ -30,7 +30,16 @@ const sortedSummaries = computed(() => sortEventSummaries(getEventSummaries(even
           Track upcoming rope events, ticket windows, and status at a glance. Estimated dates are labeled clearly.
         </p>
         <div class="mt-3 max-w-2xl rounded-md border border-slate-800 bg-slate-900/60 px-3 py-2 text-sm text-slate-200">
-          Missing an event? Open a pull request on GitHub, or email
+          Missing an event?
+          <a
+            href="https://github.com/RopeLabsOrg/international-shibari-events"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium text-[var(--color-secondary)] transition hover:text-[var(--color-primary)]"
+          >
+            Open a pull request on GitHub
+          </a>
+          , or email
           <ObfuscatedEmail
             :email="CONTACT_EMAIL"
             class-name="font-medium text-[var(--color-secondary)] transition hover:text-[var(--color-primary)]"

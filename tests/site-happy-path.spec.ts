@@ -37,6 +37,11 @@ describe("buyer guide website", () => {
     expect(wrapper.text()).toContain("Sort by");
     expect(wrapper.text()).toContain("Missing an event?");
     expect(wrapper.text()).toContain("Open a pull request on GitHub");
+    expect(
+      wrapper
+        .find('a[href="https://github.com/RopeLabsOrg/international-shibari-events"]')
+        .exists(),
+    ).toBe(true);
   });
 
   it("renders event detail with status, provenance, history, and links", async () => {

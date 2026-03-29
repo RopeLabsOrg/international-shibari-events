@@ -42,7 +42,7 @@ const sortedSummaries = computed(() => sortEventSummaries(getEventSummaries(even
           , or email
           <ObfuscatedEmail
             :email="CONTACT_EMAIL"
-            class-name="font-medium text-[var(--color-secondary)] transition hover:text-[var(--color-primary)]"
+            
           />
           .
         </div>

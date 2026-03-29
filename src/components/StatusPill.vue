@@ -15,11 +15,11 @@ const statusLabelMap: Record<TStatus, string> = {
 };
 
 const statusClassMap: Record<TStatus, string> = {
-  scheduled: "border border-[var(--color-border)] bg-[var(--color-surface-strong)] text-[var(--color-text)]",
-  on_sale: "border border-[#65805a] bg-[#dce9d6] text-[#33412d]",
-  sold_out: "border border-[#8f6468] bg-[#f0dfdf] text-[#5a2f33]",
-  waiting_list: "border border-[#9d8658] bg-[#f3ead7] text-[#5f4a1f]",
-  tba: "border border-[var(--color-border)] bg-[#ebe2ce] text-[var(--color-muted)]",
+  scheduled: "border border-[#5b78a6] bg-[#d8e4f5] text-[#243958]",
+  on_sale: "border border-[#4f7a3f] bg-[#cfe5c4] text-[#1f3a1a]",
+  sold_out: "border border-[#9a4d56] bg-[#f2cfd3] text-[#5a1f26]",
+  waiting_list: "border border-[#a8742f] bg-[#f5dfb8] text-[#5c3a0f]",
+  tba: "border border-[#8f7a52] bg-[#efe0bf] text-[#5b4a28]",
 };
 
 const label = computed(() => statusLabelMap[props.status]);

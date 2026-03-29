@@ -1,0 +1,183 @@
+name: Daily Event Status Automation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * *"
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  daily-status:
+    runs-on: ubuntu-latest
+    env:
+      REMINDER_OUTPUT_PATH: /tmp/status-reminders.json
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Run status updater
+        run: |
+          npm ci
+          npm run validate:data
+          npm run status:update
+
+      - name: Rebuild site (if configured)
+        run: |
+          if [ -f package.json ]; then
+            if node -e "const p=require('./package.json'); process.exit(p.scripts && p.scripts.build ? 0 : 1)"; then
+              npm run build
+            else
+              echo "No build script found. Skipping build step."
+            fi
+          else
+            echo "No package.json found. Skipping build step."
+          fi
+
+      - name: Commit status changes
+        run: |
+          if git diff --quiet; then
+            echo "No status changes to commit."
+            exit 0
+          fi
+
+          git add -A
+          git commit -m ":robot: Auto-update event statuses"
+          git push
+
+      - name: Create reminder issues
+        uses: actions/github-script@v7
+        env:
+          REMINDER_OUTPUT_PATH: ${{ env.REMINDER_OUTPUT_PATH }}
+        with:
+          script: |
+            const fs = require("node:fs");
+
+            const reminderPath = process.env.REMINDER_OUTPUT_PATH;
+            if (!reminderPath || !fs.existsSync(reminderPath)) {
+              core.info("No reminder payload found.");
+              return;
+            }
+
+            const reminders = JSON.parse(fs.readFileSync(reminderPath, "utf8"));
+            if (!Array.isArray(reminders) || reminders.length === 0) {
+              core.info("No reminders to create.");
+              return;
+            }
+
+            const DEDUPE_MARKER_PREFIX = "<!-- reminder-dedupe-key:";
+
+            function parseDedupeKeyFromBody(body) {
+              if (typeof body !== "string") {
+                return null;
+              }
+
+              const markerStart = body.indexOf(DEDUPE_MARKER_PREFIX);
+              if (markerStart === -1) {
+                return null;
+              }
+
+              const keyStart = markerStart + DEDUPE_MARKER_PREFIX.length;
+              const markerEnd = body.indexOf("-->", keyStart);
+              if (markerEnd === -1) {
+                return null;
+              }
+
+              const rawKey = body.slice(keyStart, markerEnd).trim();
+              return rawKey.length > 0 ? rawKey : null;
+            }
+
+            async function ensureLabel(name, color, description) {
+              try {
+                await github.rest.issues.getLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name,
+                });
+              } catch (error) {
+                if (error.status !== 404) {
+                  throw error;
+                }
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name,
+                  color,
+                  description,
+                });
+              }
+            }
+
+            await ensureLabel("status-reminder", "1d76db", "Automated status reminders");
+            await ensureLabel("announcement-window", "0e8a16", "Announcement window is open");
+            await ensureLabel("ticket-window", "fbca04", "Ticket window is approaching");
+            await ensureLabel("stale-data", "d93f0b", "Data needs refresh");
+
+            const reminderIssues = await github.paginate(
+              github.rest.issues.listForRepo,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: "all",
+                labels: "status-reminder",
+                per_page: 100,
+              },
+            );
+
+            const openIssues = reminderIssues.filter((issue) => issue.state === "open");
+            const existingDedupeKeys = new Set(
+              reminderIssues
+                .map((issue) => parseDedupeKeyFromBody(issue.body))
+                .filter((dedupeKey) => typeof dedupeKey === "string"),
+            );
+
+            for (const reminder of reminders) {
+              if (!reminder || typeof reminder.title !== "string") {
+                continue;
+              }
+
+              const dedupeKey = typeof reminder.dedupeKey === "string"
+                ? reminder.dedupeKey.trim()
+                : "";
+
+              if (dedupeKey && existingDedupeKeys.has(dedupeKey)) {
+                core.info(`Skipping duplicate reminder by dedupe key: ${dedupeKey}`);
+                continue;
+              }
+
+              const duplicate = openIssues.find(
+                (issue) => !issue.pull_request && issue.title === reminder.title,
+              );
+
+              if (duplicate) {
+                core.info(`Skipping duplicate reminder: ${reminder.title}`);
+                continue;
+              }
+
+              const issueBody = [
+                reminder.body || "Automated event reminder.",
+                dedupeKey ? `${DEDUPE_MARKER_PREFIX} ${dedupeKey} -->` : "",
+              ]
+                .filter(Boolean)
+                .join("\n\n");
+
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: reminder.title,
+                body: issueBody,
+                labels: Array.isArray(reminder.labels) ? reminder.labels : ["status-reminder"],
+              });
+
+              if (dedupeKey) {
+                existingDedupeKeys.add(dedupeKey);
+              }
+            }

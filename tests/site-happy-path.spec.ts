@@ -3,6 +3,7 @@ import { mount } from "@vue/test-utils";
 import { createMemoryHistory, createRouter } from "vue-router";
 import HomePage from "../src/pages/HomePage.vue";
 import EventPage from "../src/pages/EventPage.vue";
+import ObfuscatedEmail from "../src/components/ObfuscatedEmail.vue";
 import { routes } from "../src/router";
 import { loadEventsData, sortEventSummaries, getEventSummaries } from "../src/lib/events";
 
@@ -64,5 +65,29 @@ describe("buyer guide website", () => {
     expect(wrapper.text()).toContain("Official links");
     expect(wrapper.text()).toContain("Temporal state");
     expect(wrapper.text()).toContain("Reveal contact email");
+  });
+
+  it("shows button before reveal then plain text email link after click", async () => {
+    const wrapper = mount(ObfuscatedEmail, {
+      props: {
+        email: "contact@example.com",
+        revealLabel: "Reveal email",
+        requireReveal: true,
+        className: "rounded-xl border px-3 py-1",
+      },
+    });
+
+    const revealButton = wrapper.find("button");
+    expect(revealButton.exists()).toBe(true);
+    expect(revealButton.text()).toBe("Reveal email");
+    expect(revealButton.classes()).toContain("rounded-xl");
+
+    await revealButton.trigger("click");
+
+    const revealedLink = wrapper.find('a[href="mailto:contact@example.com"]');
+    expect(revealedLink.exists()).toBe(true);
+    expect(revealedLink.classes()).toContain("underline");
+    expect(revealedLink.classes()).not.toContain("rounded-xl");
+    expect(revealedLink.text()).toBe("moc.elpmaxe@tcatnoc");
   });
 });

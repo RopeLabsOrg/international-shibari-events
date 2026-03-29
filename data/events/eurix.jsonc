@@ -1,0 +1,176 @@
+{
+  "name": "EURIX",
+  "slug": "eurix",
+  "location": {
+    "city": "Berlin",
+    "country": "Germany",
+    "venue": "Saalchen Holzmarkt"
+  },
+  "links": {
+    "website": "https://felixruckert.de/2015/10/01/eurix/",
+    "fetlife": "https://fetlife.com/events/2034177",
+    "mailingList": null,
+    "contactEmail": "jana.felixruckert@gmx.de"
+  },
+  "status": "on_sale",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2023-04-17",
+      "endDate": "2023-04-22",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1209105 (FetLife event). Edition dates confirmed; no explicit announcement or ticket-open date in extracted fields."
+    },
+    {
+      "startDate": "2023-10-16",
+      "endDate": "2023-10-21",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1328948 (FetLife event). Edition dates confirmed; no explicit announcement or ticket-open date in extracted fields."
+    },
+    {
+      "startDate": "2024-04-01",
+      "endDate": "2024-04-06",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1404378 (FetLife event). Event title contains sold-out marker, but no explicit sold-out date is provided."
+    },
+    {
+      "startDate": "2024-10-14",
+      "endDate": "2024-10-19",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1539849 (FetLife event). Event title contains sold-out marker, but no explicit sold-out date is provided."
+    },
+    {
+      "startDate": "2025-04-14",
+      "endDate": "2025-04-19",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1628487 (FetLife event). Description states festival sold out; no explicit sold-out date is provided."
+    },
+    {
+      "startDate": "2025-10-20",
+      "endDate": "2025-10-25",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1798958 (FetLife event). Description states festival sold out; no explicit sold-out date is provided."
+    },
+    {
+      "startDate": "2026-04-13",
+      "endDate": "2026-04-18",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1930140 (FetLife event). Description states April edition sold out and mentions October registration already open, without explicit registration-open date."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-10-19",
+    "endDate": "2026-10-24",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": null,
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://felixruckert.de/2015/10/01/eurix/",
+    "status": "on_sale"
+  }
+}
+{
+  "name": "EURIX",
+  "slug": "eurix",
+  "location": {
+    "city": "Berlin",
+    "country": "Germany",
+    "venue": "Saalchen Holzmarkt"
+  },
+  "links": {
+    "website": "https://felixruckert.de/2015/10/01/eurix/",
+    "fetlife": null,
+    "mailingList": null,
+    "contactEmail": "jana.felixruckert@gmx.de"
+  },
+  "status": "on_sale",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2026-04-13",
+      "endDate": "2026-04-18",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "Tracker notes mark edition 28 as sold out and registration by email via organizer contacts."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-10-19",
+    "endDate": "2026-10-24",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": null,
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://felixruckert.de/2015/10/01/eurix/",
+    "status": "on_sale"
+  }
+}
+{
+  "name": "EURIX",
+  "slug": "eurix",
+  "location": {
+    "city": "Berlin",
+    "country": "Germany",
+    "venue": "Säälchen Holzmarkt"
+  },
+  "links": {
+    "website": "https://felixruckert.de/2015/10/01/eurix/",
+    "fetlife": "https://fetlife.com/FelixRuckert",
+    "mailingList": null,
+    "contactEmail": "jana.felixruckert@gmx.de"
+  },
+  "status": "on_sale",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2026-04-13",
+      "endDate": "2026-04-18",
+      "announcementDate": "2025-10-01",
+      "ticketSaleDate": "2025-10-01",
+      "soldOutDate": "2026-03-01",
+      "sourceNotes": "Edition 28 sold out. Registration by email."
+    },
+    {
+      "startDate": "2025-10-13",
+      "endDate": "2025-10-18",
+      "announcementDate": "2025-04-01",
+      "ticketSaleDate": "2025-04-01",
+      "soldOutDate": null,
+      "sourceNotes": "Biannual cadence observed in spring and autumn."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-10-19",
+    "endDate": "2026-10-24",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": "2026-03-15",
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": "2026-03-15",
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://felixruckert.de/2015/10/01/eurix/",
+    "status": "on_sale"
+  }
+}

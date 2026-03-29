@@ -1,0 +1,102 @@
+{
+  "name": "Austrian Rope Retreat",
+  "slug": "austrian-rope-retreat",
+  "location": {
+    "city": "Zobern",
+    "country": "Austria",
+    "venue": "Zobern, Lower Austria"
+  },
+  "links": {
+    "website": null,
+    "fetlife": null,
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "scheduled",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-09-17",
+    "endDate": "2026-09-21",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": "2026-04-12",
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": null,
+    "status": "scheduled"
+  }
+}
+{
+  "name": "Austrian Rope Retreat",
+  "slug": "austrian-rope-retreat",
+  "location": {
+    "city": "Zobern",
+    "country": "Austria",
+    "venue": "Zobern, Lower Austria"
+  },
+  "links": {
+    "website": null,
+    "fetlife": null,
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "scheduled",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-09-17",
+    "endDate": "2026-09-21",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": "2026-04-12",
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": null,
+    "status": "scheduled"
+  }
+}
+{
+  "name": "Austrian Rope Retreat",
+  "slug": "austrian-rope-retreat",
+  "location": {
+    "city": "Zobern",
+    "country": "Austria",
+    "venue": "Lower Austria countryside retreat site"
+  },
+  "links": {
+    "website": null,
+    "fetlife": "https://fetlife.com/rosen-rot",
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "scheduled",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2025-09-18",
+      "endDate": "2025-09-22",
+      "announcementDate": "2025-12-01",
+      "ticketSaleDate": "2025-12-01",
+      "soldOutDate": null,
+      "sourceNotes": "Application-based format with lottery preference tiers."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-09-17",
+    "endDate": "2026-09-21",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": "2026-04-12",
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": "2026-04-12",
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": null,
+    "status": "scheduled"
+  }
+}

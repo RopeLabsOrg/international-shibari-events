@@ -1,0 +1,120 @@
+{
+  "name": "Danish Shibari Festival",
+  "slug": "danish-shibari-festival",
+  "location": {
+    "city": "Sonder Felding",
+    "country": "Denmark",
+    "venue": "MyShibari, Sandetvej 8"
+  },
+  "links": {
+    "website": "https://www.danish-shibari.com/",
+    "fetlife": null,
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "sold_out",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2025-08-14",
+      "endDate": "2025-08-17",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "Official MyShibari page for the 2025 edition confirms date range and sold-out status: https://myshibari.dk/en/begivenheder/danish-shibari-festival-2025-2/"
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-08-13",
+    "endDate": "2026-08-16",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": null,
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://myshibari.dk/en/begivenheder/danish-shibari-festival-2026-2/",
+    "status": "sold_out"
+  }
+}
+{
+  "name": "Danish Shibari Festival",
+  "slug": "danish-shibari-festival",
+  "location": {
+    "city": "Sonder Felding",
+    "country": "Denmark",
+    "venue": "MyShibari, Sandetvej 8"
+  },
+  "links": {
+    "website": "https://www.danish-shibari.com/",
+    "fetlife": null,
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "sold_out",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2025-08-14",
+      "endDate": "2025-08-17",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "Official MyShibari page for the 2025 edition confirms date range and sold-out status: https://myshibari.dk/en/begivenheder/danish-shibari-festival-2025-2/"
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-08-13",
+    "endDate": "2026-08-16",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": null,
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://myshibari.dk/en/begivenheder/danish-shibari-festival-2026-2/",
+    "status": "sold_out"
+  }
+}
+{
+  "name": "Danish Shibari Festival",
+  "slug": "danish-shibari-festival",
+  "location": {
+    "city": "Sonder Felding",
+    "country": "Denmark",
+    "venue": "MyShibari"
+  },
+  "links": {
+    "website": "https://www.danish-shibari.com/",
+    "fetlife": "https://fetlife.com/MyShibari",
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "scheduled",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2025-08-14",
+      "endDate": "2025-08-17",
+      "announcementDate": "2024-11-20",
+      "ticketSaleDate": "2024-11-20",
+      "soldOutDate": null,
+      "sourceNotes": "Event usually announced late in the previous year."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-08-13",
+    "endDate": "2026-08-16",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": "2025-11-15",
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": "2025-11-15",
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://myshibari.dk/en/begivenheder/danish-shibari-festival-2026-2/",
+    "status": "scheduled"
+  }
+}

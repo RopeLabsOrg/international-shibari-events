@@ -1,0 +1,184 @@
+{
+  "name": "Prague Shibari Festival",
+  "slug": "prague-shibari-festival",
+  "location": {
+    "city": "Prague",
+    "country": "Czechia",
+    "venue": "Prague (exact venue shared after booking)"
+  },
+  "links": {
+    "website": "https://www.pragueshibari.com/",
+    "fetlife": "https://fetlife.com/events/1941040",
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "sold_out",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2024-05-17",
+      "endDate": "2024-05-19",
+      "announcementDate": null,
+      "ticketSaleDate": "2024-02-29",
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1468076 (FetLife event). Description says tickets available from 2024-02-29 at 23:00 CET."
+    },
+    {
+      "startDate": "2024-09-13",
+      "endDate": "2024-09-15",
+      "announcementDate": null,
+      "ticketSaleDate": "2024-06-20",
+      "soldOutDate": "2024-07-24",
+      "sourceNotes": "sourceEventId=1535094 (FetLife event). Description says tickets available from 2024-06-20 at 23:00 CET. Discussion createdAt=2024-07-24 reports sold out."
+    },
+    {
+      "startDate": "2025-09-12",
+      "endDate": "2025-09-14",
+      "announcementDate": null,
+      "ticketSaleDate": "2025-06-10",
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1795416 (FetLife event). Description says tickets available from 2025-06-10 at 23:00."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-05-15",
+    "endDate": "2026-05-17",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": "2025-11-20",
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://www.pragueshibari.com/events/tickets-2026-05-15/",
+    "status": "sold_out"
+  }
+}
+{
+  "name": "Prague Shibari Festival",
+  "slug": "prague-shibari-festival",
+  "location": {
+    "city": "Prague",
+    "country": "Czechia",
+    "venue": "Prague (exact venue shared after booking)"
+  },
+  "links": {
+    "website": "https://www.pragueshibari.com/",
+    "fetlife": null,
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "sold_out",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2025-09-12",
+      "endDate": "2025-09-14",
+      "announcementDate": null,
+      "ticketSaleDate": "2025-06-10",
+      "soldOutDate": null,
+      "sourceNotes": "Official tickets page for autumn 2025 confirms event dates and first ticket batch opening: https://www.pragueshibari.com/events/tickets-2025-09-12/"
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-05-15",
+    "endDate": "2026-05-17",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": "2025-11-20",
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://www.pragueshibari.com/events/tickets-2026-05-15/",
+    "status": "sold_out"
+  }
+}
+{
+  "name": "Prague Shibari Festival",
+  "slug": "prague-shibari-festival",
+  "location": {
+    "city": "Prague",
+    "country": "Czechia",
+    "venue": "Prague (exact venue shared after booking)"
+  },
+  "links": {
+    "website": "https://www.pragueshibari.com/",
+    "fetlife": null,
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "sold_out",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2025-09-12",
+      "endDate": "2025-09-14",
+      "announcementDate": null,
+      "ticketSaleDate": "2025-06-10",
+      "soldOutDate": null,
+      "sourceNotes": "Official tickets page for autumn 2025 confirms event dates and first ticket batch opening: https://www.pragueshibari.com/events/tickets-2025-09-12/"
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-05-15",
+    "endDate": "2026-05-17",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": "2025-11-20",
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://www.pragueshibari.com/events/tickets-2026-05-15/",
+    "status": "sold_out"
+  }
+}
+{
+  "name": "Prague Shibari Festival",
+  "slug": "prague-shibari-festival",
+  "location": {
+    "city": "Prague",
+    "country": "Czechia",
+    "venue": "Venue shared after booking"
+  },
+  "links": {
+    "website": "https://www.pragueshibari.com/",
+    "fetlife": "https://fetlife.com/SubspaceStudio",
+    "mailingList": null,
+    "contactEmail": null
+  },
+  "status": "sold_out",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2026-05-14",
+      "endDate": "2026-05-17",
+      "announcementDate": "2025-11-20",
+      "ticketSaleDate": "2025-11-20",
+      "soldOutDate": "2025-11-20",
+      "sourceNotes": "Spring tickets sold out in minutes, second batch one week later."
+    },
+    {
+      "startDate": "2025-09-12",
+      "endDate": "2025-09-14",
+      "announcementDate": "2025-03-15",
+      "ticketSaleDate": "2025-03-20",
+      "soldOutDate": "2025-03-20",
+      "sourceNotes": "Autumn edition follows similar cadence with two ticket waves."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-09-11",
+    "endDate": "2026-09-13",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": "2026-05-15",
+    "ticketSaleDate": null,
+    "estimatedTicketSaleDate": "2026-06-01",
+    "ticketUrl": "https://www.pragueshibari.com/",
+    "status": "sold_out"
+  }
+}

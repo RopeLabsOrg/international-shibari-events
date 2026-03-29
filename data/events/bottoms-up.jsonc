@@ -1,0 +1,56 @@
+{
+  "name": "Bottoms Up!",
+  "slug": "bottoms-up",
+  "location": {
+    "city": "Mol",
+    "country": "Belgium",
+    "venue": "TBA"
+  },
+  "links": {
+    "website": "https://docs.roguerope.be/",
+    "fetlife": null,
+    "mailingList": "https://docs.roguerope.be/docs/practical/participation/",
+    "contactEmail": null
+  },
+  "status": "tba",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2024-01-04",
+      "endDate": "2024-01-07",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "Provided timeline lists Jan. 4-7, 2024 with status 'Sale over'."
+    },
+    {
+      "startDate": "2025-01-02",
+      "endDate": "2025-01-06",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "Provided timeline lists Jan. 2-6, 2025 with status 'Sale over'."
+    },
+    {
+      "startDate": "2026-02-18",
+      "endDate": "2026-02-22",
+      "announcementDate": null,
+      "ticketSaleDate": "2025-12-01",
+      "soldOutDate": null,
+      "sourceNotes": "Homepage confirms Wed-Sun, 18-22 Feb 2026 (Mol) and states tickets were available December 1st, 2025."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": true,
+    "startDate": null,
+    "endDate": null,
+    "estimatedStartDate": "2027-02-17",
+    "estimatedEndDate": "2027-02-21",
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": null,
+    "estimatedTicketSaleDate": "2026-12-01",
+    "ticketUrl": "https://docs.roguerope.be/docs/practical/participation/",
+    "status": "tba"
+  }
+}

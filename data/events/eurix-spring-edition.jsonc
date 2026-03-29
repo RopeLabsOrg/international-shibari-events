@@ -1,0 +1,64 @@
+{
+  "name": "EURIX (Spring Edition)",
+  "slug": "eurix-spring-edition",
+  "location": {
+    "city": "Berlin",
+    "country": "Germany",
+    "venue": "Saalchen Holzmarkt"
+  },
+  "links": {
+    "website": "https://felixruckert.de/2015/10/01/eurix/",
+    "fetlife": "https://fetlife.com/events/1930140",
+    "mailingList": null,
+    "contactEmail": "jana.felixruckert@gmx.de"
+  },
+  "status": "tba",
+  "lastUpdated": "2026-03-29",
+  "historicalEditions": [
+    {
+      "startDate": "2023-04-17",
+      "endDate": "2023-04-22",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1209105 (FetLife event). Edition dates confirmed; no explicit announcement or ticket-open date in extracted fields."
+    },
+    {
+      "startDate": "2024-04-01",
+      "endDate": "2024-04-06",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1404378 (FetLife event). Event title contains sold-out marker, but no explicit sold-out date is provided."
+    },
+    {
+      "startDate": "2025-04-14",
+      "endDate": "2025-04-19",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1628487 (FetLife event). Description states festival sold out; no explicit sold-out date is provided."
+    },
+    {
+      "startDate": "2026-04-13",
+      "endDate": "2026-04-18",
+      "announcementDate": null,
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "sourceEventId=1930140 (FetLife event). Description states April edition sold out and mentions October registration already open, without explicit registration-open date."
+    }
+  ],
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": null,
+    "endDate": null,
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": null,
+    "ticketSaleDate": null,
+    "estimatedTicketSaleDate": null,
+    "ticketUrl": "https://felixruckert.de/2015/10/01/eurix/",
+    "status": "tba"
+  }
+}

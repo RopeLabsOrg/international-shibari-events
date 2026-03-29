@@ -50,7 +50,7 @@ describe("buyer guide website", () => {
       routes,
     });
 
-    router.push("/events/eurix");
+    router.push("/events/eurix-autumn-edition");
     await router.isReady();
 
     const wrapper = mount(EventPage, {

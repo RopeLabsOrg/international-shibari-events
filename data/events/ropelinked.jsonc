@@ -1,6 +1,6 @@
 {
-  "name": "RopeLinked",
-  "slug": "ropelinked",
+  "name": "RopeLinked (Summer Edition)",
+  "slug": "ropelinked-summer-edition",
   "location": {
     "city": "Rotterdam",
     "country": "Netherlands",
@@ -32,14 +32,6 @@
       "sourceNotes": "sourceEventId=1214654 (FetLife event). Event title includes sold-out marker but no explicit sold-out date."
     },
     {
-      "startDate": "2024-01-04",
-      "endDate": "2024-01-07",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1382715 (FetLife event). Event title includes sold-out marker; no explicit initial sale date in extracted text."
-    },
-    {
       "startDate": "2024-07-11",
       "endDate": "2024-07-14",
       "announcementDate": "2024-03-28",
@@ -48,28 +40,12 @@
       "sourceNotes": "sourceEventId=1384118 (FetLife event). Discussion createdAt=2024-03-28 announces tickets on 2024-04-19."
     },
     {
-      "startDate": "2025-01-02",
-      "endDate": "2025-01-05",
-      "announcementDate": "2024-10-28",
-      "ticketSaleDate": "2024-11-03",
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1506908 (FetLife event). Discussion createdAt=2024-10-28 announces registration window; event text states registration on 2024-11-03."
-    },
-    {
       "startDate": "2025-07-03",
       "endDate": "2025-07-06",
       "announcementDate": "2025-03-19",
       "ticketSaleDate": "2025-04-06",
       "soldOutDate": null,
       "sourceNotes": "sourceEventId=1646813 (FetLife event). Discussion createdAt=2025-03-19 announces registration timing; discussion createdAt=2025-04-06 confirms registration opened."
-    },
-    {
-      "startDate": "2026-01-08",
-      "endDate": "2026-01-11",
-      "announcementDate": "2025-10-18",
-      "ticketSaleDate": "2025-11-01",
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1863371 (FetLife event). Discussion createdAt=2025-10-18 announces Nov 1-2 registration; discussion createdAt=2025-11-01 confirms open-now."
     }
   ],
   "nextEdition": {
@@ -83,86 +59,6 @@
     "ticketSaleDate": "2026-03-28",
     "estimatedTicketSaleDate": null,
     "ticketUrl": "https://forms.gle/JKutzmCWvGUmaDh19",
-    "status": "waiting_list"
-  }
-}
-{
-  "name": "RopeLinked",
-  "slug": "ropelinked",
-  "location": {
-    "city": "Rotterdam",
-    "country": "Netherlands",
-    "venue": "Tangoschool Cuartito Azul, Schoterbosstraat 17"
-  },
-  "links": {
-    "website": "https://www.ellipsisrope.com/",
-    "fetlife": null,
-    "mailingList": "https://www.ellipsisrope.com/",
-    "contactEmail": "tickets@ellipsisrope.com"
-  },
-  "status": "waiting_list",
-  "lastUpdated": "2026-03-29",
-  "historicalEditions": [
-    {
-      "startDate": "2025-07-03",
-      "endDate": "2025-07-06",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "Tracker notes indicate a short late-March registration window and lottery allocation pattern."
-    }
-  ],
-  "nextEdition": {
-    "isEstimated": false,
-    "startDate": "2026-07-02",
-    "endDate": "2026-07-05",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
-    "announcementDate": null,
-    "estimatedAnnouncementDate": null,
-    "ticketSaleDate": "2026-03-28",
-    "estimatedTicketSaleDate": null,
-    "ticketUrl": "https://www.ellipsisrope.com/",
-    "status": "waiting_list"
-  }
-}
-{
-  "name": "RopeLinked",
-  "slug": "ropelinked",
-  "location": {
-    "city": "Rotterdam",
-    "country": "Netherlands",
-    "venue": "Tangoschool Cuartito Azul"
-  },
-  "links": {
-    "website": "https://www.ellipsisrope.com/",
-    "fetlife": "https://fetlife.com/Ellipsis",
-    "mailingList": "https://www.ellipsisrope.com/",
-    "contactEmail": "tickets@ellipsisrope.com"
-  },
-  "status": "waiting_list",
-  "lastUpdated": "2026-03-29",
-  "historicalEditions": [
-    {
-      "startDate": "2025-07-03",
-      "endDate": "2025-07-06",
-      "announcementDate": "2025-03-20",
-      "ticketSaleDate": "2025-03-28",
-      "soldOutDate": null,
-      "sourceNotes": "Registration uses short lottery window around late March."
-    }
-  ],
-  "nextEdition": {
-    "isEstimated": false,
-    "startDate": "2026-07-02",
-    "endDate": "2026-07-05",
-    "estimatedStartDate": null,
-    "estimatedEndDate": null,
-    "announcementDate": null,
-    "estimatedAnnouncementDate": "2026-03-20",
-    "ticketSaleDate": "2026-03-28",
-    "estimatedTicketSaleDate": null,
-    "ticketUrl": "https://www.ellipsisrope.com/",
     "status": "waiting_list"
   }
 }

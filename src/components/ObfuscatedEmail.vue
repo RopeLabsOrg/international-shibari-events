@@ -20,14 +20,12 @@ const props = withDefaults(defineProps<IProps>(), {
 
 const isRevealed = ref(!props.requireReveal);
 const obfuscatedDisplay = computed(() => props.email.split("").reverse().join(""));
+const mailtoHref = computed(() => `mailto:${props.email}`);
 
 function revealEmail(): void {
   isRevealed.value = true;
 }
 
-function openEmailClient(): void {
-  window.location.href = `mailto:${props.email}`;
-}
 </script>
 
 <template>
@@ -39,11 +37,10 @@ function openEmailClient(): void {
   >
     {{ props.revealLabel }}
   </button>
-  <button
+  <a
     v-else
-    type="button"
+    :href="mailtoHref"
     :class="props.className"
-    @click="openEmailClient"
   >
     <span
       v-if="props.showAddressWhenRevealed"
@@ -54,5 +51,5 @@ function openEmailClient(): void {
     <span v-else>
       {{ props.linkLabel }}
     </span>
-  </button>
+  </a>
 </template>

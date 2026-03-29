@@ -24,10 +24,10 @@ const sortedSummaries = computed(() => sortEventSummaries(getEventSummaries(even
     <header class="mb-6 flex flex-wrap items-end justify-between gap-4">
       <div>
         <h1 class="text-3xl font-bold text-[var(--color-secondary)] sm:text-4xl">
-          Event Buyer Guide
+          Upcoming Events
         </h1>
         <p class="mt-2 max-w-2xl text-sm text-[var(--color-muted)]">
-          Track upcoming rope events, ticket windows, and status at a glance. Estimated dates are labeled clearly.
+          Track upcoming rope events, ticket windows, and status at a glance. Dates may be estimates.
         </p>
         <div class="mt-3 max-w-2xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-text)] shadow-lg shadow-[rgba(58,42,26,0.1)]">
           Missing an event?

@@ -5,17 +5,13 @@ interface IProps {
   email: string;
   className?: string;
   revealLabel?: string;
-  linkLabel?: string;
   requireReveal?: boolean;
-  showAddressWhenRevealed?: boolean;
 }
 
 const props = withDefaults(defineProps<IProps>(), {
   className: "",
   revealLabel: "Reveal email",
-  linkLabel: "Email",
   requireReveal: false,
-  showAddressWhenRevealed: true,
 });
 
 const isRevealed = ref(!props.requireReveal);
@@ -32,7 +28,10 @@ function revealEmail(): void {
   <button
     v-if="!isRevealed"
     type="button"
-    :class="props.className"
+    :class="[
+      'cursor-pointer border-0 bg-transparent p-0 text-[var(--color-secondary)] underline decoration-dotted underline-offset-2 transition hover:text-[var(--color-primary)]',
+      props.className,
+    ]"
     @click="revealEmail"
   >
     {{ props.revealLabel }}
@@ -40,16 +39,13 @@ function revealEmail(): void {
   <a
     v-else
     :href="mailtoHref"
-    :class="props.className"
+    :class="[
+      'text-[var(--color-secondary)] underline decoration-dotted underline-offset-2 transition hover:text-[var(--color-primary)]',
+      props.className,
+    ]"
   >
-    <span
-      v-if="props.showAddressWhenRevealed"
-      class="[direction:rtl] [unicode-bidi:bidi-override]"
-    >
+    <span class="[direction:rtl] [unicode-bidi:bidi-override]">
       {{ obfuscatedDisplay }}
-    </span>
-    <span v-else>
-      {{ props.linkLabel }}
     </span>
   </a>
 </template>

@@ -122,10 +122,8 @@ async function openEventDetails(): Promise<void> {
         <ObfuscatedEmail
           :email="event.links.contactEmail"
           reveal-label="Reveal email"
-          link-label="Email"
           :require-reveal="true"
-          :show-address-when-revealed="false"
-          class-name="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
+          class-name="text-slate-200"
         />
       </div>
     </div>

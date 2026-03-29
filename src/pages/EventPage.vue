@@ -190,10 +190,8 @@ const temporalStateLabelMap: Record<string, string> = {
           v-if="event.links.contactEmail"
           :email="event.links.contactEmail"
           reveal-label="Reveal contact email"
-          link-label="Contact email"
           :require-reveal="true"
-          :show-address-when-revealed="false"
-          class-name="rounded border border-slate-700 px-3 py-1 text-slate-200 transition hover:border-[var(--color-primary)] hover:text-[var(--color-secondary)]"
+          class-name="text-slate-200"
         />
       </div>
     </section>

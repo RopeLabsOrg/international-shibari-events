@@ -1,0 +1,42 @@
+---
+description: GitHub Actions automation for event status and reminder issues
+globs: .github/**/*
+alwaysApply: false
+---
+
+# Daily Automation Strategy
+
+- Run a scheduled GitHub Action once per day (`07:00 UTC`).
+- Split behavior into:
+  - deterministic status updates (safe auto-commit), and
+  - reminder issue creation for key monitoring windows.
+
+# Auto-Status Rules
+
+- Parse all `data/events/*.jsonc` files.
+- Normalize status to allowed enum: `scheduled`, `on_sale`, `sold_out`, `waiting_list`, `tba`.
+- If `ticketSaleDate` exists and is on or before today while status is `scheduled`, set `on_sale`.
+- Do not store temporal states like `happening_now` in `status`; infer those from dates at build/runtime.
+- Commit only when files actually change.
+
+# Reminder-Issue Rules
+
+- Open issue during an event's expected announcement window.
+- Open issue during an event's expected ticket-sale window.
+- Open issue when `lastUpdated` is 90+ days old.
+- Avoid duplicates by checking existing open issues for same title.
+- Apply labels: `status-reminder`, plus category labels when useful.
+
+# Workflow Behavior
+
+- Trigger on `schedule` and optional `workflow_dispatch`.
+- Use a script in `scripts/update-statuses.ts` to produce:
+  - changed files, and
+  - reminder payload for issue creation.
+- Run `scripts/validate-events.ts` before status updates/build.
+- Use `actions/github-script` or `gh` API calls to create reminder issues.
+- Run the site build at least daily so date-derived UI states remain accurate.
+- Use Node LTS in CI (`actions/setup-node` with `lts/*`).
+- Keep permissions minimal (`contents: write`, `issues: write`).
+- Use TypeScript for project automation scripts.
+- Keep event types derived from `schemas/event.schema.ts` (single source of truth).

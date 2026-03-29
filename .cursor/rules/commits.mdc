@@ -1,0 +1,33 @@
+---
+description: Commit and branch conventions for this repository
+alwaysApply: true
+---
+
+# Commit Message Convention
+
+- Use gitmoji shortcode + one concise line.
+- Format: `:<gitmoji>: <single-line description>`
+- Keep subject imperative and specific.
+
+# Preferred Gitmojis
+
+- `:sparkles:` new feature work
+- `:card_file_box:` event data additions or updates
+- `:lipstick:` visual/UI improvements
+- `:bug:` bug fixes
+- `:robot:` automated status/data updates from workflow
+- `:memo:` docs and guidance updates
+- `:wrench:` tooling and workflow configuration
+
+# Examples
+
+- `:sparkles: Add buyer-guide style event overview page`
+- `:card_file_box: Update RopeLinked X status to sold_out`
+- `:robot: Auto-update event statuses`
+
+# Branch and PR Flow
+
+- Never commit directly to protected branches (`main`, `staging`).
+- Use prefixes: `feat/`, `fix/`, `docs/`, `data/`, `chore/`.
+- Prefer `data/*` for event-data-only changes.
+- Open PRs for all changes with a clear test/check plan.

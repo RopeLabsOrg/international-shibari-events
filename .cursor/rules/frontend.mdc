@@ -1,0 +1,47 @@
+---
+description: Frontend UI conventions for buyer-guide style SPA
+globs: src/**/*
+alwaysApply: false
+---
+
+# Frontend Principles
+
+- Use SPA patterns compatible with GitHub Pages static hosting.
+- Use TypeScript for frontend source files.
+- Keep templates simple and data-driven from JSONC event files.
+- Prefer readable component boundaries over one large page script.
+
+# Styling
+
+- Use Tailwind CSS utility classes; avoid plain CSS unless unavoidable.
+- Keep design responsive and mobile-first.
+- Prioritize clarity over decoration: status and dates must be scannable.
+
+# Event Card Requirements
+
+- Show event name, location, and next date range.
+- Show a strong status badge (`scheduled`, `on_sale`, `sold_out`, `waiting_list`, `tba`).
+- Show ticket timing hints (known or estimated sale date).
+- Show direct action links for `website`, `FetLife`, and `mailing list/contact`.
+- Distinguish estimated dates from confirmed dates.
+
+# Status Presentation
+
+- `scheduled`: neutral gray badge
+- `on_sale`: green badge
+- `sold_out`: red badge
+- `waiting_list`: amber/yellow badge
+- `tba`: muted gray badge
+
+# Date-Inferred State
+
+- Derive temporal state from `nextEdition` dates instead of storing it in `status`.
+- Example derived labels: `happening_now`, `upcoming`, `ended_recently`.
+- Recompute derived labels on each build so date boundaries stay accurate.
+
+# Accessibility and UX
+
+- Use semantic headings and landmark regions.
+- Ensure links and controls are keyboard reachable.
+- Provide clear text labels, not icon-only navigation.
+- Keep contrast high for all badge and text combinations.

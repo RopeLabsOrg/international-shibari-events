@@ -1,0 +1,35 @@
+---
+description: Project architecture and scope for the Shibari Events SPA
+alwaysApply: true
+---
+
+# Shibari Events Project Scope
+
+- Build a static SPA hosted on GitHub Pages.
+- Keep runtime fully client-side with no backend services.
+- Follow a buyer's-guide style UX inspired by [MacRumors Buyer's Guide](https://buyersguide.macrumors.com/).
+- Store event data in repository-managed, human-readable files.
+
+# Architecture Constraints
+
+- Use a frontend-only stack suitable for static hosting.
+- Use TypeScript for application and automation code.
+- Standardize local toolchain with `mise` (`node@lts`, `npm@latest`).
+- Maintain one source of truth for event contracts: JSON Schema + derived TS types.
+- Keep data files as source of truth and derive UI state from them.
+- Do not hide business data in compiled artifacts.
+- Avoid introducing infrastructure that requires secrets for normal operation.
+
+# Product Behavior
+
+- Show upcoming and active events, never past-only listings.
+- If an event has no confirmed future date, compute and display an estimated next date from history.
+- Persist only business statuses: `scheduled`, `on_sale`, `sold_out`, `waiting_list`, `tba`.
+- Infer temporal states (`happening_now`, `upcoming`, `ended`) from dates during build/runtime.
+- Always show direct links to website, FetLife, and mailing-list or contact channels when available.
+
+# Deployment
+
+- Keep the app deployable through GitHub Pages workflows.
+- Keep generated site assets in the configured Pages output directory.
+- Ensure daily rebuilds so date-derived states stay fresh even without manual edits.

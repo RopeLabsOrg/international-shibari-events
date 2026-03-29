@@ -1,0 +1,31 @@
+---
+description: Data contribution workflow for community event updates
+globs: data/**/*
+alwaysApply: false
+---
+
+# Contributing Event Data
+
+- Keep contributions focused and verifiable.
+- Prefer one event per PR unless updates are tightly related.
+- Add source context in comments (`sourceNotes`) for future maintainers.
+
+# Add a New Event
+
+1. Create `data/events/<event-slug>.jsonc`.
+2. Fill identity, links, status, `lastUpdated`, `historicalEditions`, and `nextEdition`.
+3. Include comments for non-obvious assumptions (especially estimated dates).
+4. Ensure no past-only display behavior (provide a future estimate when needed).
+
+# Update an Existing Event
+
+- Update `status`, `nextEdition`, and any ticket fields that changed.
+- Append new completed editions to `historicalEditions`.
+- Refresh `lastUpdated` every time data is touched.
+- Preserve existing comments that explain provenance.
+
+# PR Conventions
+
+- Title format: `:card_file_box: Add/Update <Event Name>`.
+- Include links used for verification in the PR description.
+- Mention whether dates are confirmed or estimated.

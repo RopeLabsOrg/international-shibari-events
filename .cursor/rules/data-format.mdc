@@ -1,0 +1,89 @@
+---
+description: JSONC schema and conventions for event data files
+globs: data/**/*.jsonc
+alwaysApply: false
+---
+
+# Event Data Format (JSONC)
+
+- Keep files human-readable and comment-rich for community PRs.
+- Use JSONC (`.jsonc`) so inline comments can explain intent.
+- Store one event per file under `data/events/`.
+- Keep schema as single source of truth in `schemas/event.schema.ts`.
+- Derive TypeScript types from JSON Schema instead of duplicating interfaces.
+
+# Required Top-Level Fields
+
+- `name`: display name, stable across editions.
+- `slug`: URL-safe stable identifier.
+- `location`: `{ city, country, venue }`.
+- `links`: `{ website, fetlife, mailingList, contactEmail }`.
+- `status`: one of `scheduled`, `on_sale`, `sold_out`, `waiting_list`, `tba`.
+- `lastUpdated`: ISO date (`YYYY-MM-DD`) for staleness reminders.
+- `historicalEditions`: array of known past editions.
+- `nextEdition`: confirmed or estimated upcoming edition.
+
+# Edition Structures
+
+- `historicalEditions[]` item:
+  - `startDate` / `endDate` (ISO date)
+  - `announcementDate` (nullable)
+  - `ticketSaleDate` (nullable)
+  - `soldOutDate` (nullable)
+  - `sourceNotes` (short provenance note)
+- `nextEdition`:
+  - `isEstimated` (boolean)
+  - `startDate` / `endDate` (nullable when unknown)
+  - `estimatedStartDate` / `estimatedEndDate` (nullable)
+  - `announcementDate` / `estimatedAnnouncementDate` (nullable)
+  - `ticketSaleDate` / `estimatedTicketSaleDate` (nullable)
+  - `ticketUrl` (nullable)
+  - `status` (same enum as top-level)
+
+# Estimation Rule
+
+- Never render past-only listings in the app.
+- If no confirmed future date exists, set `nextEdition.isEstimated = true`.
+- Base estimates on historical cadence (median month/day gap when possible).
+
+# Example Template
+
+```jsonc
+{
+  // Stable event identity
+  "name": "Prague Shibari Festival",
+  "slug": "prague-shibari-festival",
+
+  "location": {
+    "city": "Prague",
+    "country": "Czechia",
+    "venue": "TBA after booking"
+  },
+
+  "links": {
+    "website": "https://www.pragueshibari.com/",
+    "fetlife": "https://fetlife.com/users/example",
+    "mailingList": null,
+    "contactEmail": null
+  },
+
+  "status": "scheduled",
+  "lastUpdated": "2026-03-29",
+
+  "historicalEditions": [],
+
+  "nextEdition": {
+    "isEstimated": false,
+    "startDate": "2026-09-11",
+    "endDate": "2026-09-13",
+    "estimatedStartDate": null,
+    "estimatedEndDate": null,
+    "announcementDate": null,
+    "estimatedAnnouncementDate": "2026-05-15",
+    "ticketSaleDate": null,
+    "estimatedTicketSaleDate": "2026-06-01",
+    "ticketUrl": "https://www.pragueshibari.com/",
+    "status": "sold_out"
+  }
+}
+```

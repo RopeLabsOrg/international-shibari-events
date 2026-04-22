@@ -26,7 +26,7 @@ async function openEventDetails(): Promise<void> {
 
 <template>
   <article
-    class="cursor-pointer rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-lg shadow-[rgba(58,42,26,0.1)] transition hover:-translate-y-0.5 hover:border-[var(--color-primary)] hover:shadow-xl hover:shadow-[rgba(58,42,26,0.15)]"
+    class="cursor-pointer rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-lg shadow-[rgba(26,35,50,0.08)] transition hover:-translate-y-0.5 hover:border-[var(--color-primary)] hover:shadow-xl hover:shadow-[rgba(26,35,50,0.14)]"
     role="link"
     tabindex="0"
     @click="openEventDetails()"
@@ -58,7 +58,7 @@ async function openEventDetails(): Promise<void> {
         </p>
         <p class="mt-1 text-sm font-medium text-[var(--color-text)]">
           {{ dateRange }}
-          <span v-if="summary.nextDate.isEstimated" class="ml-2 rounded-full bg-[rgba(127,103,71,0.14)] px-2 py-0.5 text-xs text-[var(--color-highlight)]">
+          <span v-if="summary.nextDate.isEstimated" class="ml-2 rounded-full bg-[rgba(44,74,107,0.10)] px-2 py-0.5 text-xs font-medium text-[var(--color-secondary)]">
             Estimated
           </span>
         </p>
@@ -69,7 +69,7 @@ async function openEventDetails(): Promise<void> {
         </p>
         <p class="mt-1 text-sm font-medium text-[var(--color-text)]">
           {{ summary.ticketDate.value ? summary.ticketDate.value.toISOString().slice(0, 10) : "TBA" }}
-          <span v-if="summary.ticketDate.isEstimated" class="ml-2 rounded-full bg-[rgba(127,103,71,0.14)] px-2 py-0.5 text-xs text-[var(--color-highlight)]">
+          <span v-if="summary.ticketDate.isEstimated" class="ml-2 rounded-full bg-[rgba(44,74,107,0.10)] px-2 py-0.5 text-xs font-medium text-[var(--color-secondary)]">
             Estimated
           </span>
         </p>

@@ -18,7 +18,7 @@ const formattedDate = computed(() => formatDisplayDate(props.value));
     </p>
     <p class="mt-1 text-sm font-medium text-[var(--color-text)]">
       {{ formattedDate }}
-      <span v-if="isEstimated" class="ml-2 rounded-full bg-[rgba(127,103,71,0.14)] px-2 py-0.5 text-xs text-[var(--color-highlight)]">
+      <span v-if="isEstimated" class="ml-2 rounded-full bg-[rgba(44,74,107,0.10)] px-2 py-0.5 text-xs font-medium text-[var(--color-secondary)]">
         Estimated
       </span>
     </p>

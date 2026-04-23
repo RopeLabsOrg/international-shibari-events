@@ -1,0 +1,32 @@
+# Cloudflare Worker local-dev secrets. Copy to `worker/.dev.vars` and fill in.
+# Never commit `.dev.vars`. Production values are set via `wrangler secret put`.
+#
+# See docs/operations.md (when it lands with the Worker lane) for rotation doctrine.
+
+# HMAC key used to sign confirm/unsubscribe tokens. Purpose prefix inside the
+# signed payload keeps the two domains isolated ("confirm|..." vs "unsub|...").
+# Rotation: set SIGNING_KEY to a new random 32 bytes, move old value to
+# SIGNING_KEY_PREVIOUS for a 48h acceptance window, then clear SIGNING_KEY_PREVIOUS.
+SIGNING_KEY=
+
+# Previous signing key, accepted during a rotation window. Empty when not rotating.
+SIGNING_KEY_PREVIOUS=
+
+# Pepper for emailHash = HMAC(EMAIL_PEPPER, lowercase-trimmed-email).
+# WRITE-ONCE: rotating this re-hashes every subscriber, orphaning all `sub:*`
+# KV keys. Treat as permanent for the life of the deployment.
+EMAIL_PEPPER=
+
+# Resend API key for transactional sends. Rotate via Resend dashboard +
+# `wrangler secret put` in one pass; old key keeps sending for the Resend-side
+# TTL.
+RESEND_API_KEY=
+
+# Standard Webhooks (svix) signing secret for the Resend bounce/complaint webhook.
+# Verified server-side on every POST /api/resend-webhook request.
+RESEND_WEBHOOK_SECRET=
+
+# Cloudflare Turnstile keys. Site key is embedded in the SPA; secret key stays
+# server-side for token verification on POST /api/subscribe.
+TURNSTILE_SITE_KEY=
+TURNSTILE_SECRET_KEY=

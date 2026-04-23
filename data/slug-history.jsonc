@@ -1,0 +1,32 @@
+// Append-only ledger of every event slug that has ever shipped publicly.
+//
+// WHY: real users have slugs stored in their browser's localStorage via the
+// Watch button (H4 in the product plan). Changing or removing a slug silently
+// breaks their watchlist. This ledger enforces the invariant at PR-review time.
+//
+// Rules:
+// - A slug currently in `data/events/*.jsonc` must appear in `active`.
+// - To retire an event, move its slug from `active` to `retired` (do not delete).
+// - Never re-use a retired slug for a different event.
+// - New event? Append the slug to `active` in the same PR that adds the file.
+// - Typo in a slug you just shipped? If it hasn't hit main yet, rename freely.
+//   If it's already live, ship a fix, keep the old slug in `retired` forever.
+{
+  "active": [
+    "austrian-rope-retreat",
+    "bottoms-up",
+    "danish-shibari-festival",
+    "eurix-autumn-edition",
+    "eurix-spring-edition",
+    "graines-de-cordes",
+    "kasumi-hourai-akane-antwerp",
+    "onawa-asobi-europe",
+    "pinse-camp",
+    "prague-shibari-festival-autumn-edition",
+    "prague-shibari-festival-spring-edition",
+    "rogue-rope-camp",
+    "ropelinked-summer-edition",
+    "ropelinked-winter-edition"
+  ],
+  "retired": []
+}

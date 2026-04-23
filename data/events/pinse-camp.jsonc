@@ -24,125 +24,12 @@
       "sourceNotes": "sourceEventId=1420907 (FetLife event). CAMP edition from pinse.json, title marks sold out but no explicit sold-out date."
     },
     {
-      "startDate": "2025-06-06",
-      "endDate": "2025-06-09",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1640265 (FetLife event). CAMP edition from pinse.json."
-    }
-  ],
-  "nextEdition": {
-    "startDate": "2026-05-22",
-    "endDate": "2026-05-25",
-    "announcementDate": null,
-    "ticketSaleDate": null,
-    "ticketUrl": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
-    "status": "scheduled"
-  }
-}
-{
-  "name": "Pinse Camp",
-  "slug": "pinse-camp",
-  "location": {
-    "city": "Sonder Felding",
-    "country": "Denmark",
-    "venue": "MyShibari, Sandetvej 8"
-  },
-  "links": {
-    "website": "https://myshibari.dk/",
-    "fetlife": "https://fetlife.com/events/1862694",
-    "mailingList": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
-    "contactEmail": null
-  },
-  "status": "scheduled",
-  "lastUpdated": "2026-03-29",
-  "historicalEditions": [],
-  "nextEdition": {
-    "startDate": "2026-05-22",
-    "endDate": "2026-05-25",
-    "announcementDate": null,
-    "ticketSaleDate": null,
-    "ticketUrl": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
-    "status": "scheduled"
-  }
-}
-{
-  "name": "Pinse Camp",
-  "slug": "pinse-camp",
-  "location": {
-    "city": "Sonder Felding",
-    "country": "Denmark",
-    "venue": "MyShibari, Sandetvej 8"
-  },
-  "links": {
-    "website": "https://myshibari.dk/",
-    "fetlife": null,
-    "mailingList": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
-    "contactEmail": null
-  },
-  "status": "scheduled",
-  "lastUpdated": "2026-03-29",
-  "historicalEditions": [],
-  "nextEdition": {
-    "startDate": "2026-05-22",
-    "endDate": "2026-05-25",
-    "announcementDate": null,
-    "ticketSaleDate": null,
-    "ticketUrl": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
-    "status": "scheduled"
-  }
-}
-{
-  "name": "Pinse Camp",
-  "slug": "pinse-camp",
-  "location": {
-    "city": "Sonder Felding",
-    "country": "Denmark",
-    "venue": "MyShibari, Sandetvej 8"
-  },
-  "links": {
-    "website": "https://myshibari.dk/",
-    "fetlife": null,
-    "mailingList": null,
-    "contactEmail": null
-  },
-  "status": "scheduled",
-  "lastUpdated": "2026-03-29",
-  "historicalEditions": [],
-  "nextEdition": {
-    "startDate": "2026-05-22",
-    "endDate": "2026-05-25",
-    "announcementDate": null,
-    "ticketSaleDate": null,
-    "ticketUrl": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
-    "status": "scheduled"
-  }
-}
-{
-  "name": "Pinse Camp",
-  "slug": "pinse-camp",
-  "location": {
-    "city": "Sonder Felding",
-    "country": "Denmark",
-    "venue": "MyShibari"
-  },
-  "links": {
-    "website": "https://myshibari.dk/",
-    "fetlife": "https://fetlife.com/MyShibari",
-    "mailingList": "https://myshibari.dk/en/begivenheder/pinse-camp-2026-4/",
-    "contactEmail": null
-  },
-  "status": "scheduled",
-  "lastUpdated": "2026-03-29",
-  "historicalEditions": [
-    {
       "startDate": "2025-05-23",
       "endDate": "2025-05-26",
       "announcementDate": "2024-08-15",
       "ticketSaleDate": "2024-08-15",
       "soldOutDate": null,
-      "sourceNotes": "Camp usually announced in late summer with slower ticket turnover."
+      "sourceNotes": "sourceEventId=1640265 (FetLife event). CAMP edition from pinse.json. Camp usually announced in late summer with slower ticket turnover."
     }
   ],
   "nextEdition": {

@@ -8,75 +8,6 @@
   },
   "links": {
     "website": "https://www.atelier-mae-shibari.com/",
-    "fetlife": null,
-    "mailingList": "https://www.billetweb.fr/graines-de-cordes",
-    "contactEmail": null
-  },
-  "status": "tba",
-  "lastUpdated": "2026-03-29",
-  "historicalEditions": [
-    {
-      "startDate": "2023-07-07",
-      "endDate": "2023-07-09",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "Tracker notes confirm edition I in July 2023; official 2026 details remain unverified."
-    },
-    {
-      "startDate": "2024-07-05",
-      "endDate": "2024-07-07",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "Tracker notes confirm edition II in July 2024; official 2026 details remain unverified."
-    }
-  ],
-  "nextEdition": {
-    "startDate": null,
-    "endDate": null,
-    "announcementDate": null,
-    "ticketSaleDate": null,
-    "ticketUrl": "https://www.billetweb.fr/graines-de-cordes",
-    "status": "tba"
-  }
-}
-{
-  "name": "Graines de Cordes",
-  "slug": "graines-de-cordes",
-  "location": {
-    "city": "Namur",
-    "country": "Belgium",
-    "venue": "Atelier Mae / Mauvaise Graine"
-  },
-  "links": {
-    "website": "https://www.atelier-mae-shibari.com/",
-    "fetlife": null,
-    "mailingList": null,
-    "contactEmail": null
-  },
-  "status": "tba",
-  "lastUpdated": "2026-03-29",
-  "historicalEditions": [],
-  "nextEdition": {
-    "startDate": null,
-    "endDate": null,
-    "announcementDate": null,
-    "ticketSaleDate": null,
-    "ticketUrl": "https://www.billetweb.fr/graines-de-cordes",
-    "status": "tba"
-  }
-}
-{
-  "name": "Graines de Cordes",
-  "slug": "graines-de-cordes",
-  "location": {
-    "city": "Namur",
-    "country": "Belgium",
-    "venue": "Atelier Mae / Mauvaise Graine"
-  },
-  "links": {
-    "website": "https://www.atelier-mae-shibari.com/",
     "fetlife": "https://fetlife.com/AtelierMae",
     "mailingList": "https://www.billetweb.fr/graines-de-cordes",
     "contactEmail": null
@@ -85,20 +16,20 @@
   "lastUpdated": "2026-03-29",
   "historicalEditions": [
     {
-      "startDate": "2024-07-05",
-      "endDate": "2024-07-07",
-      "announcementDate": "2024-04-01",
-      "ticketSaleDate": "2024-04-10",
-      "soldOutDate": null,
-      "sourceNotes": "Edition II confirmed in July 2024."
-    },
-    {
       "startDate": "2023-07-07",
       "endDate": "2023-07-09",
       "announcementDate": "2023-04-01",
       "ticketSaleDate": "2023-04-10",
       "soldOutDate": null,
-      "sourceNotes": "Edition I confirmed in July 2023."
+      "sourceNotes": "Edition I confirmed in July 2023; announcement/ticket dates approximate from tracker notes."
+    },
+    {
+      "startDate": "2024-07-05",
+      "endDate": "2024-07-07",
+      "announcementDate": "2024-04-01",
+      "ticketSaleDate": "2024-04-10",
+      "soldOutDate": null,
+      "sourceNotes": "Edition II confirmed in July 2024; announcement/ticket dates approximate from tracker notes."
     }
   ],
   "nextEdition": {

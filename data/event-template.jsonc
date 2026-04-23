@@ -1,0 +1,66 @@
+// Canonical shape for a single event file. Copy this to
+// `data/events/<slug>.jsonc`, fill in the fields, and run
+// `npm run validate:data` to check your work.
+//
+// Every field below is REQUIRED. Use `null` for unknown values — never omit
+// a key (the validator rejects missing keys and extra keys).
+//
+// Dates are ISO-8601 (YYYY-MM-DD). URLs are absolute (https://...) or null.
+//
+// After adding a new event, append its slug to the "active" array in
+// `data/slug-history.jsonc`. Slugs are permanent once shipped: real users
+// have the slug saved in their browser (via the Watch button / localStorage).
+// Renaming a slug silently breaks their watchlist.
+
+{
+  // Display name shown on the site.
+  "name": "Your Event Name",
+
+  // URL-safe slug: lowercase, hyphens only. Must match `^[a-z0-9]+(-[a-z0-9]+)*$`.
+  // This also becomes the filename: `data/events/<slug>.jsonc`.
+  "slug": "your-event-slug",
+
+  "location": {
+    "city": "City Name",
+    "country": "Country Name",
+    "venue": "Venue name and/or street address"
+  },
+
+  // Each field is a URL or null.
+  "links": {
+    "website": "https://example.com/",
+    "fetlife": "https://fetlife.com/events/000000",
+    "mailingList": "https://example.com/subscribe",
+    "contactEmail": "info@example.com"
+  },
+
+  // One of: "scheduled" | "on_sale" | "sold_out" | "waiting_list" | "tba"
+  "status": "tba",
+
+  // ISO date the record was last checked or edited (YYYY-MM-DD).
+  "lastUpdated": "2026-04-22",
+
+  // Prior editions you can confirm. Most recent first is fine; order doesn't
+  // affect prediction logic but helps reviewers.
+  "historicalEditions": [
+    {
+      "startDate": "2025-07-04",
+      "endDate": "2025-07-06",
+      "announcementDate": "2025-03-01", // when the event was publicly announced, or null
+      "ticketSaleDate": "2025-03-15", // when tickets opened (critical for prediction), or null
+      "soldOutDate": null, // when tickets sold out, or null
+      "sourceNotes": "FetLife event 1234567 confirms dates. Ticket sale date observed via mailing list."
+    }
+  ],
+
+  // The upcoming edition. Leave fields null until they're publicly confirmed;
+  // the site derives predicted dates at runtime from historicalEditions.
+  "nextEdition": {
+    "startDate": null,
+    "endDate": null,
+    "announcementDate": null,
+    "ticketSaleDate": null,
+    "ticketUrl": null, // URL to the ticket page when it opens
+    "status": "tba" // same enum as top-level "status"
+  }
+}

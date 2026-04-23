@@ -1,12 +1,44 @@
 # International Shibari Events
 
-A static, community-driven directory of international shibari events. Runtime-derived predictions of next editions, confidence and provenance on every date, and a buyer-guide browse UX inspired by MacRumors.
+A static, community-driven directory of international shibari events.
+Runtime-derived predictions of next editions, confidence and provenance on
+every date, and a buyer-guide browse UX inspired by MacRumors.
 
-**Stack:** Vue 3 + Vite + TypeScript + Tailwind 4 + Vitest. Hosted on GitHub Pages. Data lives as JSONC files per event in `data/events/`. Daily GitHub Action (`daily-status.yml`) updates statuses and opens maintainer reminder issues.
+**Stack:** Vue 3 + Vite + TypeScript + Tailwind 4 + Vitest. Hosted on GitHub
+Pages. Data lives as JSONC files per event in `data/events/`. Daily GitHub
+Action (`daily-status.yml`) updates statuses and opens maintainer reminder
+issues.
 
 **Source of truth docs:** `docs/website-architecture-and-product-decisions.md`.
 
-**Ecosystem context:** This site is the discovery layer for a three-part rope-scene ecosystem: [RopeLabs](https://ropelabs.org/) (teaching) and [Tsuri Neko](https://tsurineko.org/) (rope sales). Keep transactional (event reminders) and marketing (ecosystem cross-promotion) consent strictly separate — never conflate the two in email flows or data capture.
+**Ecosystem context:** this site is the discovery layer in a five-site rope
+ecosystem run through Peg Productions BV (Tsuri Neko). CNAME is
+`international-events.tsurineko.org`; the repo lives under the `tsurineko.org`
+subdomain family. Siblings:
+
+- `tsurineko.org` — main content (teaching, jams, classes)
+- `shop.tsurineko.org` — e-commerce (rope + safety scissors)
+- `ropelabs.org` — RopeLabs international teaching (matcha accent family)
+- `ropelabs.be` — standalone Belgian wellness/movement surface (non-shibari;
+  do not cross-link or mirror content in either direction)
+
+Keep transactional (event reminders) and marketing (ecosystem cross-promotion)
+consent strictly separate — never conflate the two in email flows or data
+capture.
+
+## Design language
+
+This site is the **reference implementation** of the Tsuri Neko kakiiro
+palette. Canonical tokens live in the umbrella `DESIGN.md`; this repo's
+local `DESIGN.md` mirrors it with a dated sync note and is the day-to-day
+reference for contributors.
+
+- Accent: **kakiiro `#c2562a`** — persimmon/jute, shared across the three
+  Tsuri Neko family sites.
+- `src/styles.css` carries the `:root` token block.
+- Known migration debt: `src/components/StatusPill.vue` (and possibly a
+  couple of siblings) still contain raw hex values from before the palette
+  landed. New components must go through tokens.
 
 ## Skill routing
 

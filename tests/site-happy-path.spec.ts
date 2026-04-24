@@ -3,9 +3,12 @@ import { mount } from "@vue/test-utils";
 import { createMemoryHistory, createRouter } from "vue-router";
 import HomePage from "../src/pages/HomePage.vue";
 import EventPage from "../src/pages/EventPage.vue";
+import TicketsPage from "../src/pages/TicketsPage.vue";
+import WatchlistPage from "../src/pages/WatchlistPage.vue";
 import ObfuscatedEmail from "../src/components/ObfuscatedEmail.vue";
 import { routes } from "../src/router";
 import { loadEventsData, sortEventSummaries, getEventSummaries } from "../src/lib/events";
+import { _resetWatchlistForTests } from "../src/lib/watchlist";
 
 describe("buyer guide website", () => {
   it("sorts by event date with confirmed before estimated", () => {
@@ -81,6 +84,38 @@ describe("buyer guide website", () => {
     expect(wrapper.text()).toContain("Official links");
     expect(wrapper.text()).toContain("Temporal state");
     expect(wrapper.text()).toContain("Reveal contact email");
+  });
+
+  it("renders tickets page with on-sale and opening-later sections", async () => {
+    const router = createRouter({ history: createMemoryHistory(), routes });
+    router.push("/tickets");
+    await router.isReady();
+
+    const wrapper = mount(TicketsPage, {
+      global: { plugins: [router] },
+    });
+
+    expect(wrapper.text()).toContain("Ticket watch");
+    // The split depends on current event data state, but the page must render one or the other section,
+    // or else the empty-state heading if neither applies.
+    const hasOnSale = wrapper.text().includes("Tickets on sale now");
+    const hasOpeningLater = wrapper.text().includes("Tickets opening later");
+    const hasEmptyState = wrapper.text().includes("No ticket windows to watch");
+    expect(hasOnSale || hasOpeningLater || hasEmptyState).toBe(true);
+  });
+
+  it("renders watchlist page empty state when nothing is watched", async () => {
+    _resetWatchlistForTests();
+    const router = createRouter({ history: createMemoryHistory(), routes });
+    router.push("/watchlist");
+    await router.isReady();
+
+    const wrapper = mount(WatchlistPage, {
+      global: { plugins: [router] },
+    });
+
+    expect(wrapper.text()).toContain("Your watchlist");
+    expect(wrapper.text()).toContain("Not watching any events yet");
   });
 
   it("shows button before reveal then plain text email link after click", async () => {

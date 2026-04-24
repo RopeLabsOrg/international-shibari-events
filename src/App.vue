@@ -13,6 +13,13 @@ const { count: watchCount } = useWatchlist();
         </RouterLink>
         <nav class="flex items-center gap-2">
           <RouterLink
+            to="/tickets"
+            class="inline-flex items-center gap-1.5 rounded-xl border border-[var(--color-secondary)] bg-[var(--color-surface-strong)] px-3 py-1 text-sm font-medium text-[var(--color-secondary)] transition hover:bg-[var(--color-secondary)] hover:text-[var(--color-surface-strong)]"
+            active-class="bg-[var(--color-secondary)] text-[var(--color-surface-strong)]"
+          >
+            Tickets
+          </RouterLink>
+          <RouterLink
             to="/watchlist"
             class="inline-flex items-center gap-1.5 rounded-xl border border-[var(--color-primary)] bg-[var(--color-surface-strong)] px-3 py-1 text-sm font-medium text-[var(--color-primary)] transition hover:bg-[var(--color-primary)] hover:text-[var(--color-surface-strong)]"
             active-class="bg-[var(--color-primary)] text-[var(--color-surface-strong)]"

@@ -90,18 +90,18 @@
     {
       "startDate": "2021-10-18",
       "endDate": "2021-10-23",
-      "announcementDate": "2021-07-08",
-      "ticketSaleDate": "2021-07-08",
+      "announcementDate": "2021-04-02",
+      "ticketSaleDate": "2021-04-02",
       "soldOutDate": "2021-10-26",
-      "sourceNotes": "EURIX No XIX. Venue: Holzmarkt/Säälchen, Berlin. Announcement concurrent with Spring 2021 (XVIII) cancellation per Wayback web.archive.org/web/20210708122637/ — XVIII ticketholders rolled over to XIX. soldOut snapshot 2021-10-26 is post-event; edition sold out in advance."
+      "sourceNotes": "EURIX No XIX. Venue: Holzmarkt/Säälchen, Berlin. announcementDate narrowed to 2021-03-06 -> 2021-04-02 window: 2021-03-06 snapshot only mentions XVIII; 2021-04-02 snapshot first mentions XIX ('The automn 2021 EURIX is planned for October, 18 - 23, 2021'). Registration was open as XVIII tickets (carry-over when XVIII cancelled) per 2021-07-08 snapshot ('All tickets remain valid and can be used for the next edition'). soldOutDate 2021-10-26 is upper bound (post-event snapshot); narrower window is 2021-07-30 -> 2021-10-26 since 2021-07-30 snapshot has no SOLD OUT marker."
     },
     {
       "startDate": "2022-11-07",
       "endDate": "2022-11-12",
-      "announcementDate": "2022-02-09",
+      "announcementDate": "2021-11-09",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "EURIX No XXI. Venue: Holzmarkt/Säälchen, Berlin. Unusually held in November rather than October. Dates announced early (Feb 2022) alongside Spring 2022 (XX) announcement per Wayback web.archive.org/web/20220209132555/ ('coming up automn 2022: EURIX No XXI / November, 7 - 12, 2022')."
+      "sourceNotes": "EURIX No XXI. Venue: Holzmarkt/Säälchen, Berlin. Unusually held in November rather than October. Announced together with Spring 2022 (XX) in the same content update: 2021-10-26 snapshot has no XXI mention; 2021-11-09 snapshot lists 'coming up automn 2022: EURIX No XXI / November, 7 - 12, 2022'. No ticket-sale or sold-out signal observed on canonical page across 2022-05-23, 2022-08-19, 2022-10-02 snapshots."
     },
     {
       "startDate": "2023-10-16",

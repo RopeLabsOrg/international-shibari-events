@@ -66,10 +66,10 @@
     {
       "startDate": "2022-05-09",
       "endDate": "2022-05-14",
-      "announcementDate": "2022-02-09",
+      "announcementDate": "2021-11-09",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "EURIX No XX. Venue: Holzmarkt/Säälchen, Berlin. Dates from Wayback web.archive.org/web/20220209132555/ ('No 20 will happen from May, 9 - 14, 2022'). Spring 2020 (XVI) and Spring 2021 (XVIII) editions were cancelled due to Corona — not listed as historical editions since they didn't take place. Spring 2021 had registration open by 2021-03-06 before being cancelled by 2021-07-08."
+      "sourceNotes": "EURIX No XX. Venue: Holzmarkt/Säälchen, Berlin. Announcement tightened to 2021-10-26 -> 2021-11-09 window: 2021-10-26 snapshot only teases 'EURIX No XX / spring 2021' (typo for 2022) with no dates; 2021-11-09 snapshot first has full dates 'No 20 will happen from May, 9 - 14, 2022'. XX and XXI announced together. No ticket-sale or sold-out signal found on canonical page in surrounding snapshots. Spring 2020 (XVI) and Spring 2021 (XVIII) editions were cancelled due to Corona — not listed as historical editions since they didn't take place."
     },
     {
       "startDate": "2023-04-17",

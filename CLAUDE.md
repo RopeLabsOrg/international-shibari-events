@@ -13,7 +13,7 @@ issues.
 
 **Ecosystem context:** this site is the discovery layer in a five-site rope
 ecosystem run through Peg Productions BV (Tsuri Neko). CNAME is
-`international-events.tsurineko.org`; the repo lives under the `tsurineko.org`
+`shibari-events.tsurineko.org`; the repo lives under the `tsurineko.org`
 subdomain family. Siblings:
 
 - `tsurineko.org` — main content (teaching, jams, classes)

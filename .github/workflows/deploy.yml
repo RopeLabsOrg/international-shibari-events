@@ -34,7 +34,10 @@ jobs:
         run: |
           REPO_NAME="${GITHUB_REPOSITORY#*/}"
           OWNER_NAME="${GITHUB_REPOSITORY_OWNER}"
-          if [ "${REPO_NAME}" = "${OWNER_NAME}.github.io" ]; then
+          # A custom domain (CNAME file) serves from the domain root, not /<repo>/.
+          if [ -s public/CNAME ]; then
+            echo "BASE_PATH=/" >> "$GITHUB_ENV"
+          elif [ "${REPO_NAME}" = "${OWNER_NAME}.github.io" ]; then
             echo "BASE_PATH=/" >> "$GITHUB_ENV"
           else
             echo "BASE_PATH=/${REPO_NAME}/" >> "$GITHUB_ENV"

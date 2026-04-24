@@ -35,8 +35,6 @@ function handleClick(): void {
         : 'border-[var(--color-primary)] bg-[var(--color-surface-strong)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-surface-strong)]',
     ]"
     @click.stop="handleClick"
-    @keydown.enter.stop
-    @keydown.space.stop
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

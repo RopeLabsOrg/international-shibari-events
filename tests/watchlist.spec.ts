@@ -77,6 +77,30 @@ describe("useWatchlist", () => {
     expect(count.value).toBe(1);
   });
 
+  it("watch/unwatch read-modifies-writes so concurrent tab writes don't clobber", () => {
+    const { watch, unwatch, isWatching } = useWatchlist();
+
+    // Simulate: another tab wrote ["tab-a-slug"] to storage, but this tab's
+    // in-memory state still shows the old empty set (storage event hasn't propagated yet).
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(["tab-a-slug"]));
+
+    // This tab's user now watches a different slug.
+    watch("tab-b-slug");
+
+    // Both slugs must be persisted. If we mutated from the stale in-memory set,
+    // we'd have overwritten storage with only ["tab-b-slug"].
+    const persisted = JSON.parse(localStorage.getItem(STORAGE_KEY) as string);
+    expect(persisted).toEqual(["tab-a-slug", "tab-b-slug"]);
+    expect(isWatching("tab-a-slug")).toBe(true);
+    expect(isWatching("tab-b-slug")).toBe(true);
+
+    // Symmetric case for unwatch.
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(["tab-a-slug", "tab-b-slug", "tab-c-slug"]));
+    unwatch("tab-b-slug");
+    const afterUnwatch = JSON.parse(localStorage.getItem(STORAGE_KEY) as string);
+    expect(afterUnwatch).toEqual(["tab-a-slug", "tab-c-slug"]);
+  });
+
   it("ignores malformed localStorage entries", () => {
     localStorage.setItem(STORAGE_KEY, "not-json{");
     _resetWatchlistForTests();

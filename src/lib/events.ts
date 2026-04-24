@@ -95,8 +95,13 @@ function inferTemporalState(startDate: Date | null, endDate: Date | null, nowDat
     return "upcoming";
   }
 
+  // Event dates are stored as YYYY-MM-DD (parsed as midnight UTC). To treat an event as
+  // "still happening" for its full final calendar day, compare against the end of that day
+  // rather than its midnight-UTC start. Without this, a May 4 event is classified as ended
+  // at 00:00 UTC on May 4 — users on the Tickets page lose access on the day they're running.
   const resolvedEndDate = endDate || startDate;
-  if (startDate <= nowDate && resolvedEndDate >= nowDate) {
+  const endOfLastDay = new Date(resolvedEndDate.getTime() + 24 * 60 * 60 * 1000 - 1);
+  if (startDate <= nowDate && endOfLastDay >= nowDate) {
     return "happening_now";
   }
 
@@ -183,8 +188,12 @@ export const EMPTY_FILTERS: IEventFilters = {
 };
 
 function toYearMonth(date: Date): string {
-  const year = date.getUTCFullYear();
-  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  // Use local time so the bucket matches what formatDisplayDate renders. Event dates are
+  // stored as YYYY-MM-DD at 00:00:00Z; formatting them via Intl.DateTimeFormat in a
+  // negative-UTC-offset zone (US, LATAM) shifts the display to the prior day's month,
+  // so UTC-based bucketing would mislabel the event's month in the filter dropdown.
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
   return `${year}-${month}`;
 }
 
@@ -229,7 +238,8 @@ export function extractMonthOptions(eventSummaries: IEventSummary[]): Array<{ va
     .sort()
     .map((yearMonth) => {
       const [year, month] = yearMonth.split("-").map(Number);
-      const date = new Date(Date.UTC(year, month - 1, 1));
+      // Local-time constructor keeps the label in sync with toYearMonth (which is also local).
+      const date = new Date(year, month - 1, 1);
       return { value: yearMonth, label: formatter.format(date) };
     });
 }

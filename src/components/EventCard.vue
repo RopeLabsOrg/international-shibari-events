@@ -3,6 +3,7 @@ import { computed } from "vue";
 import { useRouter } from "vue-router";
 import StatusPill from "./StatusPill.vue";
 import ObfuscatedEmail from "./ObfuscatedEmail.vue";
+import WatchButton from "./WatchButton.vue";
 import { formatDateRange } from "../lib/events";
 import type { IEventSummary } from "../lib/events";
 
@@ -77,6 +78,7 @@ async function openEventDetails(): Promise<void> {
     </div>
 
     <div class="mt-4 flex flex-wrap gap-2 text-sm">
+      <WatchButton :slug="event.slug" />
       <a
         v-if="event.links.website"
         :href="event.links.website"

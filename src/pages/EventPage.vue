@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import DateField from "../components/DateField.vue";
 import ObfuscatedEmail from "../components/ObfuscatedEmail.vue";
 import StatusPill from "../components/StatusPill.vue";
+import WatchButton from "../components/WatchButton.vue";
 import { buildEditionDisplays, formatDateRange, getEventSummaries, loadEventsData } from "../lib/events";
 
 const route = useRoute();
@@ -44,7 +45,10 @@ const temporalStateLabelMap: Record<string, string> = {
         <h1 class="text-3xl font-bold text-[var(--color-secondary)]">
           {{ event.name }}
         </h1>
-        <StatusPill :status="event.status" />
+        <div class="flex items-center gap-3">
+          <WatchButton :slug="event.slug" size="md" />
+          <StatusPill :status="event.status" />
+        </div>
       </div>
       <p class="mt-2 text-[var(--color-text)]">
         {{ event.location.venue }} · {{ event.location.city }}, {{ event.location.country }}

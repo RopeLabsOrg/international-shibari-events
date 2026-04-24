@@ -12,48 +12,48 @@
     "mailingList": null,
     "contactEmail": "jana.felixruckert@gmx.de"
   },
-  "status": "tba",
-  "lastUpdated": "2026-03-29",
+  "status": "scheduled",
+  "lastUpdated": "2026-04-24",
   "historicalEditions": [
     {
       "startDate": "2023-04-17",
       "endDate": "2023-04-22",
-      "announcementDate": null,
-      "ticketSaleDate": null,
+      "announcementDate": "2022-05-23",
+      "ticketSaleDate": "2023-02-07",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1209105 (FetLife event). Edition dates confirmed; no explicit announcement or ticket-open date in extracted fields."
+      "sourceNotes": "sourceEventId=1209105 (FetLife event). felixruckert.de has no per-edition blog posts; dates derived from Wayback snapshots of the canonical /2015/10/01/eurix/ page. announcementDate is a Wayback upper bound (first snapshot listing the edition in 'coming up' block, 2022-05-23). ticketSaleDate is a Wayback upper bound (first snapshot with active-edition banner, 2023-02-07). Real dates may be earlier."
     },
     {
       "startDate": "2024-04-01",
       "endDate": "2024-04-06",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1404378 (FetLife event). Event title contains sold-out marker, but no explicit sold-out date is provided."
+      "announcementDate": "2023-02-07",
+      "ticketSaleDate": "2023-12-11",
+      "soldOutDate": "2024-03-05",
+      "sourceNotes": "sourceEventId=1404378 (FetLife event). Wayback 2023-02-07 snapshot lists EURIX No XXIV in 'coming up' (announcement upper bound). Wayback 2023-12-11 snapshot shows 'Registration is open!' on No 24 banner (ticket-sale upper bound). Wayback 2024-03-05 snapshot states 'The European Rigger&Model Exchange No 24 is SOLD OUT!'"
     },
     {
       "startDate": "2025-04-14",
       "endDate": "2025-04-19",
-      "announcementDate": null,
+      "announcementDate": "2023-12-11",
       "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1628487 (FetLife event). Description states festival sold out; no explicit sold-out date is provided."
+      "soldOutDate": "2025-01-01",
+      "sourceNotes": "sourceEventId=1628487 (FetLife event). Wayback 2023-12-11 snapshot lists No XXVI in 'coming up' (announcement upper bound). ticketSaleDate unknown — no Wayback snapshot captures registration opening (gap in snapshot coverage); by earliest 2025 snapshot (2025-01-01) the festival was already SOLD OUT. Likely opened and sold out in late 2024."
     },
     {
       "startDate": "2026-04-13",
       "endDate": "2026-04-18",
-      "announcementDate": null,
+      "announcementDate": "2025-05-14",
       "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1930140 (FetLife event). Description states April edition sold out and mentions October registration already open, without explicit registration-open date."
+      "soldOutDate": "2026-01-24",
+      "sourceNotes": "sourceEventId=1930140 (FetLife event). Wayback 2025-05-14 snapshot lists No XXVIII in 'coming up' (announcement upper bound). No Wayback snapshot captures registration opening for Spring 2026 (gap between 2025-09-14 and 2026-01-24). Wayback 2026-01-24 snapshot states 'THE FESTIVAL IS SOLD OUT! REGISTRATION FOR THE AUTUMN EDITION (Oct, 19-24) IS OPEN!'"
     }
   ],
   "nextEdition": {
-    "startDate": null,
-    "endDate": null,
-    "announcementDate": null,
+    "startDate": "2027-04-12",
+    "endDate": "2027-04-17",
+    "announcementDate": "2026-02-11",
     "ticketSaleDate": null,
     "ticketUrl": "https://felixruckert.de/2015/10/01/eurix/",
-    "status": "tba"
+    "status": "scheduled"
   }
 }

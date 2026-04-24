@@ -13,38 +13,38 @@
     "contactEmail": "jana.felixruckert@gmx.de"
   },
   "status": "on_sale",
-  "lastUpdated": "2026-03-29",
+  "lastUpdated": "2026-04-24",
   "historicalEditions": [
     {
       "startDate": "2023-10-16",
       "endDate": "2023-10-21",
-      "announcementDate": null,
-      "ticketSaleDate": null,
+      "announcementDate": "2022-05-23",
+      "ticketSaleDate": "2023-06-01",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1328948 (FetLife event). Edition dates confirmed; no explicit announcement or ticket-open date in extracted fields."
+      "sourceNotes": "sourceEventId=1328948 (FetLife event). felixruckert.de has no per-edition blog posts; dates derived from Wayback snapshots of /2015/10/01/eurix/. announcementDate is a Wayback upper bound (first snapshot listing No XXIII in 'coming up', 2022-05-23). ticketSaleDate is a Wayback upper bound (first snapshot with 'REGISTRATION is open!!', 2023-06-01). No sold-out snapshot found."
     },
     {
       "startDate": "2024-10-14",
       "endDate": "2024-10-19",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1539849 (FetLife event). Event title contains sold-out marker, but no explicit sold-out date is provided."
+      "announcementDate": "2023-02-07",
+      "ticketSaleDate": "2024-07-16",
+      "soldOutDate": "2024-10-05",
+      "sourceNotes": "sourceEventId=1539849 (FetLife event). Wayback 2023-02-07 snapshot lists No XXV in 'coming up' (announcement upper bound). Wayback 2024-07-16 snapshot shows 'Registration is open!' on No 25 banner (ticket-sale upper bound). Wayback 2024-10-05 snapshot states 'The festival is SOLD OUT!! Waitinglist is still available.'"
     },
     {
       "startDate": "2025-10-20",
       "endDate": "2025-10-25",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1798958 (FetLife event). Description states festival sold out; no explicit sold-out date is provided."
+      "announcementDate": "2023-12-11",
+      "ticketSaleDate": "2025-05-14",
+      "soldOutDate": "2025-07-19",
+      "sourceNotes": "sourceEventId=1798958 (FetLife event). Wayback 2023-12-11 snapshot lists No XXVII in 'coming up' (announcement upper bound). Wayback 2025-05-14 snapshot shows 'Registration is open!' on No 27 banner (ticket-sale upper bound). Wayback 2025-07-19 snapshot states 'THE FESTIVAL IS SOLD OUT! (Some places left in the Absolute Beginner Course)'"
     }
   ],
   "nextEdition": {
     "startDate": "2026-10-19",
     "endDate": "2026-10-24",
-    "announcementDate": null,
-    "ticketSaleDate": null,
+    "announcementDate": "2025-05-14",
+    "ticketSaleDate": "2026-01-24",
     "ticketUrl": "https://felixruckert.de/2015/10/01/eurix/",
     "status": "on_sale"
   }

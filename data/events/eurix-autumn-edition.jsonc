@@ -16,6 +16,94 @@
   "lastUpdated": "2026-04-24",
   "historicalEditions": [
     {
+      "startDate": "2012-09-10",
+      "endDate": "2012-09-15",
+      "announcementDate": "2012-07-29",
+      "ticketSaleDate": "2012-07-29",
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No I — inaugural edition. Venue: schwelle7 (Uferstr. 6, Berlin-Wedding). Dates confirmed from Wayback snapshot web.archive.org/web/20120729165550/http://schwelle7.de:80/EURIXE.html ('10. - 15. SEPTEMBER 2012'). announce/ticket are Wayback upper bounds — fully-formed announcement already public at that snapshot date. Fee 100 EUR per couple / 50 EUR single."
+    },
+    {
+      "startDate": "2013-09-09",
+      "endDate": "2013-09-14",
+      "announcementDate": "2013-05-14",
+      "ticketSaleDate": "2013-05-14",
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No III. Venue: schwelle7, Berlin. Dates confirmed from Wayback web.archive.org/web/20130514041457/http://www.schwelle7.de:80/EURIXE.html ('09. - 14. September 2013')."
+    },
+    {
+      "startDate": "2014-09-08",
+      "endDate": "2014-09-13",
+      "announcementDate": "2014-04-26",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No V. Venue: schwelle7, Berlin. Dates confirmed from Wayback web.archive.org/web/20140426153410/ German text '8. - 13. September 2014' (English alt text has a '2013' typo)."
+    },
+    {
+      "startDate": "2015-09-07",
+      "endDate": "2015-09-12",
+      "announcementDate": "2015-05-03",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No VII. Venue: schwelle7, Berlin. Dates from Wayback web.archive.org/web/20150503090854/ ('07. - 12. September 2015'). Core program Mon-Fri Sep 7-11; final party Sat Sep 12."
+    },
+    {
+      "startDate": "2016-09-12",
+      "endDate": "2016-09-18",
+      "announcementDate": "2016-09-12",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No IX. First edition at Alte Börse Marzahn (venue migration from schwelle7). Extended to 7 days (Mon-Sun) vs. previous 6-day format. Dates from Wayback web.archive.org/web/20160912101634/ ('12. - 18. September 2016'). announcementDate upper bound is the snapshot date (no earlier snapshot captured for this edition)."
+    },
+    {
+      "startDate": "2017-09-18",
+      "endDate": "2017-09-24",
+      "announcementDate": "2017-07-16",
+      "ticketSaleDate": null,
+      "soldOutDate": "2017-08-16",
+      "sourceNotes": "EURIX No XI. Venue: Alte Börse Marzahn, Berlin. soldOut upper bound from Wayback web.archive.org/web/20170816223032/ ('The regular program and the Beginner Course is SOLD OUT')."
+    },
+    {
+      "startDate": "2018-10-22",
+      "endDate": "2018-10-27",
+      "announcementDate": "2018-08-01",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No XIII. Venue: Holzmarkt/Säälchen, Berlin (second edition at this venue). announcementDate is Wayback upper bound."
+    },
+    {
+      "startDate": "2019-10-21",
+      "endDate": "2019-10-26",
+      "announcementDate": "2019-08-19",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No XV. Venue: Holzmarkt/Säälchen, Berlin."
+    },
+    {
+      "startDate": "2020-10-19",
+      "endDate": "2020-10-24",
+      "announcementDate": "2020-09-26",
+      "ticketSaleDate": "2020-09-26",
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No XVII. Corona-era edition: reduced capacity ~80 participants with 3G hygiene concept. Venue: Holzmarkt/Säälchen, Berlin. Wayback web.archive.org/web/20200926214229/ notes 'This event is almost sold out'. Dates announced after Spring 2020 (XVI) cancellation."
+    },
+    {
+      "startDate": "2021-10-18",
+      "endDate": "2021-10-23",
+      "announcementDate": "2021-07-08",
+      "ticketSaleDate": "2021-07-08",
+      "soldOutDate": "2021-10-26",
+      "sourceNotes": "EURIX No XIX. Venue: Holzmarkt/Säälchen, Berlin. Announcement concurrent with Spring 2021 (XVIII) cancellation per Wayback web.archive.org/web/20210708122637/ — XVIII ticketholders rolled over to XIX. soldOut snapshot 2021-10-26 is post-event; edition sold out in advance."
+    },
+    {
+      "startDate": "2022-11-07",
+      "endDate": "2022-11-12",
+      "announcementDate": "2022-02-09",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No XXI. Venue: Holzmarkt/Säälchen, Berlin. Unusually held in November rather than October. Dates announced early (Feb 2022) alongside Spring 2022 (XX) announcement per Wayback web.archive.org/web/20220209132555/ ('coming up automn 2022: EURIX No XXI / November, 7 - 12, 2022')."
+    },
+    {
       "startDate": "2023-10-16",
       "endDate": "2023-10-21",
       "announcementDate": "2022-05-23",

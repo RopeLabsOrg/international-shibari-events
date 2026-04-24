@@ -4,7 +4,7 @@ import { useRouter } from "vue-router";
 import StatusPill from "./StatusPill.vue";
 import ObfuscatedEmail from "./ObfuscatedEmail.vue";
 import WatchButton from "./WatchButton.vue";
-import { formatDateRange } from "../lib/events";
+import { confidenceAriaLabel, formatDateRange, formatEstimatedLabel } from "../lib/events";
 import type { IEventSummary } from "../lib/events";
 
 const props = defineProps<{
@@ -59,8 +59,12 @@ async function openEventDetails(): Promise<void> {
         </p>
         <p class="mt-1 text-sm font-medium text-[var(--color-text)]">
           {{ dateRange }}
-          <span v-if="summary.nextDate.isEstimated" class="ml-2 rounded-full bg-[rgba(44,74,107,0.10)] px-2 py-0.5 text-xs font-medium text-[var(--color-secondary)]">
-            Estimated
+          <span
+            v-if="summary.nextDate.isEstimated"
+            class="ml-2 rounded-full bg-[rgba(44,74,107,0.10)] px-2 py-0.5 text-xs font-medium text-[var(--color-secondary)]"
+            :aria-label="confidenceAriaLabel(summary.confidence)"
+          >
+            {{ formatEstimatedLabel(summary.confidence) }}
           </span>
         </p>
       </div>
@@ -70,8 +74,12 @@ async function openEventDetails(): Promise<void> {
         </p>
         <p class="mt-1 text-sm font-medium text-[var(--color-text)]">
           {{ summary.ticketDate.value ? summary.ticketDate.value.toISOString().slice(0, 10) : "TBA" }}
-          <span v-if="summary.ticketDate.isEstimated" class="ml-2 rounded-full bg-[rgba(44,74,107,0.10)] px-2 py-0.5 text-xs font-medium text-[var(--color-secondary)]">
-            Estimated
+          <span
+            v-if="summary.ticketDate.isEstimated"
+            class="ml-2 rounded-full bg-[rgba(44,74,107,0.10)] px-2 py-0.5 text-xs font-medium text-[var(--color-secondary)]"
+            :aria-label="confidenceAriaLabel(summary.confidence)"
+          >
+            {{ formatEstimatedLabel(summary.confidence) }}
           </span>
         </p>
       </div>

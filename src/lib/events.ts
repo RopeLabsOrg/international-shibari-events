@@ -1,7 +1,13 @@
 import { parse as parseJsonc } from "jsonc-parser";
 import type { IEventData, TStatus } from "../../schemas/event.schema";
-import { addDays, deriveNextEditionDates, getCadenceAndDuration, parseIsoDate } from "./predictions";
-import type { IPredictionInfo } from "./predictions";
+import {
+  addDays,
+  classifyConfidence,
+  deriveNextEditionDates,
+  getCadenceAndDuration,
+  parseIsoDate,
+} from "./predictions";
+import type { IPredictionInfo, TConfidenceLevel } from "./predictions";
 
 export type TTemporalState = "happening_now" | "upcoming" | "ended";
 export type TSortKey = "eventDate" | "ticketDate" | "status" | "lastUpdated" | "name";
@@ -18,6 +24,21 @@ export interface IEventSummary {
   endDate: IResolvedDate;
   ticketDate: IResolvedDate;
   temporalState: TTemporalState;
+  confidence: TConfidenceLevel;
+}
+
+const confidenceLabels: Record<TConfidenceLevel, string> = {
+  high: "High confidence",
+  medium: "Medium confidence",
+  low: "Low confidence",
+};
+
+export function formatEstimatedLabel(confidence: TConfidenceLevel): string {
+  return `Estimated · ${confidence.charAt(0).toUpperCase()}${confidence.slice(1)}`;
+}
+
+export function confidenceAriaLabel(confidence: TConfidenceLevel): string {
+  return confidenceLabels[confidence];
 }
 
 export interface IEditionDisplay {
@@ -133,6 +154,7 @@ export function getEventSummaries(eventDataList: IEventData[], nowDate = new Dat
   return eventDataList.map((eventData) => {
     const nextEdition = eventData.nextEdition;
     const derivedDates = deriveNextEditionDates(eventData);
+    const prediction = getCadenceAndDuration(eventData);
     const nextDate = resolveDate(parseIsoDate(nextEdition.startDate), derivedDates.startDate);
     const ticketDate = resolveDate(parseIsoDate(nextEdition.ticketSaleDate), derivedDates.ticketDate);
     const endDate = resolveDate(parseIsoDate(nextEdition.endDate), derivedDates.endDate);
@@ -143,6 +165,7 @@ export function getEventSummaries(eventDataList: IEventData[], nowDate = new Dat
       endDate,
       ticketDate,
       temporalState: inferTemporalState(nextDate.value, endDate.value, nowDate),
+      confidence: classifyConfidence(prediction.sampleSize),
     };
   });
 }

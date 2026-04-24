@@ -7,9 +7,9 @@
         </RouterLink>
         <a
           class="rounded-xl border border-[var(--color-secondary)] bg-[var(--color-surface-strong)] px-3 py-1 text-sm text-[var(--color-secondary)] transition hover:-translate-y-0.5 hover:bg-[var(--color-secondary)] hover:text-[var(--color-surface-strong)]"
-          href="https://international-events.tsurineko.org"
+          href="https://shibari-events.tsurineko.org"
         >
-          international-events.tsurineko.org
+          shibari-events.tsurineko.org
         </a>
       </div>
     </header>

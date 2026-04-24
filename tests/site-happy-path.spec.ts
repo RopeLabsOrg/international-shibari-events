@@ -8,7 +8,7 @@ import WatchlistPage from "../src/pages/WatchlistPage.vue";
 import ObfuscatedEmail from "../src/components/ObfuscatedEmail.vue";
 import { routes } from "../src/router";
 import { loadEventsData, sortEventSummaries, getEventSummaries } from "../src/lib/events";
-import { _resetWatchlistForTests } from "../src/lib/watchlist";
+import { _resetWatchlistForTests, useWatchlist } from "../src/lib/watchlist";
 
 describe("buyer guide website", () => {
   it("sorts by event date with confirmed before estimated", () => {
@@ -116,6 +116,78 @@ describe("buyer guide website", () => {
 
     expect(wrapper.text()).toContain("Your watchlist");
     expect(wrapper.text()).toContain("Not watching any events yet");
+  });
+
+  it("watchlist page renders the watched event after watch()", async () => {
+    _resetWatchlistForTests();
+    const watchlist = useWatchlist();
+    watchlist.watch("austrian-rope-retreat");
+
+    const router = createRouter({ history: createMemoryHistory(), routes });
+    router.push("/watchlist");
+    await router.isReady();
+
+    const wrapper = mount(WatchlistPage, {
+      global: { plugins: [router] },
+    });
+
+    expect(wrapper.text()).toContain("Austrian Rope Retreat");
+    expect(wrapper.text()).not.toContain("Not watching any events yet");
+  });
+
+  it("watchlist page flags watched slugs that are no longer in the directory", async () => {
+    _resetWatchlistForTests();
+    const watchlist = useWatchlist();
+    watchlist.watch("slug-that-does-not-exist-in-data");
+
+    const router = createRouter({ history: createMemoryHistory(), routes });
+    router.push("/watchlist");
+    await router.isReady();
+
+    const wrapper = mount(WatchlistPage, {
+      global: { plugins: [router] },
+    });
+
+    expect(wrapper.text()).toContain("no longer in the directory");
+  });
+
+  it("home page filters by country when URL has ?country=Belgium", async () => {
+    const router = createRouter({ history: createMemoryHistory(), routes });
+    router.push("/?country=Belgium");
+    await router.isReady();
+
+    const wrapper = mount(HomePage, {
+      global: { plugins: [router] },
+    });
+
+    expect(wrapper.text()).toContain("Kasumi Hourai");
+    expect(wrapper.text()).not.toContain("Austrian Rope Retreat");
+    expect(wrapper.text()).toContain("Clear filters");
+  });
+
+  it("tickets page surfaces the on-sale heading with a known on-sale event", async () => {
+    const router = createRouter({ history: createMemoryHistory(), routes });
+    router.push("/tickets");
+    await router.isReady();
+
+    const wrapper = mount(TicketsPage, {
+      global: { plugins: [router] },
+    });
+
+    expect(wrapper.text()).toContain("Tickets on sale now");
+    expect(wrapper.text()).toContain("Kasumi Hourai");
+  });
+
+  it("event page shows not-found message for unknown slug", async () => {
+    const router = createRouter({ history: createMemoryHistory(), routes });
+    router.push("/events/this-slug-does-not-exist-in-the-directory");
+    await router.isReady();
+
+    const wrapper = mount(EventPage, {
+      global: { plugins: [router] },
+    });
+
+    expect(wrapper.text()).toContain("Event not found");
   });
 
   it("shows button before reveal then plain text email link after click", async () => {

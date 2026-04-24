@@ -147,6 +147,79 @@ export function getEventSummaries(eventDataList: IEventData[], nowDate = new Dat
   });
 }
 
+export interface IEventFilters {
+  country: string | null;
+  month: string | null;
+  status: TStatus | null;
+}
+
+export const EMPTY_FILTERS: IEventFilters = {
+  country: null,
+  month: null,
+  status: null,
+};
+
+function toYearMonth(date: Date): string {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  return `${year}-${month}`;
+}
+
+export function filterEventSummaries(
+  eventSummaries: IEventSummary[],
+  filters: IEventFilters,
+): IEventSummary[] {
+  return eventSummaries.filter((summary) => {
+    if (filters.country && summary.event.location.country !== filters.country) {
+      return false;
+    }
+    if (filters.status && summary.event.status !== filters.status) {
+      return false;
+    }
+    if (filters.month) {
+      if (!summary.nextDate.value) return false;
+      if (toYearMonth(summary.nextDate.value) !== filters.month) return false;
+    }
+    return true;
+  });
+}
+
+export function countActiveFilters(filters: IEventFilters): number {
+  return (filters.country ? 1 : 0) + (filters.month ? 1 : 0) + (filters.status ? 1 : 0);
+}
+
+export function extractCountryOptions(eventSummaries: IEventSummary[]): string[] {
+  const countries = new Set<string>();
+  for (const summary of eventSummaries) {
+    if (summary.event.location.country) countries.add(summary.event.location.country);
+  }
+  return [...countries].sort((a, b) => a.localeCompare(b));
+}
+
+export function extractMonthOptions(eventSummaries: IEventSummary[]): Array<{ value: string; label: string }> {
+  const months = new Set<string>();
+  for (const summary of eventSummaries) {
+    if (summary.nextDate.value) months.add(toYearMonth(summary.nextDate.value));
+  }
+  const formatter = new Intl.DateTimeFormat("en-GB", { month: "short", year: "numeric" });
+  return [...months]
+    .sort()
+    .map((yearMonth) => {
+      const [year, month] = yearMonth.split("-").map(Number);
+      const date = new Date(Date.UTC(year, month - 1, 1));
+      return { value: yearMonth, label: formatter.format(date) };
+    });
+}
+
+export function extractStatusOptions(eventSummaries: IEventSummary[]): TStatus[] {
+  const statuses = new Set<TStatus>();
+  for (const summary of eventSummaries) {
+    statuses.add(summary.event.status);
+  }
+  const ordered: TStatus[] = ["on_sale", "waiting_list", "scheduled", "sold_out", "tba"];
+  return ordered.filter((status) => statuses.has(status));
+}
+
 export function sortEventSummaries(eventSummaries: IEventSummary[], sortKey: TSortKey): IEventSummary[] {
   const sorted = [...eventSummaries];
 

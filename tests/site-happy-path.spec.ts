@@ -35,20 +35,23 @@ describe("buyer guide website", () => {
     expect(ropeLinkedWinter?.nextDate.isEstimated).toBe(true);
   });
 
-  it("renders home cards with sort control", () => {
+  it("renders home cards with sort control and filters", async () => {
+    const router = createRouter({ history: createMemoryHistory(), routes });
+    router.push("/");
+    await router.isReady();
+
     const wrapper = mount(HomePage, {
       global: {
-        stubs: {
-          RouterLink: {
-            template: "<a><slot /></a>",
-          },
-        },
+        plugins: [router],
       },
     });
 
     expect(wrapper.text()).toContain("Upcoming Events");
-    expect(wrapper.find("select").exists()).toBe(true);
+    expect(wrapper.findAll("select").length).toBeGreaterThanOrEqual(4);
     expect(wrapper.text()).toContain("Sort by");
+    expect(wrapper.text()).toContain("Country");
+    expect(wrapper.text()).toContain("Month");
+    expect(wrapper.text()).toContain("Status");
     expect(wrapper.text()).toContain("Missing an event?");
     expect(wrapper.text()).toContain("Open a pull request on GitHub");
     expect(

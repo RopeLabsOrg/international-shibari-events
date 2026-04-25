@@ -15,6 +15,14 @@ export interface IPredictionInfo {
   sourceNotes: string[];
 }
 
+export type TConfidenceLevel = "high" | "medium" | "low";
+
+export function classifyConfidence(sampleSize: number): TConfidenceLevel {
+  if (sampleSize >= 3) return "high";
+  if (sampleSize >= 1) return "medium";
+  return "low";
+}
+
 export interface IDerivedNextEditionDates {
   startDate: Date | null;
   endDate: Date | null;

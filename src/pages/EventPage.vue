@@ -4,7 +4,9 @@ import { useRoute } from "vue-router";
 import DateField from "../components/DateField.vue";
 import ObfuscatedEmail from "../components/ObfuscatedEmail.vue";
 import StatusPill from "../components/StatusPill.vue";
+import WatchButton from "../components/WatchButton.vue";
 import { buildEditionDisplays, formatDateRange, getEventSummaries, loadEventsData } from "../lib/events";
+import { classifyConfidence, getCadenceAndDuration } from "../lib/predictions";
 
 const route = useRoute();
 const events = loadEventsData();
@@ -19,6 +21,9 @@ const event = computed(() => {
 });
 
 const editionData = computed(() => (event.value ? buildEditionDisplays(event.value) : null));
+const eventConfidence = computed(() =>
+  event.value ? classifyConfidence(getCadenceAndDuration(event.value).sampleSize) : "low",
+);
 const temporalState = computed(() => {
   if (!event.value) {
     return "upcoming";
@@ -44,7 +49,10 @@ const temporalStateLabelMap: Record<string, string> = {
         <h1 class="text-3xl font-bold text-[var(--color-secondary)]">
           {{ event.name }}
         </h1>
-        <StatusPill :status="event.status" />
+        <div class="flex items-center gap-3">
+          <WatchButton :slug="event.slug" size="md" />
+          <StatusPill :status="event.status" />
+        </div>
       </div>
       <p class="mt-2 text-[var(--color-text)]">
         {{ event.location.venue }} · {{ event.location.city }}, {{ event.location.country }}
@@ -75,16 +83,19 @@ const temporalStateLabelMap: Record<string, string> = {
             label="Event dates"
             :value="edition.startDate.value"
             :is-estimated="edition.startDate.isEstimated"
+            :confidence="eventConfidence"
           />
           <DateField
             label="Ticket date"
             :value="edition.ticketDate.value"
             :is-estimated="edition.ticketDate.isEstimated"
+            :confidence="eventConfidence"
           />
           <DateField
             label="Announcement date"
             :value="edition.announcementDate.value"
             :is-estimated="edition.announcementDate.isEstimated"
+            :confidence="eventConfidence"
           />
           <p class="text-sm text-[var(--color-text)]">
             Range:

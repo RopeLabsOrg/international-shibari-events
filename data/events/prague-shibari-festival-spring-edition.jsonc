@@ -13,21 +13,37 @@
     "contactEmail": null
   },
   "status": "sold_out",
-  "lastUpdated": "2026-03-29",
+  "lastUpdated": "2026-04-24",
   "historicalEditions": [
+    {
+      "startDate": "2022-03-18",
+      "endDate": "2022-03-20",
+      "announcementDate": "2022-01-09",
+      "ticketSaleDate": "2022-01-09",
+      "soldOutDate": "2022-01-24",
+      "sourceNotes": "Announcement post pragueshibari.com/2022/prague-shibari-festival-spring-2022/ published 09.01.2022; tickets available same day. Sold-out post pragueshibari.com/2022/prague-shibari-festival-2022-spring-sold-out/ published 24.01.2022."
+    },
+    {
+      "startDate": "2023-03-24",
+      "endDate": "2023-03-26",
+      "announcementDate": "2022-12-22",
+      "ticketSaleDate": "2022-12-22",
+      "soldOutDate": "2023-01-11",
+      "sourceNotes": "Announcement post pragueshibari.com/2022/prague-shibari-festival-2023-spring/ published 22.12.2022; first batch same day, second batch 11.01.2023 per pragueshibari.com/2022/the-first-batch-of-tickets-is-sold-out-more-to-come/. Sold-out post pragueshibari.com/2023/2023-spring-sold-out/ published 11.01.2023."
+    },
     {
       "startDate": "2024-05-17",
       "endDate": "2024-05-19",
-      "announcementDate": null,
+      "announcementDate": "2024-02-21",
       "ticketSaleDate": "2024-02-29",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1468076 (FetLife event). Description says tickets available from 2024-02-29 at 23:00 CET."
+      "sourceNotes": "sourceEventId=1468076 (FetLife event). Announcement post pragueshibari.com/2024/prague-shibari-festival-2024-spring/ published 21.02.2024; first batch 29.02.2024 23:00 CET, second batch 07.03.2024. Event page shows sold out but no dated sold-out post on-site."
     }
   ],
   "nextEdition": {
     "startDate": "2026-05-15",
     "endDate": "2026-05-17",
-    "announcementDate": null,
+    "announcementDate": "2025-11-13",
     "ticketSaleDate": "2025-11-20",
     "ticketUrl": "https://www.pragueshibari.com/events/tickets-2026-05-15/",
     "status": "sold_out"

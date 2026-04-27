@@ -13,31 +13,31 @@
     "contactEmail": null
   },
   "status": "tba",
-  "lastUpdated": "2026-03-29",
+  "lastUpdated": "2026-04-24",
   "historicalEditions": [
     {
       "startDate": "2024-01-04",
       "endDate": "2024-01-07",
-      "announcementDate": null,
+      "announcementDate": "2023-11-03",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "Provided timeline lists Jan. 4-7, 2024 with status 'Sale over'."
+      "sourceNotes": "First winter edition of Rogue Rope's gathering. Initially announced as 'Rogue Rope Winter 2024' in commit 344b126 (2023-11-03 18:53), retitled to 'Bottoms Up!' in commit 5264813 (2023-11-03 23:55). Dates from same commit ('When: 04/01/2024 14:00 -> 07/01/2024 16:00'). Ticket sale handled off-docs (gogogonzo shop / FetLife); not recorded in repo. Location: 'East of Antwerp, West of Lommel' (Mol area)."
     },
     {
       "startDate": "2025-01-02",
       "endDate": "2025-01-06",
-      "announcementDate": null,
-      "ticketSaleDate": null,
+      "announcementDate": "2024-09-04",
+      "ticketSaleDate": "2024-09-29",
       "soldOutDate": null,
-      "sourceNotes": "Provided timeline lists Jan. 2-6, 2025 with status 'Sale over'."
+      "sourceNotes": "Announced as 'second indoor edition of Bottoms Up!' in commit 3983276 (2024-09-04). Dates first appeared in commit df739f3 (2024-09-10). Ticket sale opened 2024-09-29 20:00 per commit e7cbb6d (2024-09-23): 'Open ticket sales start on September 29th at 20:00.' Shop URL RRW25."
     },
     {
       "startDate": "2026-02-18",
       "endDate": "2026-02-22",
-      "announcementDate": null,
+      "announcementDate": "2025-08-26",
       "ticketSaleDate": "2025-12-01",
       "soldOutDate": null,
-      "sourceNotes": "Homepage confirms Wed-Sun, 18-22 Feb 2026 (Mol) and states tickets were available December 1st, 2025."
+      "sourceNotes": "Initially announced under rebrand 'Oh Bondage! Up Yours!' in commit 94e96bd (2025-08-26): 'When: 18/02/2026 18:00 -> 22/02/2026 16:00', location 'Mol, Belgium' (commit 9770650 same day). Reverted to 'Bottoms Up!' branding in commit c4d9ae6 (2025-11-01). Initial ticket sale date was a copy-paste residue ('May 5th at 20:00'), corrected to 2025-12-01 20:00 in commit 84fc63c (2025-11-06): '📅 Tickets go on sale: December 1st, 2025 at 20:00' (per commit 42a171b). Price 169 EUR, capacity 42."
     }
   ],
   "nextEdition": {

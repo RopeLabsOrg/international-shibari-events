@@ -19,7 +19,6 @@
     "eurix-autumn-edition",
     "eurix-spring-edition",
     "graines-de-cordes",
-    "kasumi-hourai-akane-antwerp",
     "onawa-asobi-europe",
     "pinse-camp",
     "prague-shibari-festival-autumn-edition",
@@ -28,5 +27,7 @@
     "ropelinked-summer-edition",
     "ropelinked-winter-edition"
   ],
-  "retired": []
+  "retired": [
+    "kasumi-hourai-akane-antwerp"
+  ]
 }

@@ -4,7 +4,7 @@
   "location": {
     "city": "Namur",
     "country": "Belgium",
-    "venue": "Atelier Mae / Mauvaise Graine"
+    "venue": "Atelier Mae / Mauvaise Graine, Rue Grandgagnage 22"
   },
   "links": {
     "website": "https://www.atelier-mae-shibari.com/",
@@ -12,32 +12,32 @@
     "mailingList": "https://www.billetweb.fr/graines-de-cordes",
     "contactEmail": null
   },
-  "status": "tba",
-  "lastUpdated": "2026-03-29",
+  "status": "scheduled",
+  "lastUpdated": "2026-04-24",
   "historicalEditions": [
     {
-      "startDate": "2023-07-07",
-      "endDate": "2023-07-09",
-      "announcementDate": "2023-04-01",
-      "ticketSaleDate": "2023-04-10",
+      "startDate": "2023-07-15",
+      "endDate": "2023-07-16",
+      "announcementDate": null,
+      "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "Edition I confirmed in July 2023; announcement/ticket dates approximate from tracker notes."
+      "sourceNotes": "Edition I — first edition. Confirmed via live Billetweb event page (billetweb.fr/graines-de-cordes): 'Sat Jul 15, 2023 at 10:00 AM to Sun Jul 16, 2023 at 09:00 PM'. Atelier Mae has no Wayback snapshots before 2024-04, so announcement and ticket-sale dates are not recoverable. Two-day weekend format at Mauvaise Graine cafe."
     },
     {
-      "startDate": "2024-07-05",
+      "startDate": "2024-07-04",
       "endDate": "2024-07-07",
-      "announcementDate": "2024-04-01",
-      "ticketSaleDate": "2024-04-10",
+      "announcementDate": null,
+      "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "Edition II confirmed in July 2024; announcement/ticket dates approximate from tracker notes."
+      "sourceNotes": "Edition II. Confirmed via Wayback web.archive.org/web/20250326202432/atelier-mae-shibari.com/d-tails-et-inscription/festival-de-shibari-graines-de-cordes ('04 juil. 2024, 10:00 - 07 juil. 2024, 23:00'). Homepage Wayback 2024-06-16 quoted 'Rejoignez-nous du 4 au 7 juillet 2024'. 4-day Thu-Sun format. Announcement upper bound: between 2024-04-19 (homepage had no Graines content) and 2024-06-16; ticket-sale date not recoverable from available snapshots."
     }
   ],
   "nextEdition": {
-    "startDate": null,
-    "endDate": null,
-    "announcementDate": null,
-    "ticketSaleDate": null,
-    "ticketUrl": "https://www.billetweb.fr/graines-de-cordes",
-    "status": "tba"
+    "startDate": "2026-07-03",
+    "endDate": "2026-07-05",
+    "announcementDate": "2026-03-08",
+    "ticketSaleDate": "2026-02-15",
+    "ticketUrl": "https://www.atelier-mae-shibari.com/billeterie",
+    "status": "scheduled"
   }
 }

@@ -13,38 +13,126 @@
     "contactEmail": "jana.felixruckert@gmx.de"
   },
   "status": "on_sale",
-  "lastUpdated": "2026-03-29",
+  "lastUpdated": "2026-04-24",
   "historicalEditions": [
+    {
+      "startDate": "2012-09-10",
+      "endDate": "2012-09-15",
+      "announcementDate": "2012-07-29",
+      "ticketSaleDate": "2012-07-29",
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No I — inaugural edition. Venue: schwelle7 (Uferstr. 6, Berlin-Wedding). Dates confirmed from Wayback snapshot web.archive.org/web/20120729165550/http://schwelle7.de:80/EURIXE.html ('10. - 15. SEPTEMBER 2012'). announce/ticket are Wayback upper bounds — fully-formed announcement already public at that snapshot date. Fee 100 EUR per couple / 50 EUR single."
+    },
+    {
+      "startDate": "2013-09-09",
+      "endDate": "2013-09-14",
+      "announcementDate": "2013-05-14",
+      "ticketSaleDate": "2013-05-14",
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No III. Venue: schwelle7, Berlin. Dates confirmed from Wayback web.archive.org/web/20130514041457/http://www.schwelle7.de:80/EURIXE.html ('09. - 14. September 2013')."
+    },
+    {
+      "startDate": "2014-09-08",
+      "endDate": "2014-09-13",
+      "announcementDate": "2014-04-26",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No V. Venue: schwelle7, Berlin. Dates confirmed from Wayback web.archive.org/web/20140426153410/ German text '8. - 13. September 2014' (English alt text has a '2013' typo)."
+    },
+    {
+      "startDate": "2015-09-07",
+      "endDate": "2015-09-12",
+      "announcementDate": "2015-05-03",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No VII. Venue: schwelle7, Berlin. Dates from Wayback web.archive.org/web/20150503090854/ ('07. - 12. September 2015'). Core program Mon-Fri Sep 7-11; final party Sat Sep 12."
+    },
+    {
+      "startDate": "2016-09-12",
+      "endDate": "2016-09-18",
+      "announcementDate": "2016-09-12",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No IX. First edition at Alte Börse Marzahn (venue migration from schwelle7). Extended to 7 days (Mon-Sun) vs. previous 6-day format. Dates from Wayback web.archive.org/web/20160912101634/ ('12. - 18. September 2016'). announcementDate upper bound is the snapshot date (no earlier snapshot captured for this edition)."
+    },
+    {
+      "startDate": "2017-09-18",
+      "endDate": "2017-09-24",
+      "announcementDate": "2017-07-16",
+      "ticketSaleDate": null,
+      "soldOutDate": "2017-08-16",
+      "sourceNotes": "EURIX No XI. Venue: Alte Börse Marzahn, Berlin. soldOut upper bound from Wayback web.archive.org/web/20170816223032/ ('The regular program and the Beginner Course is SOLD OUT')."
+    },
+    {
+      "startDate": "2018-10-22",
+      "endDate": "2018-10-27",
+      "announcementDate": "2018-08-01",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No XIII. Venue: Holzmarkt/Säälchen, Berlin (second edition at this venue). announcementDate is Wayback upper bound."
+    },
+    {
+      "startDate": "2019-10-21",
+      "endDate": "2019-10-26",
+      "announcementDate": "2019-08-19",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No XV. Venue: Holzmarkt/Säälchen, Berlin."
+    },
+    {
+      "startDate": "2020-10-19",
+      "endDate": "2020-10-24",
+      "announcementDate": "2020-09-26",
+      "ticketSaleDate": "2020-09-26",
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No XVII. Corona-era edition: reduced capacity ~80 participants with 3G hygiene concept. Venue: Holzmarkt/Säälchen, Berlin. Wayback web.archive.org/web/20200926214229/ notes 'This event is almost sold out'. Dates announced after Spring 2020 (XVI) cancellation."
+    },
+    {
+      "startDate": "2021-10-18",
+      "endDate": "2021-10-23",
+      "announcementDate": "2021-04-02",
+      "ticketSaleDate": "2021-04-02",
+      "soldOutDate": "2021-10-26",
+      "sourceNotes": "EURIX No XIX. Venue: Holzmarkt/Säälchen, Berlin. announcementDate narrowed to 2021-03-06 -> 2021-04-02 window: 2021-03-06 snapshot only mentions XVIII; 2021-04-02 snapshot first mentions XIX ('The automn 2021 EURIX is planned for October, 18 - 23, 2021'). Registration was open as XVIII tickets (carry-over when XVIII cancelled) per 2021-07-08 snapshot ('All tickets remain valid and can be used for the next edition'). soldOutDate 2021-10-26 is upper bound (post-event snapshot); narrower window is 2021-07-30 -> 2021-10-26 since 2021-07-30 snapshot has no SOLD OUT marker."
+    },
+    {
+      "startDate": "2022-11-07",
+      "endDate": "2022-11-12",
+      "announcementDate": "2021-11-09",
+      "ticketSaleDate": null,
+      "soldOutDate": null,
+      "sourceNotes": "EURIX No XXI. Venue: Holzmarkt/Säälchen, Berlin. Unusually held in November rather than October. Announced together with Spring 2022 (XX) in the same content update: 2021-10-26 snapshot has no XXI mention; 2021-11-09 snapshot lists 'coming up automn 2022: EURIX No XXI / November, 7 - 12, 2022'. No ticket-sale or sold-out signal observed on canonical page across 2022-05-23, 2022-08-19, 2022-10-02 snapshots."
+    },
     {
       "startDate": "2023-10-16",
       "endDate": "2023-10-21",
-      "announcementDate": null,
-      "ticketSaleDate": null,
+      "announcementDate": "2022-05-23",
+      "ticketSaleDate": "2023-06-01",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1328948 (FetLife event). Edition dates confirmed; no explicit announcement or ticket-open date in extracted fields."
+      "sourceNotes": "sourceEventId=1328948 (FetLife event). felixruckert.de has no per-edition blog posts; dates derived from Wayback snapshots of /2015/10/01/eurix/. announcementDate is a Wayback upper bound (first snapshot listing No XXIII in 'coming up', 2022-05-23). ticketSaleDate is a Wayback upper bound (first snapshot with 'REGISTRATION is open!!', 2023-06-01). No sold-out snapshot found."
     },
     {
       "startDate": "2024-10-14",
       "endDate": "2024-10-19",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1539849 (FetLife event). Event title contains sold-out marker, but no explicit sold-out date is provided."
+      "announcementDate": "2023-02-07",
+      "ticketSaleDate": "2024-07-16",
+      "soldOutDate": "2024-10-05",
+      "sourceNotes": "sourceEventId=1539849 (FetLife event). Wayback 2023-02-07 snapshot lists No XXV in 'coming up' (announcement upper bound). Wayback 2024-07-16 snapshot shows 'Registration is open!' on No 25 banner (ticket-sale upper bound). Wayback 2024-10-05 snapshot states 'The festival is SOLD OUT!! Waitinglist is still available.'"
     },
     {
       "startDate": "2025-10-20",
       "endDate": "2025-10-25",
-      "announcementDate": null,
-      "ticketSaleDate": null,
-      "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1798958 (FetLife event). Description states festival sold out; no explicit sold-out date is provided."
+      "announcementDate": "2023-12-11",
+      "ticketSaleDate": "2025-05-14",
+      "soldOutDate": "2025-07-19",
+      "sourceNotes": "sourceEventId=1798958 (FetLife event). Wayback 2023-12-11 snapshot lists No XXVII in 'coming up' (announcement upper bound). Wayback 2025-05-14 snapshot shows 'Registration is open!' on No 27 banner (ticket-sale upper bound). Wayback 2025-07-19 snapshot states 'THE FESTIVAL IS SOLD OUT! (Some places left in the Absolute Beginner Course)'"
     }
   ],
   "nextEdition": {
     "startDate": "2026-10-19",
     "endDate": "2026-10-24",
-    "announcementDate": null,
-    "ticketSaleDate": null,
+    "announcementDate": "2025-05-14",
+    "ticketSaleDate": "2026-01-24",
     "ticketUrl": "https://felixruckert.de/2015/10/01/eurix/",
     "status": "on_sale"
   }

@@ -70,6 +70,15 @@ The site derives `nextEdition` predictions at runtime from `historicalEditions` 
 
 Prediction rules live in `src/lib/predictions.ts` and are spec'd in `docs/website-architecture-and-product-decisions.md`. If you change the algorithm, add a backtest in `tests/` and note the delta in your PR.
 
+### Cancelled or skipped editions (optional)
+
+When you know an edition was cancelled or skipped (organiser announcement, FetLife post, mailing list note), record it in the optional `cancelledEditions` array. Each entry is `{ year, sourceNotes }`. The site uses these entries two ways:
+
+1. **Timeline display.** The cancelled year renders in the historical-editions table interleaved chronologically with held editions, struck through and muted, with your `sourceNotes` next to it.
+2. **Cadence sharpening.** The prediction algorithm treats a known cancelled year as a real period in the cadence, so an annual event with one cancellation no longer mispredicts the next edition halfway between two real years.
+
+Year-based metadata only supports annual events. The validator rejects entries that match a held edition's year, fall outside the held-edition range, or sit in a gap that does not fit an annual cadence (e.g. between two biennial editions). If you need biennial or sub-annual cancellation support, open an issue.
+
 ## Running the Worker (reminder emails)
 
 The email-reminder backend lives in `worker/`. Required secrets are documented in `worker/.dev.vars.example`. You do not need the Worker running for frontend or data work — the site is fully static otherwise.

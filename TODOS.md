@@ -50,3 +50,51 @@ Items deferred from planning sessions. Add context, not just titles — future-y
 - C) Defer until the first event is actually retired (YAGNI).
 
 **Context:** Flagged by Codex adversarial + Claude adversarial during /ship review of PR (watchlist branch). Both rated medium severity / low-frequency.
+
+---
+
+## Recency-weighted cadence detection
+
+**What:** Weight recent intervals more heavily in the cadence math so an organiser who tightened their rhythm (e.g. biennial → annual) shows up in next-edition predictions faster.
+
+**Why:** Today the algorithm treats a 2010-era biennial cycle as equal evidence to a 2024-era annual cycle. For events that have visibly shifted cadence mid-history, predictions trail reality.
+
+**Pros:** Sharper predictions for evolving events. Aligns with how a human would weight the same data ("the last three editions all happened a year apart, so probably next year too").
+
+**Cons:** Adds a tunable decay parameter without much real-world data to calibrate against. Easy to over-fit on a 14-event dataset. Most current events show stable cadence so the marginal value is small.
+
+**Context:** Open Question #2 in the cancelled-editions design doc deferred this. Lives in `getCadenceAndDuration` (`src/lib/predictions.ts`); ~30 LOC + tests. Pick a recency window (e.g. last N intervals weighted 2x) and verify against the 14-event dataset before shipping.
+
+**Depends on / blocked by:** Cancelled-editions PR (Pezmc/cancelled-editions) lands first.
+
+---
+
+## `cadenceConfidence` label in the prediction provenance panel
+
+**What:** Expose a "high / medium / low" cadence-confidence label in the provenance pills on the event detail page, based on whether `detectBaseCadence` succeeded with N≥3 intervals (high), fell back to median (medium), or used the default cadence (low).
+
+**Why:** CLAUDE.md says the product principle is "confidence and provenance on every date." Today the provenance panel shows `sampleSize` (a number) but users can't tell whether the prediction is the algorithm's strong opinion or a wild guess from one data point.
+
+**Pros:** Closes the gap on the stated product principle. The signal already exists inside the algorithm; just needs to be returned and rendered. ~10 LOC. The closest-to-free-shipping follow-up of the three.
+
+**Cons:** Three labels is coarse; richer (e.g. percentile uncertainty) would be better but more code. May commit us to a label vocabulary that's hard to evolve.
+
+**Context:** Open Question #2 in the cancelled-editions design doc. Add to the `IPredictionInfo` interface in `src/lib/predictions.ts` (probably as `cadenceConfidence: "high" | "medium" | "low"`), set the value at the same place the cadence is determined in `getCadenceAndDuration`, render as a fourth (or fifth) pill in `EventPage.vue`'s provenance `<ul>`.
+
+**Depends on / blocked by:** Cancelled-editions PR (Pezmc/cancelled-editions) lands first; that PR introduces the `detectBaseCadence` return signal.
+
+---
+
+## Mobile-friendly historical-editions row layout
+
+**What:** Below 640px, replace the horizontal-scroll `<table>` on `EventPage.vue` with a card-stacked layout per edition that prioritises Dates and Notes (the two columns users actually look at). Cancelled rows render as a smaller, muted card.
+
+**Why:** Today the `<table>` at `EventPage.vue:131-154` uses `min-w-[640px]` with `overflow-x-auto`, forcing horizontal scroll on phones to display columns mostly containing "Unknown" and em dashes. Once cancellations land, the most-clicked content (the Notes cell with sourceNotes URL) sits in the rightmost column and mobile users miss it.
+
+**Pros:** Mobile users see the actually-useful columns first. Cancelled rows still distinguishable visually. Deeper alignment with DESIGN.md voice ("let the facts do the work").
+
+**Cons:** Real surgery on a working table. Adds two layouts to maintain (table on desktop, cards on mobile, or one CSS-grid layout that responds). Component-level test coverage needed across both viewports. Affects every event detail page, not just events with cancellations.
+
+**Context:** Surfaced in plan-design-review Pass 6 of the cancelled-editions branch (2026-04-27). Rated 5→8 with this deferred; reaching 10/10 needs this work. Affects every event detail page on mobile, not only events with cancellations — so the value is broader than the cancellations PR alone.
+
+**Depends on / blocked by:** Cancelled-editions PR (Pezmc/cancelled-editions) lands first; the new cancelled-row treatment is the strongest signal that the existing layout under-serves mobile.

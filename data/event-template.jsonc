@@ -63,4 +63,22 @@
     "ticketUrl": null, // URL to the ticket page when it opens
     "status": "tba" // same enum as top-level "status"
   }
+
+  // OPTIONAL — omit unless you have known cancellations to record.
+  // Each entry: { year: integer, sourceNotes: string explaining what happened
+  // and a source URL when possible }. Year-based, so this only covers annual
+  // events. The validator will reject entries whose year matches a held edition,
+  // falls outside the held-edition range, or sits in a gap that does not fit an
+  // annual cadence (e.g. recording a cancellation between two biennial editions).
+  // The site uses these entries both to surface the cancellation in the timeline
+  // (with a strike-through and your sourceNotes) and to sharpen the cadence
+  // prediction by treating the gap as N+1 annual periods.
+  //
+  // To use: add a comma after `nextEdition`'s closing `}` above, then add the
+  // field below (uncommented):
+  //
+  // ,
+  // "cancelledEditions": [
+  //   { "year": 2024, "sourceNotes": "Venue lost lease, see https://fetlife.com/events/123" }
+  // ]
 }

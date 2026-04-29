@@ -13,7 +13,7 @@
     "contactEmail": "tickets@ellipsisrope.com"
   },
   "status": "waiting_list",
-  "lastUpdated": "2026-04-24",
+  "lastUpdated": "2026-04-29",
   "historicalEditions": [
     {
       "startDate": "2019-06-13",
@@ -55,5 +55,19 @@
     "ticketSaleDate": "2026-03-28",
     "ticketUrl": "https://forms.gle/JKutzmCWvGUmaDh19",
     "status": "waiting_list"
-  }
+  },
+  "cancelledEditions": [
+    {
+      "year": 2020,
+      "sourceNotes": "COVID-era cancellation. Organiser numbering jumps from RopeLinked I (2019, FetLife sourceEventId=765184) to RopeLinked IV (2023, FetLife sourceEventId=1214654, attended by Andrea Ropes per andrearopes.com/en/about-me/ '13-16 July – Presenter @ Rope linked IV, Rotterdam (N)'). The 4-year gap with no FetLife events or Wayback snapshots in 2020-2022 implies editions II and III were planned but did not run. ellipsisrope.com has no Wayback snapshots so a per-edition cancellation post is not recoverable."
+    },
+    {
+      "year": 2021,
+      "sourceNotes": "COVID-era cancellation. See 2020 entry — organiser numbering I (2019) → IV (2023) implies editions II and III were planned but did not run; Netherlands COVID restrictions remained active for indoor events through summer 2021."
+    },
+    {
+      "year": 2022,
+      "sourceNotes": "Cancellation/skip per organiser numbering I (2019) → IV (2023). No FetLife event records or Wayback snapshots for RopeLinked exist between Edition I and Edition IV. The 4-year gap is required for the validator's annual cadence check; the festival resumed in July 2023 as Edition IV."
+    }
+  ]
 }

@@ -13,7 +13,7 @@
     "contactEmail": "jana.felixruckert@gmx.de"
   },
   "status": "scheduled",
-  "lastUpdated": "2026-04-24",
+  "lastUpdated": "2026-04-29",
   "historicalEditions": [
     {
       "startDate": "2013-04-22",
@@ -111,5 +111,15 @@
     "ticketSaleDate": null,
     "ticketUrl": "https://felixruckert.de/2015/10/01/eurix/",
     "status": "scheduled"
-  }
+  },
+  "cancelledEditions": [
+    {
+      "year": 2020,
+      "sourceNotes": "EURIX No XVI (Spring 2020) — felixruckert.de/2015/10/01/eurix/ historical list marks this edition as 'cancelled due to Corona!'. The next edition held was EURIX No XVII (Autumn 2020, October)."
+    },
+    {
+      "year": 2021,
+      "sourceNotes": "EURIX No XVIII (Spring 2021) — felixruckert.de/2015/10/01/eurix/ historical list marks this edition as 'cancelled due to Corona!'. Tickets carried over to EURIX No XIX (Autumn 2021) per Wayback web.archive.org/web/20210708 ('All tickets remain valid and can be used for the next edition')."
+    }
+  ]
 }

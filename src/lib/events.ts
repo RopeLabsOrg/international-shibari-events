@@ -155,6 +155,84 @@ export function formatDateRange(startDate: Date | null, endDate: Date | null): s
   return formatDisplayDate(startDate || endDate);
 }
 
+export interface IHeldTimelineRow {
+  kind: "held";
+  key: string;
+  sortYear: number;
+  startDate: string;
+  endDate: string;
+  announcementDate: string | null;
+  ticketSaleDate: string | null;
+  sourceNotes: string;
+}
+
+export interface ICancelledTimelineRow {
+  kind: "cancelled";
+  key: string;
+  sortYear: number;
+  year: number;
+  sourceNotes: string;
+}
+
+export type TTimelineRow = IHeldTimelineRow | ICancelledTimelineRow;
+
+export function buildTimelineRows(event: IEventData): TTimelineRow[] {
+  const held: TTimelineRow[] = event.historicalEditions.map((edition) => ({
+    kind: "held",
+    key: `held-${edition.startDate}-${edition.endDate}`,
+    sortYear: Number(edition.startDate.slice(0, 4)),
+    startDate: edition.startDate,
+    endDate: edition.endDate,
+    announcementDate: edition.announcementDate ?? null,
+    ticketSaleDate: edition.ticketSaleDate ?? null,
+    sourceNotes: edition.sourceNotes,
+  }));
+  const cancelled: TTimelineRow[] = (event.cancelledEditions ?? []).map((entry) => ({
+    kind: "cancelled",
+    key: `cancelled-${entry.year}`,
+    sortYear: entry.year,
+    year: entry.year,
+    sourceNotes: entry.sourceNotes,
+  }));
+  return [...held, ...cancelled].sort((leftRow, rightRow) => leftRow.sortYear - rightRow.sortYear);
+}
+
+export type TLinkifySegment =
+  | { type: "text"; value: string }
+  | { type: "link"; value: string };
+
+const URL_PATTERN = /https?:\/\/[^\s)]+/g;
+
+export function linkifySourceNotes(text: string): TLinkifySegment[] {
+  if (!text) {
+    return [];
+  }
+
+  const segments: TLinkifySegment[] = [];
+  let lastIndex = 0;
+  for (const match of text.matchAll(URL_PATTERN)) {
+    const matchStart = match.index ?? 0;
+    if (matchStart > lastIndex) {
+      segments.push({ type: "text", value: text.slice(lastIndex, matchStart) });
+    }
+    let url = match[0];
+    let trailing = "";
+    while (url.length > 0 && /[.,;:!?]$/.test(url)) {
+      trailing = url.slice(-1) + trailing;
+      url = url.slice(0, -1);
+    }
+    segments.push({ type: "link", value: url });
+    if (trailing) {
+      segments.push({ type: "text", value: trailing });
+    }
+    lastIndex = matchStart + match[0].length;
+  }
+  if (lastIndex < text.length) {
+    segments.push({ type: "text", value: text.slice(lastIndex) });
+  }
+  return segments;
+}
+
 export function getEventSummaries(eventDataList: IEventData[], nowDate = new Date()): IEventSummary[] {
   return eventDataList.map((eventData) => {
     const nextEdition = eventData.nextEdition;
@@ -316,7 +394,11 @@ export function buildEditionDisplays(event: IEventData): { editions: IEditionDis
     isEstimated: parseIsoDate(nextEdition.startDate) === null && derivedDates.startDate !== null,
     confidenceLabel: parseIsoDate(nextEdition.startDate)
       ? "Confirmed by source"
-      : (derivedDates.startDate ? "Predicted from prior editions" : "Low confidence (limited history)"),
+      : (derivedDates.startDate
+          ? "Predicted from prior editions"
+          : (event.historicalEditions.length > 0
+              ? "Event appears dormant (no recent edition)"
+              : "Low confidence (limited history)")),
   };
 
   const baseStartDate = currentEdition.startDate.value;

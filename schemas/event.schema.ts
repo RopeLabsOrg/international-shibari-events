@@ -59,6 +59,16 @@ const NEXT_EDITION_SCHEMA = {
   },
 } as const;
 
+const CANCELLED_EDITION_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  required: ["year", "sourceNotes"],
+  properties: {
+    year: { type: "integer", minimum: 1900 },
+    sourceNotes: { type: "string", minLength: 1 },
+  },
+} as const;
+
 export const EVENT_SCHEMA = {
   $schema: "http://json-schema.org/draft-07/schema#",
   $id: "https://shibari-events/schemas/event.schema.json",
@@ -90,6 +100,10 @@ export const EVENT_SCHEMA = {
       items: HISTORICAL_EDITION_SCHEMA,
     },
     nextEdition: NEXT_EDITION_SCHEMA,
+    cancelledEditions: {
+      type: "array",
+      items: CANCELLED_EDITION_SCHEMA,
+    },
   },
 } as const;
 

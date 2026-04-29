@@ -5,7 +5,14 @@ import DateField from "../components/DateField.vue";
 import ObfuscatedEmail from "../components/ObfuscatedEmail.vue";
 import StatusPill from "../components/StatusPill.vue";
 import WatchButton from "../components/WatchButton.vue";
-import { buildEditionDisplays, formatDateRange, getEventSummaries, loadEventsData } from "../lib/events";
+import {
+  buildEditionDisplays,
+  buildTimelineRows,
+  formatDateRange,
+  getEventSummaries,
+  linkifySourceNotes,
+  loadEventsData,
+} from "../lib/events";
 import { classifyConfidence, getCadenceAndDuration } from "../lib/predictions";
 
 const route = useRoute();
@@ -36,6 +43,8 @@ const temporalStateLabelMap: Record<string, string> = {
   upcoming: "Upcoming",
   ended: "Ended",
 };
+
+const timelineRows = computed(() => (event.value ? buildTimelineRows(event.value) : []));
 </script>
 
 <template>
@@ -112,7 +121,10 @@ const temporalStateLabelMap: Record<string, string> = {
       <p class="mt-2 text-sm text-[var(--color-text)]">
         Forecasts are derived from observed cadence between historical edition start dates and median event duration.
       </p>
-      <ul class="mt-3 grid gap-2 text-sm text-[var(--color-text)] md:grid-cols-3">
+      <ul
+        class="mt-3 grid gap-2 text-sm text-[var(--color-text)]"
+        :class="event.cancelledEditions?.length ? 'md:grid-cols-4' : 'md:grid-cols-3'"
+      >
         <li class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-strong)] p-3">
           Cadence: every {{ editionData.prediction.cadenceDays }} days
         </li>
@@ -121,6 +133,12 @@ const temporalStateLabelMap: Record<string, string> = {
         </li>
         <li class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-strong)] p-3">
           Historical samples: {{ editionData.prediction.sampleSize }}
+        </li>
+        <li
+          v-if="event.cancelledEditions?.length"
+          class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-strong)] p-3"
+        >
+          Cancellations recorded: {{ event.cancelledEditions.length }}
         </li>
       </ul>
       <div v-if="editionData.prediction.sourceNotes.length > 0" class="mt-4">
@@ -151,14 +169,49 @@ const temporalStateLabelMap: Record<string, string> = {
           </thead>
           <tbody>
             <tr
-              v-for="edition in event.historicalEditions"
-              :key="`${edition.startDate}-${edition.endDate}`"
+              v-for="row in timelineRows"
+              :key="row.key"
               class="border-t border-[var(--color-border)]"
+              :class="row.kind === 'cancelled' ? 'text-[var(--color-muted)]' : ''"
             >
-              <td class="py-2">{{ edition.startDate }} - {{ edition.endDate }}</td>
-              <td class="py-2">{{ edition.announcementDate || "Unknown" }}</td>
-              <td class="py-2">{{ edition.ticketSaleDate || "Unknown" }}</td>
-              <td class="py-2">{{ edition.sourceNotes }}</td>
+              <template v-if="row.kind === 'held'">
+                <td class="py-2">{{ row.startDate }} - {{ row.endDate }}</td>
+                <td class="py-2">{{ row.announcementDate || "Unknown" }}</td>
+                <td class="py-2">{{ row.ticketSaleDate || "Unknown" }}</td>
+                <td class="py-2">
+                  <template v-for="(segment, segmentIndex) in linkifySourceNotes(row.sourceNotes)" :key="segmentIndex">
+                    <a
+                      v-if="segment.type === 'link'"
+                      :href="segment.value"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-block py-1 underline text-[var(--color-secondary)] hover:text-[var(--color-primary)]"
+                    >{{ segment.value }}</a>
+                    <template v-else>{{ segment.value }}</template>
+                  </template>
+                </td>
+              </template>
+              <template v-else>
+                <td class="py-2">
+                  <span class="sr-only">Cancelled edition: </span>
+                  <del>{{ row.year }}</del>
+                  <span aria-hidden="true"> Cancelled</span>
+                </td>
+                <td class="py-2">—</td>
+                <td class="py-2">—</td>
+                <td class="py-2">
+                  <template v-for="(segment, segmentIndex) in linkifySourceNotes(row.sourceNotes)" :key="segmentIndex">
+                    <a
+                      v-if="segment.type === 'link'"
+                      :href="segment.value"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-block py-1 underline text-[var(--color-secondary)] hover:text-[var(--color-primary)]"
+                    >{{ segment.value }}</a>
+                    <template v-else>{{ segment.value }}</template>
+                  </template>
+                </td>
+              </template>
             </tr>
           </tbody>
         </table>

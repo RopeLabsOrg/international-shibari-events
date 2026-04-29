@@ -6,7 +6,7 @@ import Ajv, { type ErrorObject } from "ajv";
 import addFormats from "ajv-formats";
 import { parse as parseJsonc } from "jsonc-parser";
 import { EVENT_SCHEMA, type IEventData } from "../schemas/event.schema";
-import { findExtraRootValueOffset } from "./validate-events-lib";
+import { checkCancelledEditions, findExtraRootValueOffset } from "./validate-events-lib";
 
 const DATA_DIRECTORY = path.resolve(process.cwd(), "data/events");
 const SLUG_HISTORY_PATH = path.resolve(process.cwd(), "data/slug-history.jsonc");
@@ -83,13 +83,18 @@ function validateFile(filePath: string, raw: string): string[] {
   }
 
   const parsed = parseJsonc(raw) as unknown;
-  if (validateEventData(parsed)) return [];
+  if (!validateEventData(parsed)) {
+    return (validateEventData.errors || []).map((error) => {
+      const pointer = error.instancePath || "/";
+      const hint = fixHintFor(error);
+      return `${relPath}: ${pointer} ${error.message || "invalid"}\n  Hint: ${hint}`;
+    });
+  }
 
-  return (validateEventData.errors || []).map((error) => {
-    const pointer = error.instancePath || "/";
-    const hint = fixHintFor(error);
-    return `${relPath}: ${pointer} ${error.message || "invalid"}\n  Hint: ${hint}`;
-  });
+  const cancelledIssues = checkCancelledEditions(parsed);
+  return cancelledIssues.map(
+    (issue) => `${relPath}: /cancelledEditions ${issue.message}`,
+  );
 }
 
 interface ISlugHistory {

@@ -42,6 +42,14 @@
 
   // Prior editions you can confirm. Most recent first is fine; order doesn't
   // affect prediction logic but helps reviewers.
+  //
+  // Each edition carries TWO notes fields:
+  //   - internalSourceNotes: maintainer-facing provenance — raw URLs, FetLife
+  //     event IDs, Wayback snapshot paths, commit hashes, ambiguity caveats.
+  //     Anything a future reviewer needs to trust or correct the record.
+  //   - externalSourceNotes: shown on the website. One or two clean,
+  //     human-readable sentences summarising what we know and how confident
+  //     we are. No internal IDs or raw URLs unless they're meant for users.
   "historicalEditions": [
     {
       "startDate": "2025-07-04",
@@ -49,7 +57,8 @@
       "announcementDate": "2025-03-01", // when the event was publicly announced, or null
       "ticketSaleDate": "2025-03-15", // when tickets opened (critical for prediction), or null
       "soldOutDate": null, // when tickets sold out, or null
-      "sourceNotes": "FetLife event 1234567 confirms dates. Ticket sale date observed via mailing list."
+      "internalSourceNotes": "FetLife event 1234567 confirms dates. Ticket sale date observed via mailing list discussion 2025-03-15.",
+      "externalSourceNotes": "Confirmed by the official FetLife event listing; ticket-sale opening confirmed via the organiser's mailing list."
     }
   ],
 
@@ -65,20 +74,26 @@
   }
 
   // OPTIONAL — omit unless you have known cancellations to record.
-  // Each entry: { year: integer, sourceNotes: string explaining what happened
-  // and a source URL when possible }. Year-based, so this only covers annual
-  // events. The validator will reject entries whose year matches a held edition,
-  // falls outside the held-edition range, or sits in a gap that does not fit an
-  // annual cadence (e.g. recording a cancellation between two biennial editions).
-  // The site uses these entries both to surface the cancellation in the timeline
-  // (with a strike-through and your sourceNotes) and to sharpen the cadence
-  // prediction by treating the gap as N+1 annual periods.
+  // Each entry: { year: integer, internalSourceNotes, externalSourceNotes }.
+  // Both notes fields follow the same split as historicalEditions: internal
+  // is raw maintainer-facing provenance; external is the clean version shown
+  // on the site. Year-based, so this only covers annual events. The validator
+  // will reject entries whose year matches a held edition, falls outside the
+  // held-edition range, or sits in a gap that does not fit an annual cadence
+  // (e.g. recording a cancellation between two biennial editions).
+  // The site uses these entries both to surface the cancellation in the
+  // timeline (with a strike-through and the externalSourceNotes) and to
+  // sharpen the cadence prediction by treating the gap as N+1 annual periods.
   //
   // To use: add a comma after `nextEdition`'s closing `}` above, then add the
   // field below (uncommented):
   //
   // ,
   // "cancelledEditions": [
-  //   { "year": 2024, "sourceNotes": "Venue lost lease, see https://fetlife.com/events/123" }
+  //   {
+  //     "year": 2024,
+  //     "internalSourceNotes": "Venue lost lease, see https://fetlife.com/events/123 and organiser post 2024-03-12.",
+  //     "externalSourceNotes": "Cancelled when the venue lost its lease; confirmed by the organiser's announcement."
+  //   }
   // ]
 }

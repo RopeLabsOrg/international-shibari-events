@@ -34,14 +34,15 @@ const LOCATION_SCHEMA = {
 const HISTORICAL_EDITION_SCHEMA = {
   type: "object",
   additionalProperties: false,
-  required: ["startDate", "endDate", "sourceNotes"],
+  required: ["startDate", "endDate", "internalSourceNotes", "externalSourceNotes"],
   properties: {
     startDate: { type: "string", format: "date" },
     endDate: { type: "string", format: "date" },
     announcementDate: { type: ["string", "null"], format: "date" },
     ticketSaleDate: { type: ["string", "null"], format: "date" },
     soldOutDate: { type: ["string", "null"], format: "date" },
-    sourceNotes: { type: "string" },
+    internalSourceNotes: { type: "string", minLength: 1 },
+    externalSourceNotes: { type: "string", minLength: 1 },
   },
 } as const;
 
@@ -62,10 +63,11 @@ const NEXT_EDITION_SCHEMA = {
 const CANCELLED_EDITION_SCHEMA = {
   type: "object",
   additionalProperties: false,
-  required: ["year", "sourceNotes"],
+  required: ["year", "internalSourceNotes", "externalSourceNotes"],
   properties: {
     year: { type: "integer", minimum: 1900 },
-    sourceNotes: { type: "string", minLength: 1 },
+    internalSourceNotes: { type: "string", minLength: 1 },
+    externalSourceNotes: { type: "string", minLength: 1 },
   },
 } as const;
 

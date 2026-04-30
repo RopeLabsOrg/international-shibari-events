@@ -21,7 +21,8 @@
       "announcementDate": null,
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "Edition 1 — inaugural. Confirmed via Wayback web.archive.org/web/20210127004923/onawa-europe.com/ ('Sat 22 & Sun 23 Feb 2020 - Shibari Lounge Antwerp'). No Wayback snapshots before the event — earliest capture is 2020-08-14. Announcement and ticket-sale dates not recoverable."
+      "internalSourceNotes": "Edition 1 — inaugural. Confirmed via Wayback web.archive.org/web/20210127004923/onawa-europe.com/ ('Sat 22 & Sun 23 Feb 2020 - Shibari Lounge Antwerp'). No Wayback snapshots before the event — earliest capture is 2020-08-14. Announcement and ticket-sale dates not recoverable.",
+      "externalSourceNotes": "Inaugural edition, weekend format at Shibari Lounge Antwerp. Dates confirmed by archived snapshots of the official site; announcement and ticket-sale dates not recoverable."
     },
     {
       "startDate": "2023-05-27",
@@ -29,7 +30,8 @@
       "announcementDate": "2023-02-14",
       "ticketSaleDate": "2023-03-27",
       "soldOutDate": null,
-      "sourceNotes": "Edition 2. Originally planned for 2022, postponed ('Due to strict Covid measures in Japan and the war in Ukraine' per 2022-05-18 homepage). First announced as 3 days (May 27-28-29) in Wayback web.archive.org/web/20230214074400/, trimmed to 2 days by April. Ticket-sale upper bound 2023-03-27 (homepage gained 'Register for Tickets >>>' link). Both dates are Wayback upper bounds — true dates may be earlier."
+      "internalSourceNotes": "Edition 2. Originally planned for 2022, postponed ('Due to strict Covid measures in Japan and the war in Ukraine' per 2022-05-18 homepage). First announced as 3 days (May 27-28-29) in Wayback web.archive.org/web/20230214074400/, trimmed to 2 days by April. Ticket-sale upper bound 2023-03-27 (homepage gained 'Register for Tickets >>>' link). Both dates are Wayback upper bounds — true dates may be earlier.",
+      "externalSourceNotes": "Originally planned for 2022 and postponed by the organisers, citing COVID restrictions in Japan and the war in Ukraine. Initially announced as a three-day event before being trimmed to two days. Announcement and ticket-sale dates are upper bounds from archived site snapshots."
     },
     {
       "startDate": "2024-09-28",
@@ -37,7 +39,8 @@
       "announcementDate": "2024-02-24",
       "ticketSaleDate": "2024-05-26",
       "soldOutDate": null,
-      "sourceNotes": "Edition 3. Confirmed via Wayback web.archive.org/web/20240224091946/onawa-europe.com/ ('Next Edition... 28 & 29 September 2024' with 'Ticketing not open yet'). Ticket sale upper bound 2024-05-26 (homepage gained 'Buy Your Tickets' button + tickets page said 'ticket sales are open as of now!'); narrower window is 2024-04-20 -> 2024-05-26 since the 2024-04-20 snapshot still said tickets not open."
+      "internalSourceNotes": "Edition 3. Confirmed via Wayback web.archive.org/web/20240224091946/onawa-europe.com/ ('Next Edition... 28 & 29 September 2024' with 'Ticketing not open yet'). Ticket sale upper bound 2024-05-26 (homepage gained 'Buy Your Tickets' button + tickets page said 'ticket sales are open as of now!'); narrower window is 2024-04-20 -> 2024-05-26 since the 2024-04-20 snapshot still said tickets not open.",
+      "externalSourceNotes": "Dates and announcement confirmed by archived snapshots of the official site. Ticket-sale date is an upper bound; the actual opening fell between late April and late May."
     },
     {
       "startDate": "2025-09-27",
@@ -45,7 +48,8 @@
       "announcementDate": "2025-06-20",
       "ticketSaleDate": "2025-06-20",
       "soldOutDate": null,
-      "sourceNotes": "Edition 4. Confirmed via Wayback web.archive.org/web/20250906040146/onawa-europe.com/onawa-2025 ('27 & 28 September'). announce/ticket dates are 2025-06-20 upper bounds (homepage already showed full lineup + 'Buy Your Tickets Here' button by then). True dates likely earlier (between 2025-03-27 and 2025-06-20)."
+      "internalSourceNotes": "Edition 4. Confirmed via Wayback web.archive.org/web/20250906040146/onawa-europe.com/onawa-2025 ('27 & 28 September'). announce/ticket dates are 2025-06-20 upper bounds (homepage already showed full lineup + 'Buy Your Tickets Here' button by then). True dates likely earlier (between 2025-03-27 and 2025-06-20).",
+      "externalSourceNotes": "Dates confirmed by archived snapshots of the official site. Announcement and ticket-sale dates are upper bounds; both likely opened earlier in spring 2025."
     }
   ],
   "nextEdition": {

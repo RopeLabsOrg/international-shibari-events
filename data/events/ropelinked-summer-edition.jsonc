@@ -21,7 +21,8 @@
       "announcementDate": null,
       "ticketSaleDate": "2019-03-30",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=765184 (FetLife event). Description states tickets become available March 30."
+      "internalSourceNotes": "sourceEventId=765184 (FetLife event). Description states tickets become available March 30.",
+      "externalSourceNotes": "Inaugural edition. Confirmed by the official FetLife event listing; ticket sale date stated in the event description."
     },
     {
       "startDate": "2023-07-13",
@@ -29,7 +30,8 @@
       "announcementDate": null,
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1214654 (FetLife event). Event title includes sold-out marker but no explicit sold-out date."
+      "internalSourceNotes": "sourceEventId=1214654 (FetLife event). Event title includes sold-out marker but no explicit sold-out date.",
+      "externalSourceNotes": "Confirmed by the official FetLife event listing; sold out but no explicit sell-out date recorded."
     },
     {
       "startDate": "2024-07-11",
@@ -37,7 +39,8 @@
       "announcementDate": "2024-03-28",
       "ticketSaleDate": "2024-04-19",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1384118 (FetLife event). Discussion createdAt=2024-03-28 announces tickets on 2024-04-19."
+      "internalSourceNotes": "sourceEventId=1384118 (FetLife event). Discussion createdAt=2024-03-28 announces tickets on 2024-04-19.",
+      "externalSourceNotes": "Confirmed by the official FetLife event listing. The organiser announced the ticket-sale date in late March and opened registration in mid-April."
     },
     {
       "startDate": "2025-07-03",
@@ -45,7 +48,8 @@
       "announcementDate": "2025-03-19",
       "ticketSaleDate": "2025-04-06",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1646813 (FetLife event). Discussion createdAt=2025-03-19 announces registration timing; discussion createdAt=2025-04-06 confirms registration opened."
+      "internalSourceNotes": "sourceEventId=1646813 (FetLife event). Discussion createdAt=2025-03-19 announces registration timing; discussion createdAt=2025-04-06 confirms registration opened.",
+      "externalSourceNotes": "Confirmed by the official FetLife event listing. The organiser announced registration timing in mid-March and opened registration in early April."
     }
   ],
   "nextEdition": {
@@ -59,15 +63,18 @@
   "cancelledEditions": [
     {
       "year": 2020,
-      "sourceNotes": "COVID-era cancellation. Organiser numbering jumps from RopeLinked I (2019, FetLife sourceEventId=765184) to RopeLinked IV (2023, FetLife sourceEventId=1214654, attended by Andrea Ropes per andrearopes.com/en/about-me/ '13-16 July – Presenter @ Rope linked IV, Rotterdam (N)'). The 4-year gap with no FetLife events or Wayback snapshots in 2020-2022 implies editions II and III were planned but did not run. ellipsisrope.com has no Wayback snapshots so a per-edition cancellation post is not recoverable."
+      "internalSourceNotes": "COVID-era cancellation. Organiser numbering jumps from RopeLinked I (2019, FetLife sourceEventId=765184) to RopeLinked IV (2023, FetLife sourceEventId=1214654, attended by Andrea Ropes per andrearopes.com/en/about-me/ '13-16 July – Presenter @ Rope linked IV, Rotterdam (N)'). The 4-year gap with no FetLife events or Wayback snapshots in 2020-2022 implies editions II and III were planned but did not run. ellipsisrope.com has no Wayback snapshots so a per-edition cancellation post is not recoverable.",
+      "externalSourceNotes": "COVID-era cancellation, validated by the organiser's edition-numbering pattern (I in 2019 jumps to IV in 2023)."
     },
     {
       "year": 2021,
-      "sourceNotes": "COVID-era cancellation. See 2020 entry — organiser numbering I (2019) → IV (2023) implies editions II and III were planned but did not run; Netherlands COVID restrictions remained active for indoor events through summer 2021."
+      "internalSourceNotes": "COVID-era cancellation. See 2020 entry — organiser numbering I (2019) → IV (2023) implies editions II and III were planned but did not run; Netherlands COVID restrictions remained active for indoor events through summer 2021.",
+      "externalSourceNotes": "COVID-era cancellation, validated by the organiser's edition-numbering pattern (I in 2019 jumps to IV in 2023). Dutch COVID restrictions on indoor events extended through summer 2021."
     },
     {
       "year": 2022,
-      "sourceNotes": "Validator-padding entry, not a documented planned edition. Organiser numbering I (2019) → IV (2023) only accounts for two skipped editions (II, III); a third year is required to satisfy the annual-cadence check across the 4-year gap. Whether 2022 specifically was 'cancelled' or simply not planned is unknown — the festival was dormant for the entire 2020-2022 window and resumed in July 2023 as Edition IV."
+      "internalSourceNotes": "Validator-padding entry, not a documented planned edition. Organiser numbering I (2019) → IV (2023) only accounts for two skipped editions (II, III); a third year is required to satisfy the annual-cadence check across the 4-year gap. Whether 2022 specifically was 'cancelled' or simply not planned is unknown — the festival was dormant for the entire 2020-2022 window and resumed in July 2023 as Edition IV.",
+      "externalSourceNotes": "Festival dormant during the 2020-2022 window; specific status of 2022 unclear. The festival resumed as Edition IV in July 2023."
     }
   ]
 }

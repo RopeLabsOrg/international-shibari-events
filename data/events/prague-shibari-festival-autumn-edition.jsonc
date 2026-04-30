@@ -21,7 +21,8 @@
       "announcementDate": "2021-03-01",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "Pandemic rollover of the cancelled 2020 edition; no public ticket sale — tickets transferred from 2020 holders. Announcement post pragueshibari.com/2021/prague-shibari-festival-2021/ published 01.03.2021. Capacity note pragueshibari.com/2021/tickets-and-covid-19-measures/ published 21.07.2021. Only one Prague Shibari edition ran in 2021 (no Spring)."
+      "internalSourceNotes": "Pandemic rollover of the cancelled 2020 edition; no public ticket sale — tickets transferred from 2020 holders. Announcement post pragueshibari.com/2021/prague-shibari-festival-2021/ published 01.03.2021. Capacity note pragueshibari.com/2021/tickets-and-covid-19-measures/ published 21.07.2021. Only one Prague Shibari edition ran in 2021 (no Spring).",
+      "externalSourceNotes": "Pandemic rollover of the cancelled 2020 edition; no public ticket sale — tickets were transferred from 2020 holders. Only one Prague Shibari edition ran in 2021 (no Spring edition)."
     },
     {
       "startDate": "2022-09-09",
@@ -29,7 +30,8 @@
       "announcementDate": "2022-06-24",
       "ticketSaleDate": "2022-06-30",
       "soldOutDate": "2022-07-08",
-      "sourceNotes": "Announcement post pragueshibari.com/2022/prague-shibari-festival-autumn-2022/ published 24.06.2022; tickets opened 30.06.2022 midnight. Sold-out post pragueshibari.com/2022/prague-shibari-festival-2022-autumn-sold-out/ published 08.07.2022."
+      "internalSourceNotes": "Announcement post pragueshibari.com/2022/prague-shibari-festival-autumn-2022/ published 24.06.2022; tickets opened 30.06.2022 midnight. Sold-out post pragueshibari.com/2022/prague-shibari-festival-2022-autumn-sold-out/ published 08.07.2022.",
+      "externalSourceNotes": "Announcement, ticket-sale opening, and sold-out dates all confirmed by dedicated posts on the official site."
     },
     {
       "startDate": "2023-09-08",
@@ -37,7 +39,8 @@
       "announcementDate": "2023-06-25",
       "ticketSaleDate": "2023-06-29",
       "soldOutDate": "2023-07-10",
-      "sourceNotes": "Announcement post pragueshibari.com/2023/prague-shibari-festival-2023-autumn/ published 25.06.2023; tickets opened 29.06.2023 23:00 CET. Sold-out post pragueshibari.com/2023/prague-shibari-festival-2023-autumn-sold-out/ published 10.07.2023."
+      "internalSourceNotes": "Announcement post pragueshibari.com/2023/prague-shibari-festival-2023-autumn/ published 25.06.2023; tickets opened 29.06.2023 23:00 CET. Sold-out post pragueshibari.com/2023/prague-shibari-festival-2023-autumn-sold-out/ published 10.07.2023.",
+      "externalSourceNotes": "Announcement, ticket-sale opening, and sold-out dates all confirmed by dedicated posts on the official site."
     },
     {
       "startDate": "2024-09-13",
@@ -45,7 +48,8 @@
       "announcementDate": "2024-05-24",
       "ticketSaleDate": "2024-06-20",
       "soldOutDate": "2024-07-24",
-      "sourceNotes": "sourceEventId=1535094 (FetLife event). Announcement post pragueshibari.com/2024/prague-shibari-festival-2024-autumn/ published 24.05.2024; first batch 20.06.2024 23:00 CET, second batch 27.06.2024. Sold-out date 2024-07-24 from FetLife discussion; not corroborated by a dedicated pragueshibari.com post."
+      "internalSourceNotes": "sourceEventId=1535094 (FetLife event). Announcement post pragueshibari.com/2024/prague-shibari-festival-2024-autumn/ published 24.05.2024; first batch 20.06.2024 23:00 CET, second batch 27.06.2024. Sold-out date 2024-07-24 from FetLife discussion; not corroborated by a dedicated pragueshibari.com post.",
+      "externalSourceNotes": "Announcement and ticket-sale opening dates confirmed by dedicated posts on the official site. Tickets were released in two batches; sold-out date is from the official FetLife event listing."
     },
     {
       "startDate": "2025-09-12",
@@ -53,7 +57,8 @@
       "announcementDate": "2025-05-29",
       "ticketSaleDate": "2025-06-10",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1795416 (FetLife event). Announcement post pragueshibari.com/2025/prague-shibari-festival-2025-autumn/ published 29.05.2025; first batch 10.06.2025 23:00, second batch 17.06.2025 23:00. Event page shows sold out but no dated sold-out post on-site."
+      "internalSourceNotes": "sourceEventId=1795416 (FetLife event). Announcement post pragueshibari.com/2025/prague-shibari-festival-2025-autumn/ published 29.05.2025; first batch 10.06.2025 23:00, second batch 17.06.2025 23:00. Event page shows sold out but no dated sold-out post on-site.",
+      "externalSourceNotes": "Announcement and ticket-sale opening dates confirmed by dedicated posts on the official site. Tickets were released in two batches; the festival sold out but no dated sell-out post was published."
     }
   ],
   "nextEdition": {

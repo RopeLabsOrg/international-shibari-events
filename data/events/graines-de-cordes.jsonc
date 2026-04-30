@@ -21,7 +21,8 @@
       "announcementDate": null,
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "Edition I — first edition. Confirmed via live Billetweb event page (billetweb.fr/graines-de-cordes): 'Sat Jul 15, 2023 at 10:00 AM to Sun Jul 16, 2023 at 09:00 PM'. Atelier Mae has no Wayback snapshots before 2024-04, so announcement and ticket-sale dates are not recoverable. Two-day weekend format at Mauvaise Graine cafe."
+      "internalSourceNotes": "Edition I — first edition. Confirmed via live Billetweb event page (billetweb.fr/graines-de-cordes): 'Sat Jul 15, 2023 at 10:00 AM to Sun Jul 16, 2023 at 09:00 PM'. Atelier Mae has no Wayback snapshots before 2024-04, so announcement and ticket-sale dates are not recoverable. Two-day weekend format at Mauvaise Graine cafe.",
+      "externalSourceNotes": "Inaugural edition, two-day weekend format at Mauvaise Graine cafe. Dates confirmed by the live Billetweb event page; announcement and ticket-sale dates not recoverable."
     },
     {
       "startDate": "2024-07-04",
@@ -29,7 +30,8 @@
       "announcementDate": null,
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "Edition II. Confirmed via Wayback web.archive.org/web/20250326202432/atelier-mae-shibari.com/d-tails-et-inscription/festival-de-shibari-graines-de-cordes ('04 juil. 2024, 10:00 - 07 juil. 2024, 23:00'). Homepage Wayback 2024-06-16 quoted 'Rejoignez-nous du 4 au 7 juillet 2024'. 4-day Thu-Sun format. Announcement upper bound: between 2024-04-19 (homepage had no Graines content) and 2024-06-16; ticket-sale date not recoverable from available snapshots."
+      "internalSourceNotes": "Edition II. Confirmed via Wayback web.archive.org/web/20250326202432/atelier-mae-shibari.com/d-tails-et-inscription/festival-de-shibari-graines-de-cordes ('04 juil. 2024, 10:00 - 07 juil. 2024, 23:00'). Homepage Wayback 2024-06-16 quoted 'Rejoignez-nous du 4 au 7 juillet 2024'. 4-day Thu-Sun format. Announcement upper bound: between 2024-04-19 (homepage had no Graines content) and 2024-06-16; ticket-sale date not recoverable from available snapshots.",
+      "externalSourceNotes": "Second edition expanded to a four-day Thursday-to-Sunday format. Dates confirmed by the official Atelier Mae event page; announcement and ticket-sale dates not recoverable."
     }
   ],
   "nextEdition": {

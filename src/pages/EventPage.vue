@@ -141,12 +141,12 @@ const timelineRows = computed(() => (event.value ? buildTimelineRows(event.value
           Cancellations recorded: {{ event.cancelledEditions.length }}
         </li>
       </ul>
-      <div v-if="editionData.prediction.sourceNotes.length > 0" class="mt-4">
+      <div v-if="editionData.prediction.externalSourceNotes.length > 0" class="mt-4">
         <h3 class="text-sm font-semibold uppercase tracking-wide text-[var(--color-muted)]">
           Source notes
         </h3>
         <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--color-text)]">
-          <li v-for="note in editionData.prediction.sourceNotes" :key="note">
+          <li v-for="note in editionData.prediction.externalSourceNotes" :key="note">
             {{ note }}
           </li>
         </ul>
@@ -179,7 +179,7 @@ const timelineRows = computed(() => (event.value ? buildTimelineRows(event.value
                 <td class="py-2">{{ row.announcementDate || "Unknown" }}</td>
                 <td class="py-2">{{ row.ticketSaleDate || "Unknown" }}</td>
                 <td class="py-2">
-                  <template v-for="(segment, segmentIndex) in linkifySourceNotes(row.sourceNotes)" :key="segmentIndex">
+                  <template v-for="(segment, segmentIndex) in linkifySourceNotes(row.externalSourceNotes)" :key="segmentIndex">
                     <a
                       v-if="segment.type === 'link'"
                       :href="segment.value"
@@ -200,7 +200,7 @@ const timelineRows = computed(() => (event.value ? buildTimelineRows(event.value
                 <td class="py-2">—</td>
                 <td class="py-2">—</td>
                 <td class="py-2">
-                  <template v-for="(segment, segmentIndex) in linkifySourceNotes(row.sourceNotes)" :key="segmentIndex">
+                  <template v-for="(segment, segmentIndex) in linkifySourceNotes(row.externalSourceNotes)" :key="segmentIndex">
                     <a
                       v-if="segment.type === 'link'"
                       :href="segment.value"

@@ -8,13 +8,13 @@ alwaysApply: false
 
 - Keep contributions focused and verifiable.
 - Prefer one event per PR unless updates are tightly related.
-- Add source context in comments (`sourceNotes`) for future maintainers.
+- Put raw provenance in `internalSourceNotes` (URLs, FetLife event IDs, caveats) for future maintainers, and a clean human-readable summary in `externalSourceNotes` for the website.
 
 # Add a New Event
 
 1. Create `data/events/<event-slug>.jsonc`.
 2. Fill identity, links, status, `lastUpdated`, `historicalEditions`, and `nextEdition`.
-3. Include comments for non-obvious assumptions (especially timeline assumptions in `sourceNotes`).
+3. Include comments for non-obvious assumptions (especially timeline assumptions in `internalSourceNotes`; mirror the user-relevant caveats in `externalSourceNotes`).
 4. Ensure no past-only display behavior (runtime prediction should be possible from historical cadence when dates are unknown).
 
 # Update an Existing Event

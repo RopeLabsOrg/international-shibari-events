@@ -30,7 +30,8 @@ alwaysApply: false
   - `announcementDate` (nullable)
   - `ticketSaleDate` (nullable)
   - `soldOutDate` (nullable)
-  - `sourceNotes` (short provenance note)
+  - `internalSourceNotes` (maintainer-facing raw provenance: URLs, FetLife event IDs, ambiguity notes)
+  - `externalSourceNotes` (clean human-readable summary shown on the website)
 - `nextEdition`:
   - `startDate` / `endDate` (nullable when unknown)
   - `announcementDate` (nullable)

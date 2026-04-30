@@ -94,9 +94,10 @@ Each event detail page displays:
 - Fill only values that are explicitly evidenced:
   - if a date is not explicit, keep it `null`,
   - if the edition is known but timeline dates are unclear, store only `startDate`/`endDate`.
-- Always include provenance in `sourceNotes` with:
-  - source URL or source label,
-  - short extraction note (for example, "ticket drop date explicitly stated").
+- Provenance is split into two fields per edition:
+  - `internalSourceNotes`: maintainer-facing. Raw URLs, FetLife event IDs, Wayback snapshot paths, commit hashes, ambiguity caveats. The reviewer's source-of-truth for trusting or correcting the record.
+  - `externalSourceNotes`: user-facing. One or two clean, human-readable sentences shown in the historical-editions table on the site. No raw IDs or internal URLs unless they're useful to a reader.
+- Always populate both fields. The internal note can be terse; the external note must be a complete sentence.
 
 ### FetLife Raw Dump Normalization
 
@@ -110,12 +111,12 @@ Each event detail page displays:
   - "tickets live/open/registration open" -> `ticketSaleDate`,
   - "sold out/waiting list only" -> `soldOutDate` when date is explicit.
 - If timing language is relative ("tomorrow", "next Friday"), do not infer without a post timestamp.
-- When uncertainty remains after normalization, store `null` and explain ambiguity in `sourceNotes`.
+- When uncertainty remains after normalization, store `null` and explain the ambiguity in `internalSourceNotes`. Mirror the user-relevant part of that caveat in `externalSourceNotes` ("ticket-sale date is an upper bound").
 
 ## Working Agreement for Ongoing Sessions
 
 - Make small, atomic commits following gitmoji conventions.
-- Keep data provenance explicit in `historicalEditions[].sourceNotes`.
+- Keep data provenance explicit in `historicalEditions[].internalSourceNotes` and the user-facing summary in `historicalEditions[].externalSourceNotes`.
 - Keep uncertain/unverified events in catalog with conservative `tba` status and runtime-derived estimates instead of removing them.
 - Extend features incrementally after each baseline milestone (sorting/filtering, saved preferences, region filters, reminder exports).
 

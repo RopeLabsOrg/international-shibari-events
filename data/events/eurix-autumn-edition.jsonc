@@ -21,7 +21,8 @@
       "announcementDate": "2012-07-29",
       "ticketSaleDate": "2012-07-29",
       "soldOutDate": null,
-      "sourceNotes": "EURIX No I — inaugural edition. Venue: schwelle7 (Uferstr. 6, Berlin-Wedding). Dates confirmed from Wayback snapshot web.archive.org/web/20120729165550/http://schwelle7.de:80/EURIXE.html ('10. - 15. SEPTEMBER 2012'). announce/ticket are Wayback upper bounds — fully-formed announcement already public at that snapshot date. Fee 100 EUR per couple / 50 EUR single."
+      "internalSourceNotes": "EURIX No I — inaugural edition. Venue: schwelle7 (Uferstr. 6, Berlin-Wedding). Dates confirmed from Wayback snapshot web.archive.org/web/20120729165550/http://schwelle7.de:80/EURIXE.html ('10. - 15. SEPTEMBER 2012'). announce/ticket are Wayback upper bounds — fully-formed announcement already public at that snapshot date. Fee 100 EUR per couple / 50 EUR single.",
+      "externalSourceNotes": "EURIX No I, the inaugural edition at the original schwelle7 venue. Dates confirmed by archived snapshots of the schwelle7 site; announcement and ticket-sale dates are upper bounds."
     },
     {
       "startDate": "2013-09-09",
@@ -29,7 +30,8 @@
       "announcementDate": "2013-05-14",
       "ticketSaleDate": "2013-05-14",
       "soldOutDate": null,
-      "sourceNotes": "EURIX No III. Venue: schwelle7, Berlin. Dates confirmed from Wayback web.archive.org/web/20130514041457/http://www.schwelle7.de:80/EURIXE.html ('09. - 14. September 2013')."
+      "internalSourceNotes": "EURIX No III. Venue: schwelle7, Berlin. Dates confirmed from Wayback web.archive.org/web/20130514041457/http://www.schwelle7.de:80/EURIXE.html ('09. - 14. September 2013').",
+      "externalSourceNotes": "EURIX No III at schwelle7, Berlin. Dates confirmed by archived snapshots of the schwelle7 site."
     },
     {
       "startDate": "2014-09-08",
@@ -37,7 +39,8 @@
       "announcementDate": "2014-04-26",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "EURIX No V. Venue: schwelle7, Berlin. Dates confirmed from Wayback web.archive.org/web/20140426153410/ German text '8. - 13. September 2014' (English alt text has a '2013' typo)."
+      "internalSourceNotes": "EURIX No V. Venue: schwelle7, Berlin. Dates confirmed from Wayback web.archive.org/web/20140426153410/ German text '8. - 13. September 2014' (English alt text has a '2013' typo).",
+      "externalSourceNotes": "EURIX No V at schwelle7, Berlin. Dates confirmed by archived snapshots of the schwelle7 site."
     },
     {
       "startDate": "2015-09-07",
@@ -45,7 +48,8 @@
       "announcementDate": "2015-05-03",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "EURIX No VII. Venue: schwelle7, Berlin. Dates from Wayback web.archive.org/web/20150503090854/ ('07. - 12. September 2015'). Core program Mon-Fri Sep 7-11; final party Sat Sep 12."
+      "internalSourceNotes": "EURIX No VII. Venue: schwelle7, Berlin. Dates from Wayback web.archive.org/web/20150503090854/ ('07. - 12. September 2015'). Core program Mon-Fri Sep 7-11; final party Sat Sep 12.",
+      "externalSourceNotes": "EURIX No VII at schwelle7, Berlin. Core program ran Monday-Friday with a final party on Saturday. Dates confirmed by archived snapshots of the schwelle7 site."
     },
     {
       "startDate": "2016-09-12",
@@ -53,7 +57,8 @@
       "announcementDate": "2016-09-12",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "EURIX No IX. First edition at Alte Börse Marzahn (venue migration from schwelle7). Extended to 7 days (Mon-Sun) vs. previous 6-day format. Dates from Wayback web.archive.org/web/20160912101634/ ('12. - 18. September 2016'). announcementDate upper bound is the snapshot date (no earlier snapshot captured for this edition)."
+      "internalSourceNotes": "EURIX No IX. First edition at Alte Börse Marzahn (venue migration from schwelle7). Extended to 7 days (Mon-Sun) vs. previous 6-day format. Dates from Wayback web.archive.org/web/20160912101634/ ('12. - 18. September 2016'). announcementDate upper bound is the snapshot date (no earlier snapshot captured for this edition).",
+      "externalSourceNotes": "EURIX No IX, the first edition at Alte Börse Marzahn after the venue moved from schwelle7. The format extended from six to seven days. Dates confirmed by archived snapshots; announcement date is an upper bound."
     },
     {
       "startDate": "2017-09-18",
@@ -61,7 +66,8 @@
       "announcementDate": "2017-07-16",
       "ticketSaleDate": null,
       "soldOutDate": "2017-08-16",
-      "sourceNotes": "EURIX No XI. Venue: Alte Börse Marzahn, Berlin. soldOut upper bound from Wayback web.archive.org/web/20170816223032/ ('The regular program and the Beginner Course is SOLD OUT')."
+      "internalSourceNotes": "EURIX No XI. Venue: Alte Börse Marzahn, Berlin. soldOut upper bound from Wayback web.archive.org/web/20170816223032/ ('The regular program and the Beginner Course is SOLD OUT').",
+      "externalSourceNotes": "EURIX No XI at Alte Börse Marzahn, Berlin. Dates and sold-out status confirmed by archived snapshots of the official EURIX page; sold-out date is an upper bound."
     },
     {
       "startDate": "2018-10-22",
@@ -69,7 +75,8 @@
       "announcementDate": "2018-08-01",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "EURIX No XIII. Venue: Holzmarkt/Säälchen, Berlin (second edition at this venue). announcementDate is Wayback upper bound."
+      "internalSourceNotes": "EURIX No XIII. Venue: Holzmarkt/Säälchen, Berlin (second edition at this venue). announcementDate is Wayback upper bound.",
+      "externalSourceNotes": "EURIX No XIII at Holzmarkt/Säälchen, Berlin. Dates confirmed by archived snapshots; announcement date is an upper bound."
     },
     {
       "startDate": "2019-10-21",
@@ -77,7 +84,8 @@
       "announcementDate": "2019-08-19",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "EURIX No XV. Venue: Holzmarkt/Säälchen, Berlin."
+      "internalSourceNotes": "EURIX No XV. Venue: Holzmarkt/Säälchen, Berlin.",
+      "externalSourceNotes": "EURIX No XV at Holzmarkt/Säälchen, Berlin. Dates confirmed by archived snapshots of the official EURIX page."
     },
     {
       "startDate": "2020-10-19",
@@ -85,7 +93,8 @@
       "announcementDate": "2020-09-26",
       "ticketSaleDate": "2020-09-26",
       "soldOutDate": null,
-      "sourceNotes": "EURIX No XVII. Corona-era edition: reduced capacity ~80 participants with 3G hygiene concept. Venue: Holzmarkt/Säälchen, Berlin. Wayback web.archive.org/web/20200926214229/ notes 'This event is almost sold out'. Dates announced after Spring 2020 (XVI) cancellation."
+      "internalSourceNotes": "EURIX No XVII. Corona-era edition: reduced capacity ~80 participants with 3G hygiene concept. Venue: Holzmarkt/Säälchen, Berlin. Wayback web.archive.org/web/20200926214229/ notes 'This event is almost sold out'. Dates announced after Spring 2020 (XVI) cancellation.",
+      "externalSourceNotes": "EURIX No XVII, the COVID-era return after the Spring 2020 (XVI) cancellation. Held with reduced capacity (~80 participants) under a 3G hygiene concept. Dates confirmed by archived snapshots of the official EURIX page."
     },
     {
       "startDate": "2021-10-18",
@@ -93,7 +102,8 @@
       "announcementDate": "2021-04-02",
       "ticketSaleDate": "2021-04-02",
       "soldOutDate": "2021-10-26",
-      "sourceNotes": "EURIX No XIX. Venue: Holzmarkt/Säälchen, Berlin. announcementDate narrowed to 2021-03-06 -> 2021-04-02 window: 2021-03-06 snapshot only mentions XVIII; 2021-04-02 snapshot first mentions XIX ('The automn 2021 EURIX is planned for October, 18 - 23, 2021'). Registration was open as XVIII tickets (carry-over when XVIII cancelled) per 2021-07-08 snapshot ('All tickets remain valid and can be used for the next edition'). soldOutDate 2021-10-26 is upper bound (post-event snapshot); narrower window is 2021-07-30 -> 2021-10-26 since 2021-07-30 snapshot has no SOLD OUT marker."
+      "internalSourceNotes": "EURIX No XIX. Venue: Holzmarkt/Säälchen, Berlin. announcementDate narrowed to 2021-03-06 -> 2021-04-02 window: 2021-03-06 snapshot only mentions XVIII; 2021-04-02 snapshot first mentions XIX ('The automn 2021 EURIX is planned for October, 18 - 23, 2021'). Registration was open as XVIII tickets (carry-over when XVIII cancelled) per 2021-07-08 snapshot ('All tickets remain valid and can be used for the next edition'). soldOutDate 2021-10-26 is upper bound (post-event snapshot); narrower window is 2021-07-30 -> 2021-10-26 since 2021-07-30 snapshot has no SOLD OUT marker.",
+      "externalSourceNotes": "EURIX No XIX at Holzmarkt/Säälchen, Berlin. Tickets from the cancelled Spring 2021 (XVIII) edition were carried over per the organiser's announcement. Announcement and sold-out dates are upper bounds taken from archived snapshots of the official EURIX page."
     },
     {
       "startDate": "2022-11-07",
@@ -101,7 +111,8 @@
       "announcementDate": "2021-11-09",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "EURIX No XXI. Venue: Holzmarkt/Säälchen, Berlin. Unusually held in November rather than October. Announced together with Spring 2022 (XX) in the same content update: 2021-10-26 snapshot has no XXI mention; 2021-11-09 snapshot lists 'coming up automn 2022: EURIX No XXI / November, 7 - 12, 2022'. No ticket-sale or sold-out signal observed on canonical page across 2022-05-23, 2022-08-19, 2022-10-02 snapshots."
+      "internalSourceNotes": "EURIX No XXI. Venue: Holzmarkt/Säälchen, Berlin. Unusually held in November rather than October. Announced together with Spring 2022 (XX) in the same content update: 2021-10-26 snapshot has no XXI mention; 2021-11-09 snapshot lists 'coming up automn 2022: EURIX No XXI / November, 7 - 12, 2022'. No ticket-sale or sold-out signal observed on canonical page across 2022-05-23, 2022-08-19, 2022-10-02 snapshots.",
+      "externalSourceNotes": "EURIX No XXI at Holzmarkt/Säälchen, Berlin. Unusually scheduled in November rather than the typical October slot. Announced together with the spring edition; no ticket-sale or sold-out signal recorded on the official page."
     },
     {
       "startDate": "2023-10-16",
@@ -109,7 +120,8 @@
       "announcementDate": "2022-05-23",
       "ticketSaleDate": "2023-06-01",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1328948 (FetLife event). felixruckert.de has no per-edition blog posts; dates derived from Wayback snapshots of /2015/10/01/eurix/. announcementDate is a Wayback upper bound (first snapshot listing No XXIII in 'coming up', 2022-05-23). ticketSaleDate is a Wayback upper bound (first snapshot with 'REGISTRATION is open!!', 2023-06-01). No sold-out snapshot found."
+      "internalSourceNotes": "sourceEventId=1328948 (FetLife event). felixruckert.de has no per-edition blog posts; dates derived from Wayback snapshots of /2015/10/01/eurix/. announcementDate is a Wayback upper bound (first snapshot listing No XXIII in 'coming up', 2022-05-23). ticketSaleDate is a Wayback upper bound (first snapshot with 'REGISTRATION is open!!', 2023-06-01). No sold-out snapshot found.",
+      "externalSourceNotes": "Confirmed by the official FetLife event listing. Announcement and ticket-sale dates are upper bounds taken from archived snapshots of the official EURIX page."
     },
     {
       "startDate": "2024-10-14",
@@ -117,7 +129,8 @@
       "announcementDate": "2023-02-07",
       "ticketSaleDate": "2024-07-16",
       "soldOutDate": "2024-10-05",
-      "sourceNotes": "sourceEventId=1539849 (FetLife event). Wayback 2023-02-07 snapshot lists No XXV in 'coming up' (announcement upper bound). Wayback 2024-07-16 snapshot shows 'Registration is open!' on No 25 banner (ticket-sale upper bound). Wayback 2024-10-05 snapshot states 'The festival is SOLD OUT!! Waitinglist is still available.'"
+      "internalSourceNotes": "sourceEventId=1539849 (FetLife event). Wayback 2023-02-07 snapshot lists No XXV in 'coming up' (announcement upper bound). Wayback 2024-07-16 snapshot shows 'Registration is open!' on No 25 banner (ticket-sale upper bound). Wayback 2024-10-05 snapshot states 'The festival is SOLD OUT!! Waitinglist is still available.'",
+      "externalSourceNotes": "Confirmed by the official FetLife event listing. Announcement, ticket-sale, and sold-out dates are upper bounds taken from archived snapshots of the official EURIX page."
     },
     {
       "startDate": "2025-10-20",
@@ -125,7 +138,8 @@
       "announcementDate": "2023-12-11",
       "ticketSaleDate": "2025-05-14",
       "soldOutDate": "2025-07-19",
-      "sourceNotes": "sourceEventId=1798958 (FetLife event). Wayback 2023-12-11 snapshot lists No XXVII in 'coming up' (announcement upper bound). Wayback 2025-05-14 snapshot shows 'Registration is open!' on No 27 banner (ticket-sale upper bound). Wayback 2025-07-19 snapshot states 'THE FESTIVAL IS SOLD OUT! (Some places left in the Absolute Beginner Course)'"
+      "internalSourceNotes": "sourceEventId=1798958 (FetLife event). Wayback 2023-12-11 snapshot lists No XXVII in 'coming up' (announcement upper bound). Wayback 2025-05-14 snapshot shows 'Registration is open!' on No 27 banner (ticket-sale upper bound). Wayback 2025-07-19 snapshot states 'THE FESTIVAL IS SOLD OUT! (Some places left in the Absolute Beginner Course)'",
+      "externalSourceNotes": "Confirmed by the official FetLife event listing. Announcement, ticket-sale, and sold-out dates are upper bounds taken from archived snapshots of the official EURIX page."
     }
   ],
   "nextEdition": {

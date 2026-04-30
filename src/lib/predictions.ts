@@ -16,7 +16,7 @@ export interface IPredictionInfo {
   announcementLeadDays: number;
   ticketLeadDays: number;
   sampleSize: number;
-  sourceNotes: string[];
+  externalSourceNotes: string[];
 }
 
 export type TConfidenceLevel = "high" | "medium" | "low";
@@ -215,7 +215,9 @@ export function getCadenceAndDuration(event: IEventData): IPredictionInfo {
     })
     .filter((value): value is number => value !== null);
 
-  const sourceNotes = editions.map((edition) => edition.sourceNotes).filter((note) => note.trim().length > 0);
+  const externalSourceNotes = editions
+    .map((edition) => edition.externalSourceNotes)
+    .filter((note) => note.trim().length > 0);
 
   const detectedCadence = detectBaseCadence(intervals);
   const fallbackCadence = intervals.length > 0 ? median(intervals) : 0;
@@ -228,7 +230,7 @@ export function getCadenceAndDuration(event: IEventData): IPredictionInfo {
     announcementLeadDays: median(announcementLeadDays) || DEFAULT_ANNOUNCEMENT_LEAD_DAYS,
     ticketLeadDays: median(ticketLeadDays) || DEFAULT_TICKET_LEAD_DAYS,
     sampleSize: intervals.length,
-    sourceNotes,
+    externalSourceNotes,
   };
 }
 

@@ -89,7 +89,7 @@ Items deferred from planning sessions. Add context, not just titles — future-y
 
 **What:** Below 640px, replace the horizontal-scroll `<table>` on `EventPage.vue` with a card-stacked layout per edition that prioritises Dates and Notes (the two columns users actually look at). Cancelled rows render as a smaller, muted card.
 
-**Why:** Today the `<table>` at `EventPage.vue:131-154` uses `min-w-[640px]` with `overflow-x-auto`, forcing horizontal scroll on phones to display columns mostly containing "Unknown" and em dashes. Once cancellations land, the most-clicked content (the Notes cell with sourceNotes URL) sits in the rightmost column and mobile users miss it.
+**Why:** Today the `<table>` at `EventPage.vue:131-154` uses `min-w-[640px]` with `overflow-x-auto`, forcing horizontal scroll on phones to display columns mostly containing "Unknown" and em dashes. Once cancellations land, the most-clicked content (the Notes cell with `externalSourceNotes`) sits in the rightmost column and mobile users miss it.
 
 **Pros:** Mobile users see the actually-useful columns first. Cancelled rows still distinguishable visually. Deeper alignment with DESIGN.md voice ("let the facts do the work").
 

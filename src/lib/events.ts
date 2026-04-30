@@ -163,7 +163,7 @@ export interface IHeldTimelineRow {
   endDate: string;
   announcementDate: string | null;
   ticketSaleDate: string | null;
-  sourceNotes: string;
+  externalSourceNotes: string;
 }
 
 export interface ICancelledTimelineRow {
@@ -171,7 +171,7 @@ export interface ICancelledTimelineRow {
   key: string;
   sortYear: number;
   year: number;
-  sourceNotes: string;
+  externalSourceNotes: string;
 }
 
 export type TTimelineRow = IHeldTimelineRow | ICancelledTimelineRow;
@@ -185,14 +185,14 @@ export function buildTimelineRows(event: IEventData): TTimelineRow[] {
     endDate: edition.endDate,
     announcementDate: edition.announcementDate ?? null,
     ticketSaleDate: edition.ticketSaleDate ?? null,
-    sourceNotes: edition.sourceNotes,
+    externalSourceNotes: edition.externalSourceNotes,
   }));
   const cancelled: TTimelineRow[] = (event.cancelledEditions ?? []).map((entry) => ({
     kind: "cancelled",
     key: `cancelled-${entry.year}`,
     sortYear: entry.year,
     year: entry.year,
-    sourceNotes: entry.sourceNotes,
+    externalSourceNotes: entry.externalSourceNotes,
   }));
   return [...held, ...cancelled].sort((leftRow, rightRow) => leftRow.sortYear - rightRow.sortYear);
 }

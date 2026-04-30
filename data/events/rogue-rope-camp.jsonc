@@ -21,7 +21,8 @@
       "announcementDate": "2023-01-04",
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "Announced via commit 8fac561 (2023-01-04, github.com/RogueRope/docs): 'When: 02/08/2023 14:00 -> 06/08/2023 16:00'. Price 128 EUR. Location described as 'East of Ghent, West of Antwerp'. Ticket sale date not preserved in repo (page overwritten Nov 2023); a 'April 8th at noon' reference appears in carry-over content."
+      "internalSourceNotes": "Announced via commit 8fac561 (2023-01-04, github.com/RogueRope/docs): 'When: 02/08/2023 14:00 -> 06/08/2023 16:00'. Price 128 EUR. Location described as 'East of Ghent, West of Antwerp'. Ticket sale date not preserved in repo (page overwritten Nov 2023); a 'April 8th at noon' reference appears in carry-over content.",
+      "externalSourceNotes": "Inaugural edition. Announcement and dates confirmed by the public docs repo; ticket-sale date not preserved in the repo history."
     },
     {
       "startDate": "2024-08-14",
@@ -29,7 +30,8 @@
       "announcementDate": "2024-04-17",
       "ticketSaleDate": "2024-05-05",
       "soldOutDate": null,
-      "sourceNotes": "Announced via commit 8858302 (2024-04-17, github.com/RogueRope/docs) — first commit re-titling site from 'Bottoms Up!' winter to 'Rogue Rope Camp' summer. Date typo '14/08/2022' fixed to '14/08/2024' in commit 0ee2998 (2024-04-30). Ticket sale opened 2024-05-05 20:00 per commit daf9d7c (2024-04-30): 'Ticket sales open May fifth at 20.00.' Shop URL: shop.gogogonzo.be/RRC24/. Price 150 EUR."
+      "internalSourceNotes": "Announced via commit 8858302 (2024-04-17, github.com/RogueRope/docs) — first commit re-titling site from 'Bottoms Up!' winter to 'Rogue Rope Camp' summer. Date typo '14/08/2022' fixed to '14/08/2024' in commit 0ee2998 (2024-04-30). Ticket sale opened 2024-05-05 20:00 per commit daf9d7c (2024-04-30): 'Ticket sales open May fifth at 20.00.' Shop URL: shop.gogogonzo.be/RRC24/. Price 150 EUR.",
+      "externalSourceNotes": "Announcement and ticket-sale opening dates confirmed by the public docs repo."
     },
     {
       "startDate": "2025-08-05",
@@ -37,7 +39,8 @@
       "announcementDate": "2025-04-06",
       "ticketSaleDate": "2025-05-05",
       "soldOutDate": null,
-      "sourceNotes": "Announced via commit 1c2463c (2025-04-06, github.com/RogueRope/docs): 'We back baby.' First 6-day edition (added Tuesday Build Day vs prior 5-day format). End-year typo '10/08/2024' fixed in commit c5812b6 (2025-04-11). Ticket sale opened 2025-05-05 20:00 per same commit: 'Tickets go on sale May 5th at 20:00.' Price 200 EUR."
+      "internalSourceNotes": "Announced via commit 1c2463c (2025-04-06, github.com/RogueRope/docs): 'We back baby.' First 6-day edition (added Tuesday Build Day vs prior 5-day format). End-year typo '10/08/2024' fixed in commit c5812b6 (2025-04-11). Ticket sale opened 2025-05-05 20:00 per same commit: 'Tickets go on sale May 5th at 20:00.' Price 200 EUR.",
+      "externalSourceNotes": "First six-day edition (a Tuesday Build Day was added to the prior five-day format). Announcement and ticket-sale opening dates confirmed by the public docs repo."
     }
   ],
   "nextEdition": {

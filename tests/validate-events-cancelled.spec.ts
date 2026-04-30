@@ -30,7 +30,8 @@ function held(starts: string[]): IEventData["historicalEditions"] {
     announcementDate: null,
     ticketSaleDate: null,
     soldOutDate: null,
-    sourceNotes: "",
+    internalSourceNotes: "",
+    externalSourceNotes: "Test edition.",
   }));
 }
 
@@ -46,7 +47,13 @@ describe("checkCancelledEditions", () => {
   it("flags a cancelled year that matches a held edition's year (SC16)", () => {
     const event = makeEvent({
       historicalEditions: held(["2024-01-01", "2025-01-01"]),
-      cancelledEditions: [{ year: 2024, sourceNotes: "wrong entry" }],
+      cancelledEditions: [
+        {
+          year: 2024,
+          internalSourceNotes: "wrong entry",
+          externalSourceNotes: "wrong entry",
+        },
+      ],
     });
     const issues = checkCancelledEditions(event);
     expect(issues).toHaveLength(1);
@@ -57,7 +64,13 @@ describe("checkCancelledEditions", () => {
   it("flags a cancelled year outside the held-edition range (SC17)", () => {
     const event = makeEvent({
       historicalEditions: held(["2018-01-01", "2024-01-01"]),
-      cancelledEditions: [{ year: 2010, sourceNotes: "Should be out of range" }],
+      cancelledEditions: [
+        {
+          year: 2010,
+          internalSourceNotes: "Should be out of range",
+          externalSourceNotes: "Should be out of range",
+        },
+      ],
     });
     const issues = checkCancelledEditions(event);
     expect(issues).toHaveLength(1);
@@ -68,7 +81,13 @@ describe("checkCancelledEditions", () => {
   it("flags a cancelled year inconsistent with annual cadence (SC18 biennial)", () => {
     const event = makeEvent({
       historicalEditions: held(["2010-01-01", "2012-01-01", "2016-01-01"]),
-      cancelledEditions: [{ year: 2014, sourceNotes: "Biennial event, not annual" }],
+      cancelledEditions: [
+        {
+          year: 2014,
+          internalSourceNotes: "Biennial event, not annual",
+          externalSourceNotes: "Biennial event, not annual",
+        },
+      ],
     });
     const issues = checkCancelledEditions(event);
     expect(issues).toHaveLength(1);
@@ -79,7 +98,13 @@ describe("checkCancelledEditions", () => {
   it("accepts a valid cancellation between consecutive annual editions", () => {
     const event = makeEvent({
       historicalEditions: held(["2010-01-01", "2011-01-01", "2013-01-01"]),
-      cancelledEditions: [{ year: 2012, sourceNotes: "Skipped, organiser sabbatical" }],
+      cancelledEditions: [
+        {
+          year: 2012,
+          internalSourceNotes: "Skipped, organiser sabbatical",
+          externalSourceNotes: "Skipped, organiser sabbatical",
+        },
+      ],
     });
     expect(checkCancelledEditions(event)).toEqual([]);
   });
@@ -88,8 +113,16 @@ describe("checkCancelledEditions", () => {
     const event = makeEvent({
       historicalEditions: held(["2018-01-01", "2019-01-01", "2022-01-01", "2023-01-01"]),
       cancelledEditions: [
-        { year: 2020, sourceNotes: "COVID" },
-        { year: 2021, sourceNotes: "COVID continued" },
+        {
+          year: 2020,
+          internalSourceNotes: "COVID",
+          externalSourceNotes: "COVID",
+        },
+        {
+          year: 2021,
+          internalSourceNotes: "COVID continued",
+          externalSourceNotes: "COVID continued",
+        },
       ],
     });
     expect(checkCancelledEditions(event)).toEqual([]);

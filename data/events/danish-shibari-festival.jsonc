@@ -21,7 +21,8 @@
       "announcementDate": "2024-11-20",
       "ticketSaleDate": "2024-11-20",
       "soldOutDate": null,
-      "sourceNotes": "Official MyShibari page for the 2025 edition confirms date range and sold-out status: https://myshibari.dk/en/begivenheder/danish-shibari-festival-2025-2/. Event usually announced late in the previous year."
+      "internalSourceNotes": "Official MyShibari page for the 2025 edition confirms date range and sold-out status: https://myshibari.dk/en/begivenheder/danish-shibari-festival-2025-2/. Event usually announced late in the previous year.",
+      "externalSourceNotes": "Dates and sold-out status confirmed by the official MyShibari event page. Editions are typically announced late in the previous year."
     }
   ],
   "nextEdition": {

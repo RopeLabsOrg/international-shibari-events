@@ -21,7 +21,8 @@
       "announcementDate": "2025-12-01",
       "ticketSaleDate": "2025-12-01",
       "soldOutDate": null,
-      "sourceNotes": "Application-based format with lottery preference tiers."
+      "internalSourceNotes": "Application-based format with lottery preference tiers.",
+      "externalSourceNotes": "Inaugural edition: application-only with a lottery and preference tiers rather than a public ticket sale."
     }
   ],
   "nextEdition": {

@@ -212,7 +212,8 @@ describe("buyer guide website", () => {
           announcementDate: null,
           ticketSaleDate: null,
           soldOutDate: null,
-          sourceNotes: "Held 2023",
+          internalSourceNotes: "Held 2023 internal",
+          externalSourceNotes: "Held 2023",
         },
         {
           startDate: "2025-10-15",
@@ -220,11 +221,16 @@ describe("buyer guide website", () => {
           announcementDate: null,
           ticketSaleDate: null,
           soldOutDate: null,
-          sourceNotes: "Held 2025",
+          internalSourceNotes: "Held 2025 internal",
+          externalSourceNotes: "Held 2025",
         },
       ],
       cancelledEditions: [
-        { year: 2024, sourceNotes: "Cancelled 2024" },
+        {
+          year: 2024,
+          internalSourceNotes: "Cancelled 2024 internal",
+          externalSourceNotes: "Cancelled 2024",
+        },
       ],
       nextEdition: {
         startDate: null,
@@ -241,7 +247,7 @@ describe("buyer guide website", () => {
     expect(rows[1].kind).toBe("cancelled");
     if (rows[1].kind === "cancelled") {
       expect(rows[1].year).toBe(2024);
-      expect(rows[1].sourceNotes).toBe("Cancelled 2024");
+      expect(rows[1].externalSourceNotes).toBe("Cancelled 2024");
     }
   });
 
@@ -260,7 +266,8 @@ describe("buyer guide website", () => {
           announcementDate: null,
           ticketSaleDate: null,
           soldOutDate: null,
-          sourceNotes: "",
+          internalSourceNotes: "",
+          externalSourceNotes: "Held 2024",
         },
       ],
       nextEdition: {

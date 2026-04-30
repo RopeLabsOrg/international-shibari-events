@@ -16,7 +16,8 @@ function makeEvent(historicalStarts: string[]): IEventData {
       announcementDate: null,
       ticketSaleDate: null,
       soldOutDate: null,
-      sourceNotes: "",
+      internalSourceNotes: "",
+      externalSourceNotes: "Test edition.",
     })),
     nextEdition: {
       startDate: null,

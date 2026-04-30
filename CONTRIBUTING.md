@@ -66,15 +66,16 @@ Dates are ISO-8601 (YYYY-MM-DD). URLs are absolute (`https://…`) or `null`.
 The site derives `nextEdition` predictions at runtime from `historicalEditions` when confirmed values are missing. For the prediction to be useful:
 
 - Record every historical edition you can confirm, with as much date detail as possible (`announcementDate`, `ticketSaleDate` are especially valuable).
-- Put the source (FetLife event ID, official page URL, discussion permalink) in `sourceNotes`. This is what lets a future reviewer trust or correct the record.
+- Put the source (FetLife event ID, official page URL, discussion permalink, Wayback snapshot path) in `internalSourceNotes`. This is the maintainer-facing field — raw provenance is fine, ambiguity caveats welcome. It is what lets a future reviewer trust or correct the record.
+- Write a clean, human-readable summary in `externalSourceNotes`. This is what the website shows. One or two sentences in plain language: what we know, how we know it, and any honest caveats. No internal IDs or URLs unless they're useful to a reader.
 
 Prediction rules live in `src/lib/predictions.ts` and are spec'd in `docs/website-architecture-and-product-decisions.md`. If you change the algorithm, add a backtest in `tests/` and note the delta in your PR.
 
 ### Cancelled or skipped editions (optional)
 
-When you know an edition was cancelled or skipped (organiser announcement, FetLife post, mailing list note), record it in the optional `cancelledEditions` array. Each entry is `{ year, sourceNotes }`. The site uses these entries two ways:
+When you know an edition was cancelled or skipped (organiser announcement, FetLife post, mailing list note), record it in the optional `cancelledEditions` array. Each entry is `{ year, internalSourceNotes, externalSourceNotes }` — the same split as historical editions. The site uses these entries two ways:
 
-1. **Timeline display.** The cancelled year renders in the historical-editions table interleaved chronologically with held editions, struck through and muted, with your `sourceNotes` next to it.
+1. **Timeline display.** The cancelled year renders in the historical-editions table interleaved chronologically with held editions, struck through and muted, with your `externalSourceNotes` next to it.
 2. **Cadence sharpening.** The prediction algorithm treats a known cancelled year as a real period in the cadence, so an annual event with one cancellation no longer mispredicts the next edition halfway between two real years.
 
 Year-based metadata only supports annual events. The validator rejects entries that match a held edition's year, fall outside the held-edition range, or sit in a gap that does not fit an annual cadence (e.g. between two biennial editions). If you need biennial or sub-annual cancellation support, open an issue.
@@ -100,5 +101,6 @@ The email-reminder backend lives in `worker/`. Required secrets are documented i
 ## Style
 
 - Never include identifying personal data beyond what organizers publish themselves.
-- Keep `sourceNotes` factual and short. Cite the URL or FetLife event ID; do not editorialize.
+- Keep `internalSourceNotes` factual: cite the URL or FetLife event ID, note ambiguity, do not editorialize.
+- Keep `externalSourceNotes` clean and human-readable: one or two sentences a reader can understand without context. Strip raw IDs and URLs unless they're meant for the public.
 - Do not add fields outside the schema. If you think one is needed, open a discussion first.

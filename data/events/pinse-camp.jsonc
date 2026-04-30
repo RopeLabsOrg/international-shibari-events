@@ -21,7 +21,8 @@
       "announcementDate": null,
       "ticketSaleDate": null,
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1420907 (FetLife event). CAMP edition from pinse.json, title marks sold out but no explicit sold-out date."
+      "internalSourceNotes": "sourceEventId=1420907 (FetLife event). CAMP edition from pinse.json, title marks sold out but no explicit sold-out date.",
+      "externalSourceNotes": "Confirmed by the official FetLife event listing; sold out but no explicit sell-out date recorded."
     },
     {
       "startDate": "2025-05-23",
@@ -29,7 +30,8 @@
       "announcementDate": "2024-08-15",
       "ticketSaleDate": "2024-08-15",
       "soldOutDate": null,
-      "sourceNotes": "sourceEventId=1640265 (FetLife event). CAMP edition from pinse.json. Camp usually announced in late summer with slower ticket turnover."
+      "internalSourceNotes": "sourceEventId=1640265 (FetLife event). CAMP edition from pinse.json. Camp usually announced in late summer with slower ticket turnover.",
+      "externalSourceNotes": "Confirmed by the official FetLife event listing. The camp is typically announced in late summer of the previous year, with slower ticket turnover than the festival."
     }
   ],
   "nextEdition": {

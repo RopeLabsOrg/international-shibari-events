@@ -41,7 +41,8 @@ function historicalEditions(starts: string[], ends?: string[]): IEventData["hist
     announcementDate: null,
     ticketSaleDate: null,
     soldOutDate: null,
-    sourceNotes: "",
+    internalSourceNotes: "",
+    externalSourceNotes: "Test edition.",
   }));
 }
 
@@ -164,7 +165,13 @@ describe("getCadenceAndDuration", () => {
   it("predicts annual cadence with metadata-informed split (SC2)", () => {
     const event = makeEvent({
       historicalEditions: historicalEditions(["2010-01-01", "2011-01-01", "2013-01-01"]),
-      cancelledEditions: [{ year: 2012, sourceNotes: "Cancelled by organizer." }],
+      cancelledEditions: [
+        {
+          year: 2012,
+          internalSourceNotes: "Cancelled by organizer.",
+          externalSourceNotes: "Cancelled by the organiser.",
+        },
+      ],
     });
     expect(getCadenceAndDuration(event).cadenceDays).toBe(365);
   });

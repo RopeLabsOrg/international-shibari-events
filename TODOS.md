@@ -65,7 +65,7 @@ Items deferred from planning sessions. Add context, not just titles — future-y
 
 **Context:** Open Question #2 in the cancelled-editions design doc deferred this. Lives in `getCadenceAndDuration` (`src/lib/predictions.ts`); ~30 LOC + tests. Pick a recency window (e.g. last N intervals weighted 2x) and verify against the 14-event dataset before shipping.
 
-**Depends on / blocked by:** Cancelled-editions PR (Pezmc/cancelled-editions) lands first.
+**Depends on / blocked by:** Cancelled-editions PR lands first.
 
 ---
 
@@ -81,7 +81,7 @@ Items deferred from planning sessions. Add context, not just titles — future-y
 
 **Context:** Open Question #2 in the cancelled-editions design doc. Add to the `IPredictionInfo` interface in `src/lib/predictions.ts` (probably as `cadenceConfidence: "high" | "medium" | "low"`), set the value at the same place the cadence is determined in `getCadenceAndDuration`, render as a fourth (or fifth) pill in `EventPage.vue`'s provenance `<ul>`.
 
-**Depends on / blocked by:** Cancelled-editions PR (Pezmc/cancelled-editions) lands first; that PR introduces the `detectBaseCadence` return signal.
+**Depends on / blocked by:** Cancelled-editions PR lands first; that PR introduces the `detectBaseCadence` return signal.
 
 ---
 
@@ -97,4 +97,4 @@ Items deferred from planning sessions. Add context, not just titles — future-y
 
 **Context:** Surfaced in plan-design-review Pass 6 of the cancelled-editions branch (2026-04-27). Rated 5→8 with this deferred; reaching 10/10 needs this work. Affects every event detail page on mobile, not only events with cancellations — so the value is broader than the cancellations PR alone.
 
-**Depends on / blocked by:** Cancelled-editions PR (Pezmc/cancelled-editions) lands first; the new cancelled-row treatment is the strongest signal that the existing layout under-serves mobile.
+**Depends on / blocked by:** Cancelled-editions PR lands first; the new cancelled-row treatment is the strongest signal that the existing layout under-serves mobile.

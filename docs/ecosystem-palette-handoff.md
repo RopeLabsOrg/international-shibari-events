@@ -123,7 +123,7 @@ Tempting to extract a `@ropelabs/tokens` npm package. **Don't, yet.**
 
 ## Commit reference
 
-ISE palette lands in commit `0a04cb2` on branch `Pezmc/office-hours-review`. Files:
+ISE palette lands in commit `0a04cb2` on the office-hours-review branch. Files:
 - `src/styles.css` — token definitions
 - `src/components/EventCard.vue` — shadow + estimated-badge color update
 - `src/components/DateField.vue` — estimated-badge color update

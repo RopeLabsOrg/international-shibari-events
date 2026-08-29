@@ -18,7 +18,7 @@ functional voice; editorial recommendations on individual events
 belong on `tsurineko.org`, not here.
 
 **Ecosystem context:** this site is the discovery layer in a five-site rope
-ecosystem run through Peg Productions BV (Tsuri Neko). CNAME is
+ecosystem run under the Tsuri Neko banner. CNAME is
 `shibari-events.tsurineko.org`; the repo lives under the `tsurineko.org`
 subdomain family. Siblings:
 

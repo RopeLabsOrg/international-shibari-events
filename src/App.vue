@@ -51,5 +51,13 @@ const { count: watchCount } = useWatchlist();
     <main class="mx-auto w-full max-w-6xl px-4 py-8">
       <RouterView />
     </main>
+    <footer class="border-t border-[var(--color-border)]">
+      <p class="mx-auto w-full max-w-6xl px-4 py-6 text-sm text-[var(--color-muted)]">
+        Rope and safety shears, shipped from Leuven:
+        <a class="underline hover:text-[var(--color-secondary)]" href="https://shop.tsurineko.org/en">shop.tsurineko.org</a>.
+        Choosing, caring for and cutting rope:
+        <a class="underline hover:text-[var(--color-secondary)]" href="https://shop.tsurineko.org/en/handbook">the rope handbook</a>.
+      </p>
+    </footer>
   </div>
 </template>

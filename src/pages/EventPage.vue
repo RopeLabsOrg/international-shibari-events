@@ -259,6 +259,11 @@ const timelineRows = computed(() => (event.value ? buildTimelineRows(event.value
         />
       </div>
     </section>
+
+    <p class="mt-6 text-sm text-[var(--color-muted)]">
+      Rope and safety cutters for the trip:
+      <a class="underline hover:text-[var(--color-secondary)]" href="https://shop.tsurineko.org/en/handbook/first-shibari-class-kit">what to bring to a class</a>
+    </p>
   </section>
 
   <section v-else class="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-lg shadow-[rgba(58,42,26,0.1)]">

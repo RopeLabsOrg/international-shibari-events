@@ -91,6 +91,11 @@ describe("buyer guide website", () => {
     expect(wrapper.text()).toContain("Official links");
     expect(wrapper.text()).toContain("Temporal state");
     expect(wrapper.text()).toContain("Reveal contact email");
+    expect(
+      wrapper
+        .find('a[href="https://shop.tsurineko.org/en/handbook/first-shibari-class-kit"]')
+        .text(),
+    ).toBe("what to bring to a class");
   });
 
   it("renders tickets page with on-sale and opening-later sections", async () => {
